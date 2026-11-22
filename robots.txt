@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://justinhiott2.github.io/alwayson-ai/sitemap.xml
