@@ -5,7 +5,7 @@
   "source": "Money Hunter AI daily research automation",
   "run_id": "1641534e-a3ac-8327-a523-47c1d71f6130",
   "status": "research_only",
-  "summary": "No verified personal funds and no property deal meeting the current purchase/title requirements were identified in this run. Findings below are leads and research status, not verified entitlements or deals.",
+  "summary": "No verified personal funds and no property deal meeting the current purchase/title requirements were identified in this run. Findings below are leads and research status, not verified entitlements or deals. Automated source monitor: 4/5 official public pages responded to an HTTP check. This does not mean records were searched or claims/deals were verified.",
   "totals": {
     "verified_personal_money": 0,
     "verified_assignable_contracts": 0,
@@ -104,5 +104,50 @@
     "A website availability check is not a personal-name search.",
     "Possible matches and public listings are not proof of ownership, entitlement, fair value, clean title or assignability.",
     "No claims, contacts, offers, contracts, or payments were submitted."
-  ]
+  ],
+  "source_monitor": {
+    "checked_at": "2026-11-23T11:19:21.530136+00:00",
+    "scope": "HTTP reachability only; not a database search or verification of a personal claim/deal",
+    "reachable": 4,
+    "total": 5,
+    "checks": [
+      {
+        "label": "South Carolina Unclaimed Property",
+        "url": "https://southcarolina.findyourunclaimedproperty.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "checked_at": "2026-11-23T11:19:20.185802+00:00"
+      },
+      {
+        "label": "MissingMoney nationwide search",
+        "url": "https://www.missingmoney.com/",
+        "status": "check_failed",
+        "http_status": 403,
+        "note": "HTTP Error 403: Forbidden",
+        "checked_at": "2026-11-23T11:19:20.513279+00:00"
+      },
+      {
+        "label": "SC state surplus real estate",
+        "url": "https://admin.sc.gov/services/real-estate",
+        "status": "reachable",
+        "http_status": 200,
+        "checked_at": "2026-11-23T11:19:20.854038+00:00"
+      },
+      {
+        "label": "SC procurement opportunities",
+        "url": "https://procurement.sc.gov/doing-biz",
+        "status": "reachable",
+        "http_status": 200,
+        "checked_at": "2026-11-23T11:19:21.083068+00:00"
+      },
+      {
+        "label": "USA.gov unclaimed money guide",
+        "url": "https://www.usa.gov/unclaimed-money",
+        "status": "reachable",
+        "http_status": 200,
+        "checked_at": "2026-11-23T11:19:21.529972+00:00"
+      }
+    ]
+  },
+  "monitor_updated_at": "2026-11-23T11:19:21.530136+00:00"
 }
