@@ -39,7 +39,7 @@ def main():
                 status = "reachable" if 200 <= code < 400 else "restricted"
         except urllib.error.HTTPError as e:
             code = e.code
-            status = "reachable" if 200 <= code < 400 else ("restricted" if code in (401,403,405,429) else "unreachable")
+            status = "reachable" if 200 <= code < 400 else ("restricted" if code in (401,403,405,406,429,451) else "unreachable")
             detail = "Host refused or rate-limited automated link check; open manually."
         except Exception as e:
             detail = type(e).__name__ + ": " + str(e)[:180]
