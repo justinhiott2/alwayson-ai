@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-11-23T07:54:47.904067+00:00",
+  "checked_at": "2026-11-23T07:55:23.004676+00:00",
   "check_type": "official_source_link_health_only_not_docket_search",
   "county_count": 5,
   "source_count": 13,
   "reachable": 6,
-  "restricted": 6,
-  "unreachable": 1,
+  "restricted": 7,
+  "unreachable": 0,
   "docket_checking": "manual_case_lookup_required_no_supported_public_api",
   "important": "This registry is a verified-source directory and monitoring checklist, not a statewide list of money owed. The bot cannot automatically determine entitlement or confirm current balances from these pages.",
   "sources": [
@@ -101,7 +101,7 @@
       "county": "Statewide",
       "kind": "official_reference",
       "url": "https://www.sccourts.org/case-records-search/",
-      "status": "unreachable",
+      "status": "restricted",
       "http_status": 406,
       "detail": "Host refused or rate-limited automated link check; open manually."
     },
