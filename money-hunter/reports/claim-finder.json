@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-23T00:00:00Z",
+  "generated_at": "2026-11-23T11:29:23.893637+00:00",
   "bot": "Money Hunter Claim Finder",
-  "scope": "Official-source directory; first automated availability check is pending. No personal claimant database access or entitlement verification.",
+  "scope": "Official-source directory and public-page reachability checks only; no personal claimant database access or entitlement verification.",
   "totals": {
     "sources_listed": 17,
-    "pages_reachable": 0,
-    "pages_check_failed": 0,
+    "pages_reachable": 12,
+    "pages_check_failed": 5,
     "personal_claims_verified": 0,
     "claims_submitted": 0,
     "payments_received": 0
@@ -25,7 +25,8 @@
       "priority": "South Carolina first",
       "url": "https://southcarolina.findyourunclaimedproperty.com/",
       "how": "Search your current and former legal names and prior states of residence.",
-      "page_status": "not_checked"
+      "page_status": "reachable",
+      "http_status": 200
     },
     {
       "category": "State unclaimed property",
@@ -33,7 +34,8 @@
       "priority": "Nationwide",
       "url": "https://unclaimed.org/search/",
       "how": "Open each state's official program; search every state where you lived, worked, or did business.",
-      "page_status": "not_checked"
+      "page_status": "reachable",
+      "http_status": 200
     },
     {
       "category": "State unclaimed property",
@@ -41,7 +43,9 @@
       "priority": "Nationwide",
       "url": "https://www.missingmoney.com/",
       "how": "Search participating state databases, then complete any claim on the official state portal.",
-      "page_status": "not_checked"
+      "page_status": "check_failed",
+      "http_status": 403,
+      "check_note": "HTTP Error 403: Forbidden"
     },
     {
       "category": "Federal money directory",
@@ -49,7 +53,8 @@
       "priority": "Nationwide",
       "url": "https://www.usa.gov/unclaimed-money",
       "how": "Use its category-by-category links; there is no single federal database.",
-      "page_status": "not_checked"
+      "page_status": "reachable",
+      "http_status": 200
     },
     {
       "category": "Federal unclaimed assets",
@@ -57,7 +62,8 @@
       "priority": "Nationwide",
       "url": "https://fiscal.treasury.gov/about-us/unclaimed-assets",
       "how": "Identify the agency and payment type; contact the responsible agency.",
-      "page_status": "not_checked"
+      "page_status": "reachable",
+      "http_status": 200
     },
     {
       "category": "Unpaid wages",
@@ -65,7 +71,9 @@
       "priority": "Nationwide",
       "url": "https://www.dol.gov/agencies/whd/wow",
       "how": "Search the Wage and Hour Division Workers Owed Wages tool for employers and workers.",
-      "page_status": "not_checked"
+      "page_status": "check_failed",
+      "http_status": 403,
+      "check_note": "HTTP Error 403: Forbidden"
     },
     {
       "category": "Pensions and retirement",
@@ -73,7 +81,8 @@
       "priority": "Nationwide",
       "url": "https://www.pbgc.gov/workers-retirees/find-unclaimed-retirement-benefits",
       "how": "Search for certain benefits from terminated private-sector defined-benefit plans.",
-      "page_status": "not_checked"
+      "page_status": "reachable",
+      "http_status": 200
     },
     {
       "category": "Bank and credit union failures",
@@ -81,7 +90,8 @@
       "priority": "Nationwide",
       "url": "https://closedbanks.fdic.gov/funds/",
       "how": "Check whether a failed FDIC-insured bank held an unpaid insured deposit.",
-      "page_status": "not_checked"
+      "page_status": "reachable",
+      "http_status": 200
     },
     {
       "category": "Bank and credit union failures",
@@ -89,7 +99,9 @@
       "priority": "Nationwide",
       "url": "https://ncua.gov/support-services/share-insurance-fund/unclaimed-deposits",
       "how": "Check accounts at liquidated federally insured credit unions.",
-      "page_status": "not_checked"
+      "page_status": "check_failed",
+      "http_status": 404,
+      "check_note": "HTTP Error 404: Not Found"
     },
     {
       "category": "Bankruptcy funds",
@@ -97,7 +109,8 @@
       "priority": "Nationwide",
       "url": "https://ucf.uscourts.gov/",
       "how": "Search court-held bankruptcy funds; court procedures and proof of entitlement apply.",
-      "page_status": "not_checked"
+      "page_status": "reachable",
+      "http_status": 200
     },
     {
       "category": "Mortgage and insurance refunds",
@@ -105,7 +118,9 @@
       "priority": "Nationwide",
       "url": "https://www.hud.gov/program_offices/housing/sfh/fharesourcecenter",
       "how": "Use HUD's official FHA resources if you had an FHA-insured mortgage; confirm current refund lookup instructions.",
-      "page_status": "not_checked"
+      "page_status": "check_failed",
+      "http_status": 404,
+      "check_note": "HTTP Error 404: Not Found"
     },
     {
       "category": "Veterans insurance",
@@ -113,7 +128,8 @@
       "priority": "Nationwide",
       "url": "https://insurance.va.gov/",
       "how": "Relevant only to eligible current or former policyholders and beneficiaries.",
-      "page_status": "not_checked"
+      "page_status": "reachable",
+      "http_status": 200
     },
     {
       "category": "Tax refunds",
@@ -121,7 +137,8 @@
       "priority": "Nationwide",
       "url": "https://www.irs.gov/refunds",
       "how": "Use only for a tax return/refund you filed or reasonably expect; the bot cannot see IRS private records.",
-      "page_status": "not_checked"
+      "page_status": "reachable",
+      "http_status": 200
     },
     {
       "category": "Investment enforcement distributions",
@@ -129,7 +146,9 @@
       "priority": "Nationwide",
       "url": "https://www.sec.gov/enforcement-litigation/claims-and-distributions",
       "how": "Check whether an SEC enforcement distribution relates to an investment you held.",
-      "page_status": "not_checked"
+      "page_status": "check_failed",
+      "http_status": 403,
+      "check_note": "HTTP Error 403: Forbidden"
     },
     {
       "category": "Railroad retirement",
@@ -137,7 +156,8 @@
       "priority": "Nationwide",
       "url": "https://www.rrb.gov/",
       "how": "Relevant to qualifying railroad workers and eligible family members.",
-      "page_status": "not_checked"
+      "page_status": "reachable",
+      "http_status": 200
     },
     {
       "category": "SC county tax-sale and foreclosure surplus",
@@ -145,7 +165,8 @@
       "priority": "South Carolina first",
       "url": "https://www.sccourts.org/",
       "how": "Check county treasurer/tax collector and clerk of court records. A surplus listing alone does not prove you are entitled.",
-      "page_status": "not_checked"
+      "page_status": "reachable",
+      "http_status": 200
     },
     {
       "category": "SC public contract opportunities",
@@ -153,7 +174,8 @@
       "priority": "South Carolina first",
       "url": "https://procurement.sc.gov/doing-biz",
       "how": "Potential earnings, not money already owed. Bid/contract rules and performance costs apply.",
-      "page_status": "not_checked"
+      "page_status": "reachable",
+      "http_status": 200
     }
   ]
 }
