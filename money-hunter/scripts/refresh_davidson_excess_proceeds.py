@@ -50,8 +50,8 @@ def discover_pdf(html: bytes) -> str:
     return candidates[0]
 
 ROW = re.compile(
-    r"^(?P<case>\d{2}-\d{4}-[IVX]+)\s+(?P<parcel>[A-Z0-9]+)\s+"
-    r"(?P<middle>.+?)\s+(?P<amount>\$[\d,]+\.\d{2})\s+"
+    r"^(?P<case>\d{2}-\d{3,4}-[IVX]+)\s+(?P<parcel>[A-Z0-9]+)\s+"
+    r"(?P<middle>.+?)\s+(?P<amount>\$\s*[\d,]+\.\d{2})\s+"
     r"(?P<held>\d{1,2}/\d{1,2}/\d{4})\s+"
     r"(?P<activity>\d{1,2}/\d{1,2}/\d{4})\s+"
     r"(?P<order>\d{1,2}/\d{1,2}/\d{4})\s*(?P<star>\*)?\s*$"
