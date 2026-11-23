@@ -1,32 +1,13 @@
 {
   "bot": "Money Hunter App Repair & Upgrade Bot",
-  "checked_at": "2026-11-23T23:42:19.857253+00:00",
-  "status": "needs_attention",
+  "checked_at": "2026-11-23T23:42:36.929280+00:00",
+  "status": "healthy",
   "summary": {
     "checks_run": 29,
-    "errors": 3,
+    "errors": 0,
     "warnings": 0
   },
-  "findings": [
-    {
-      "level": "error",
-      "code": "missing_navigation_targets",
-      "message": "Missing tab sections: bot, claims, home, matches, pricing, profile, revenue, search, settings",
-      "path": "money-hunter/claim-finder.html"
-    },
-    {
-      "level": "error",
-      "code": "missing_navigation_targets",
-      "message": "Missing tab sections: bot, claims, home, matches, pricing, profile, revenue, search, settings",
-      "path": "money-hunter/deep-scan.html"
-    },
-    {
-      "level": "error",
-      "code": "missing_navigation_targets",
-      "message": "Missing tab sections: bot, claims, home, matches, pricing, profile, revenue, search, settings",
-      "path": "money-hunter/maintenance.html"
-    }
-  ],
+  "findings": [],
   "scope": "Repository/static-app diagnostics only. No personal claimant records or payment accounts are accessed.",
   "auto_repair_policy": "Diagnostics and smoke tests run automatically. Production source changes require reviewed commits; claims and payments are never submitted automatically."
 }
