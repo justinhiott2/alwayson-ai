@@ -86,3 +86,5 @@ fs.mkdirSync("money-hunter/reports", { recursive: true });
 fs.writeFileSync("money-hunter/reports/browser-test.json", JSON.stringify(report, null, 2) + "\n");
 console.log(JSON.stringify(report, null, 2));
 if (failed) process.exitCode = 1;
+
+// Manual test-run trigger commit: browser suite executes on every test-bot change.
