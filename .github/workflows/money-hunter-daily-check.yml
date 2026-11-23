@@ -35,6 +35,9 @@ jobs:
       - name: Check South Carolina county overage and court source links
         run: python3 money-hunter/scripts/check_sc_overage_sources.py
 
+      - name: Scan official Davidson excess-proceeds motion dockets
+        run: python3 money-hunter/scripts/check_davidson_excess_proceeds_dockets.py
+
       - name: Check official source availability
         run: |
           python3 - <<'PY'
@@ -92,6 +95,7 @@ jobs:
           cp money-hunter/scan-status.json /tmp/money-hunter-generated/
           cp money-hunter/data/excess-proceeds/davidson-county.json /tmp/money-hunter-generated/
           cp money-hunter/data/excess-proceeds/south-carolina-source-status.json /tmp/money-hunter-generated/
+          cp money-hunter/data/excess-proceeds/davidson-docket-status.json /tmp/money-hunter-generated/
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           for attempt in 1 2 3; do
@@ -100,7 +104,8 @@ jobs:
             cp /tmp/money-hunter-generated/scan-status.json money-hunter/scan-status.json
             cp /tmp/money-hunter-generated/davidson-county.json money-hunter/data/excess-proceeds/davidson-county.json
             cp /tmp/money-hunter-generated/south-carolina-source-status.json money-hunter/data/excess-proceeds/south-carolina-source-status.json
-            git add money-hunter/scan-status.json money-hunter/data/excess-proceeds/davidson-county.json money-hunter/data/excess-proceeds/south-carolina-source-status.json
+            cp /tmp/money-hunter-generated/davidson-docket-status.json money-hunter/data/excess-proceeds/davidson-docket-status.json
+            git add money-hunter/scan-status.json money-hunter/data/excess-proceeds/davidson-county.json money-hunter/data/excess-proceeds/south-carolina-source-status.json money-hunter/data/excess-proceeds/davidson-docket-status.json
             if git diff --cached --quiet; then exit 0; fi
             git commit -m "Update Money Hunter daily source check"
             if git push origin HEAD:main; then exit 0; fi
