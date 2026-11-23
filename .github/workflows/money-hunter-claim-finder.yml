@@ -1,0 +1,38 @@
+name: Money Hunter claim finder bot
+
+on:
+  schedule:
+    - cron: "43 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: money-hunter-claim-finder
+  cancel-in-progress: false
+
+jobs:
+  scan-official-resources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Build and check claim-finder directory
+        run: python scripts/money_hunter_claim_finder.py
+      - name: Publish latest report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add money-hunter/reports/claim-finder.json
+          if git diff --cached --quiet; then
+            echo "No report changes to publish."
+          else
+            git commit -m "chore: refresh Money Hunter claim finder report"
+            git push
+          fi
