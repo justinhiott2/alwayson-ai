@@ -1,6 +1,84 @@
 {
-  "checked_at": null,
+  "checked_at": "2026-11-23T04:37:20.020667+00:00",
   "check_type": "official_source_availability_only",
   "important": "This checks whether official websites respond. It does not search personal names, verify ownership, or establish that money is owed.",
-  "sources": []
+  "sources": [
+    {
+      "name": "NAUPA state directory",
+      "url": "https://unclaimed.org/search/",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "name": "MissingMoney national search",
+      "url": "https://www.missingmoney.com/",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "The host refused or limited automated checks; open the official site manually."
+    },
+    {
+      "name": "USA.gov unclaimed money guide",
+      "url": "https://www.usa.gov/unclaimed-money",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "name": "US Department of Labor wage search",
+      "url": "https://webapps.dol.gov/WOW/",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "name": "PBGC missing pensions",
+      "url": "https://www.pbgc.gov/workers-retirees/find-unclaimed-retirement-benefits",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "name": "FDIC unclaimed funds",
+      "url": "https://closedbanks.fdic.gov/funds/",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "name": "NCUA credit union liquidations",
+      "url": "https://ncua.gov/support-services/conservatorships-liquidations",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "name": "HUD FHA refunds",
+      "url": "https://www.hud.gov/program_offices/housing/sfh/fha_refunds",
+      "status": "unreachable",
+      "http_status": 404,
+      "detail": "The host refused or limited automated checks; open the official site manually."
+    },
+    {
+      "name": "US Courts bankruptcy unclaimed funds",
+      "url": "https://ucf.uscourts.gov/",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "name": "TreasuryDirect savings bonds",
+      "url": "https://www.treasurydirect.gov/savings-bonds/",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "name": "SEC investor distributions",
+      "url": "https://www.sec.gov/enforce/investor-alerts-and-bulletins/investor-alert-unclaimed-funds",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "The host refused or limited automated checks; open the official site manually."
+    }
+  ]
 }
