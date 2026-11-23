@@ -46,13 +46,14 @@
       "county": "Allendale",
       "priority": "statewide_directory",
       "county_website_url": "https://www.allendalecounty.com",
-      "tax_office_url": null,
+      "tax_office_url": "https://www.allendalecounty.com/government/county_government/county_offices.php",
       "sale_announcement_url": null,
       "sale_information_url": null,
       "public_overage_register_url": null,
       "overage_claim_form_url": null,
-      "coverage_status": "county_portal_only_needs_tax_office_review",
-      "notes": "Official county website link supplied by the South Carolina Association of Counties directory. The county's delinquent-tax office page, overage claim procedure, current balance register and contact details have not yet been individually verified for Money Hunter. Open the county website and locate the Treasurer/Delinquent Tax Collector; ask whether tax-sale overages exist, who may claim them, and what public records are available. This is a directory lead only, not evidence of available funds."
+      "coverage_status": "official_tax_office_source_reviewed",
+      "notes": "Official Allendale County offices directory identifies the Tax Collector and direct office phone. The county site does not expose a dedicated tax-sale or overage page in this review; sale notices appear to be published through legal advertisements. Call the Tax Collector for current post-sale records and claimant requirements. County homepage/directory only; no overage register found.",
+      "contact_phone": "803-584-4040"
     },
     {
       "county": "Anderson",
@@ -407,13 +408,14 @@
       "county": "Lee",
       "priority": "statewide_directory",
       "county_website_url": "https://www.leecountysc.org/",
-      "tax_office_url": null,
+      "tax_office_url": "https://www.leecountysc.org/directory/departments___elected_officials/lee_county_delinquent_tax.php",
       "sale_announcement_url": null,
       "sale_information_url": null,
       "public_overage_register_url": null,
       "overage_claim_form_url": null,
-      "coverage_status": "county_portal_only_needs_tax_office_review",
-      "notes": "Official county website link supplied by the South Carolina Association of Counties directory. The county's delinquent-tax office page, overage claim procedure, current balance register and contact details have not yet been individually verified for Money Hunter. Open the county website and locate the Treasurer/Delinquent Tax Collector; ask whether tax-sale overages exist, who may claim them, and what public records are available. This is a directory lead only, not evidence of available funds."
+      "coverage_status": "official_tax_office_source_reviewed",
+      "notes": "Official Delinquent Tax page provides office contacts and sale instructions. It explains the one-year redemption period and assignment of a bidder's interest before redemption ends. No public overage balance register or claim form identified in this review; contact the Delinquent Tax Office for post-sale overage records and claimant procedure.",
+      "contact_phone": "803-483-3149"
     },
     {
       "county": "Lexington",
@@ -432,13 +434,14 @@
       "county": "Marion",
       "priority": "statewide_directory",
       "county_website_url": "https://www.marionsc.org/",
-      "tax_office_url": null,
+      "tax_office_url": "https://www.marionsc.org/departments/tax_collector/index.php",
       "sale_announcement_url": null,
-      "sale_information_url": null,
+      "sale_information_url": "https://www.marionsc.org/departments/tax_collector/index.php",
       "public_overage_register_url": null,
       "overage_claim_form_url": null,
-      "coverage_status": "county_portal_only_needs_tax_office_review",
-      "notes": "Official county website link supplied by the South Carolina Association of Counties directory. The county's delinquent-tax office page, overage claim procedure, current balance register and contact details have not yet been individually verified for Money Hunter. Open the county website and locate the Treasurer/Delinquent Tax Collector; ask whether tax-sale overages exist, who may claim them, and what public records are available. This is a directory lead only, not evidence of available funds."
+      "coverage_status": "official_tax_office_source_reviewed",
+      "notes": "Official Tax Collector page identifies the delinquent-tax office, office contact, public-access terminal and links to annual sale information/property lists. The lists are tax-sale notices, not an overage register. No public overage balance register or claim form identified in this review; contact the Tax Collector for post-sale records.",
+      "contact_phone": "843-423-8228"
     },
     {
       "county": "Marlboro",
@@ -457,13 +460,14 @@
       "county": "McCormick",
       "priority": "statewide_directory",
       "county_website_url": "http://www.mccormickcountysc.org",
-      "tax_office_url": null,
+      "tax_office_url": "https://www.mccormickcountysc.org/departments/treasurer.php",
       "sale_announcement_url": null,
       "sale_information_url": null,
       "public_overage_register_url": null,
       "overage_claim_form_url": null,
-      "coverage_status": "county_portal_only_needs_tax_office_review",
-      "notes": "Official county website link supplied by the South Carolina Association of Counties directory. The county's delinquent-tax office page, overage claim procedure, current balance register and contact details have not yet been individually verified for Money Hunter. Open the county website and locate the Treasurer/Delinquent Tax Collector; ask whether tax-sale overages exist, who may claim them, and what public records are available. This is a directory lead only, not evidence of available funds."
+      "coverage_status": "official_tax_office_source_reviewed",
+      "notes": "Official Treasurer/Tax Collector page confirms the Treasurer handles tax collection and annual tax sale, and that properties are advertised in The McCormick Messenger. No dedicated county overage register or claim form identified; contact the Treasurer for post-sale public records and claimant procedure.",
+      "contact_phone": "864-852-2332"
     },
     {
       "county": "Newberry",
@@ -560,13 +564,14 @@
       "county": "Sumter",
       "priority": "statewide_directory",
       "county_website_url": "http://www.sumtercountysc.gov",
-      "tax_office_url": null,
+      "tax_office_url": "https://www.sumtercountysc.gov/departments/s_-_z/treasurer/delinquent_tax.php",
       "sale_announcement_url": null,
       "sale_information_url": null,
       "public_overage_register_url": null,
       "overage_claim_form_url": null,
-      "coverage_status": "county_portal_only_needs_tax_office_review",
-      "notes": "Official county website link supplied by the South Carolina Association of Counties directory. The county's delinquent-tax office page, overage claim procedure, current balance register and contact details have not yet been individually verified for Money Hunter. Open the county website and locate the Treasurer/Delinquent Tax Collector; ask whether tax-sale overages exist, who may claim them, and what public records are available. This is a directory lead only, not evidence of available funds."
+      "coverage_status": "official_tax_office_source_reviewed",
+      "notes": "Official Treasurer Delinquent Tax page publishes the current tax-sale instructions and registration links and gives the office contact. This is sale information, not an overage register. No public overage balance list or claim form identified in this review; contact the Treasurer for post-sale public records and claimant process.",
+      "contact_phone": "803-436-2213"
     },
     {
       "county": "Union",
@@ -623,9 +628,9 @@
   },
   "coverage_summary": {
     "total_counties": 46,
-    "tax_office_sources_reviewed": 41,
-    "county_portal_only_needs_tax_office_review": 5,
+    "tax_office_sources_reviewed": 46,
+    "county_portal_only_needs_tax_office_review": 0,
     "public_overage_registers_found_in_review": 1,
-    "meaning": "All 46 county websites are listed. Forty-one counties have individually reviewed official delinquent-tax, tax-sale, overage or office sources; five remain county-portal entry points awaiting page-level review. Fairfield is the only county with a published historical overage listing located in this review (tax-sale years 2021–2024)."
+    "meaning": "All 46 South Carolina counties now have an individually reviewed official county tax-office, delinquent-tax, Treasurer, or tax-sale source link. This is source-directory coverage, not proof that each county publishes an overage register. Only Fairfield's historical 2021–2024 overage list was found in this review; other counties require direct public-record or clerk inquiries."
   }
 }
