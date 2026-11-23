@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-11-23",
+  "scope": "South Carolina county tax-sale overage research sources; official links only",
+  "legal_baseline": {
+    "statute": "S.C. Code §12-51-130",
+    "url": "https://www.scstatehouse.gov/code/t12c051",
+    "summary": "After applying outstanding municipal tax liens, remaining overage belongs to the owner of record immediately before the end of the redemption period. Payable 90 days after execution of the tax deed unless another claimant institutes a judicial action during that time. Unclaimed/unassigned overage escheats five years after the public auction tax-sale date.",
+    "important": "The legal claimant is not a finder. County rules and documents may require identity proof, deeds, probate authority, notarization, or a court order. Never promise or claim entitlement."
+  },
+  "court_index": {
+    "name": "South Carolina Judicial Branch — Trial Court Case Records Search",
+    "url": "https://www.sccourts.org/case-records-search/",
+    "guide_url": "https://www.sccourts.org/media/eFiling/Args/ARG-21-Using_the_Trial_Court_Public_Index.pdf",
+    "coverage_note": "Use the county-specific trial-court index route. This public index is not a unified searchable feed/API for this bot. Recent filings may be delayed; verify with the clerk. A blank search is not proof no motion or case exists.",
+    "automated_status": "manual_case_lookup_required"
+  },
+  "counties": [
+    {
+      "county": "Berkeley",
+      "priority": "home_region",
+      "tax_office_url": "https://berkeleycountysc.gov/dept/delinquent-tax-collector/taxsale/",
+      "sale_announcement_url": "https://berkeleycountysc.gov/berkeley-county-delinquent-tax-sale-set-for-november-16/",
+      "public_overage_register_url": null,
+      "overage_claim_form_url": null,
+      "contact_phone": "843-719-4030 option 5",
+      "notes": "Official page confirms the 2026 sale is over and links research resources; no public overage register or claim form was located on the checked page. Ask the Delinquent Tax Collector for a current overage balance and claimant process. Do not use the sale listing as an overage list."
+    },
+    {
+      "county": "Charleston",
+      "priority": "nearby",
+      "tax_office_url": "https://www.charlestoncounty.gov/departments/delinquent-tax/index.php",
+      "sale_information_url": "https://www.charlestoncounty.gov/departments/delinquent-tax/tax-sale.php",
+      "public_overage_register_url": null,
+      "overage_claim_form_url": null,
+      "contact_phone": "843-202-6570",
+      "notes": "Official FAQ explains that excess funds belong to the owner of record at the end of redemption and are claimed using an overage claim form; the page says payment is not due until 90 days after the tax deed is filed. A current downloadable claim form/list was not located in this check."
+    },
+    {
+      "county": "Dorchester",
+      "priority": "nearby",
+      "tax_office_url": "https://www.dorchestercountysc.gov/government/property-tax-services/delinquent-tax",
+      "faq_url": "https://www.dorchestercountysc.gov/government/property-tax-services/delinquent-tax/common-terms-faq",
+      "public_overage_register_url": null,
+      "overage_claim_form_url": null,
+      "contact_phone": "843-563-0110 or 843-832-0110",
+      "notes": "Official FAQ says an overage is created when the bid exceeds taxes, penalties, levy costs and current-year taxes; if property is conveyed to bidder, defaulting taxpayer is entitled, and the overage is available for five years after sale. No public balance register or downloadable overage claim form was located in this check."
+    },
+    {
+      "county": "Oconee",
+      "priority": "statewide_verified_process",
+      "tax_office_url": "https://oconeesc.com/departments/delinquent-tax",
+      "overage_information_url": "https://oconeesc.com/delinquent-tax/tax-sale-information/overage-information",
+      "public_overage_register_url": null,
+      "overage_claim_form_url": "https://oconeesc.com/delinquent-tax/tax-sale-information/overage-information",
+      "contact_phone": "864-638-4147",
+      "contact_email": "delinquenttaxinfo@oconeesc.com",
+      "notes": "Official page explains claimant priority, says county sends certified notices, claim form is free, must be notarized and returned, and overage must be claimed within five years. It does not publish an individual balance register."
+    },
+    {
+      "county": "York",
+      "priority": "statewide_verified_process",
+      "tax_office_url": "https://www.yorkcountysc.gov/",
+      "overage_information_url": "https://www.yorkcountysc.gov/DocumentCenter/View/1193/OVERAGE-CLAIM-FORM-AND-INSTRUCTIONS-PDF",
+      "public_overage_register_url": null,
+      "overage_claim_form_url": "https://www.yorkcountysc.gov/DocumentCenter/View/1193/OVERAGE-CLAIM-FORM-AND-INSTRUCTIONS-PDF",
+      "contact_phone": "803-909-7272",
+      "notes": "Official instructions say owner of record immediately before end of redemption period is claimant, and York County will not issue overage checks to a third party unless court ordered. Claim requires tax deed, claimant deed, photo ID; probate representative needs court authority. Do not market third-party claim service based on these records."
+    }
+  ],
+  "docket_check_protocol": [
+    "Use the official county Trial Court Public Index and select the correct county/court.",
+    "Search the case number or parcel/case reference from the official tax deed or court record; do not rely on a similar party name.",
+    "Review entries for motion/petition to claim surplus, objections, hearing notices, orders, appeal/stay, and disbursement/payment.",
+    "Open the filed order or contact the Clerk of Court to confirm the signed order and actual custodian balance.",
+    "Record the date checked, portal used, exact event/document title and result. 'No result' means unknown, not clear or available.",
+    "Do not automate around CAPTCHA, access controls, login gates, sealed records or paid subscriptions."
+  ],
+  "limits": "This registry is a verified-source directory and monitoring checklist, not a statewide list of money owed. The bot cannot automatically determine entitlement or confirm current balances from these pages."
+}
