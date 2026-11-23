@@ -1,10 +1,20 @@
 {
   "bot": "Money Hunter App Repair & Upgrade Bot",
-  "status": "not_run",
+  "checked_at": "2026-11-23T09:40:38.575342+00:00",
+  "status": "needs_attention",
   "summary": {
-    "errors": 0,
+    "checks_run": 26,
+    "errors": 1,
     "warnings": 0
   },
-  "findings": [],
-  "message": "Waiting for first GitHub Actions run. No diagnostic checks have completed yet."
+  "findings": [
+    {
+      "level": "error",
+      "code": "invalid_json",
+      "message": "JSON cannot be parsed: Expecting value: line 1 column 1 (char 0)",
+      "path": "maintenance-output.json"
+    }
+  ],
+  "scope": "Repository/static-app diagnostics only. No personal claimant records or payment accounts are accessed.",
+  "auto_repair_policy": "No production source edits are made automatically. Failures are reported for reviewed repair."
 }
