@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-23T07:26:14.938533+00:00",
+  "checked_at": "2026-11-23T07:26:49.755520+00:00",
   "check_type": "official_source_availability_only",
   "important": "This checks whether official websites respond. It does not search personal names, verify ownership, or establish that money is owed.",
   "sources": [
@@ -53,11 +53,11 @@
       "detail": ""
     },
     {
-      "name": "Railroad Retirement Board",
-      "url": "https://www.rrb.gov/Benefits/FinancialAssistance/UnclaimedFunds",
-      "status": "unreachable",
-      "http_status": 404,
-      "detail": "The host refused or limited automated checks; open the official site manually."
+      "name": "Railroad Retirement Board service and claim guidance",
+      "url": "https://www.rrb.gov/Benefits/RB-40",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
     },
     {
       "name": "US Department of Labor wage search",
@@ -86,13 +86,6 @@
       "status": "reachable",
       "http_status": 200,
       "detail": ""
-    },
-    {
-      "name": "HUD FHA refunds",
-      "url": "https://www.hud.gov/program_offices/housing/sfh/fha_refunds",
-      "status": "unreachable",
-      "http_status": 404,
-      "detail": "The host refused or limited automated checks; open the official site manually."
     },
     {
       "name": "US Courts bankruptcy unclaimed funds",
