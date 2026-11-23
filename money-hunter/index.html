@@ -18,6 +18,15 @@
 <div class="panel"><div class="metric" id="metricPaid">$0</div><div class="metric-label">Confirmed payments received</div></div>
 </div>
 <div class="panel"><h3>Next actions</h3><div id="nextActions" class="muted">Set up your profile and run a search to get started.</div></div>
+<div class="panel" id="researchReportPanel">
+ <div class="row"><div><h3>Automatic research reports</h3><p class="tiny muted">Latest published findings from the daily Money Hunter research run. Refreshes automatically when this app opens.</p></div><button class="secondary fit" id="refreshResearchReport">Refresh report</button></div>
+ <div id="researchReportMeta" class="tiny muted">Connecting to the research feed…</div>
+ <div class="grid" id="researchReportMetrics"></div>
+ <div id="researchReportSummary" class="notice">Loading the latest report…</div>
+ <div id="researchReportCategories"></div>
+ <div id="researchReportWatchlist"></div>
+ <div id="researchReportLinks" class="tiny"></div>
+</div>
 <div class="panel"><h3>How the recovery process works</h3><div class="grid"><div><b class="gold">01 · Search</b><p class="muted tiny">Check official state and federal databases.</p></div><div><b class="gold">02 · Match</b><p class="muted tiny">Compare names and historical addresses. A match is only a lead.</p></div><div><b class="gold">03 · Prove</b><p class="muted tiny">Gather agency-required identity and ownership evidence securely.</p></div><div><b class="gold">04 · Claim</b><p class="muted tiny">Review, sign and submit through the official agency process.</p></div></div></div>
 </section>
 <section id="search" class="tabs">
@@ -124,6 +133,35 @@ function download(content,name,type){let a=document.createElement("a"),u=URL.cre
 $("backup").onclick=()=>download(JSON.stringify(db,null,2),"money-hunter-backup.json","application/json");
 $("restoreFile").onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let d=JSON.parse(await f.text());if(!d||!Array.isArray(d.records)||!d.profile)throw Error();db=Object.assign(blank(),d);persist();fillProfile();drawStates();alert("Backup restored on this device.")}catch(err){alert("Backup file was not recognized.")}e.target.value=""};
 $("wipeAll").onclick=()=>{if(confirm("Permanently erase profile, records and claims saved in this browser? Export a backup first if needed.")){db=blank();persist();fillProfile();drawStates()}};
+
+async function loadResearchReport(){
+ const meta=$("researchReportMeta"),summary=$("researchReportSummary");
+ try{
+  const res=await fetch("./reports/latest.json?ts="+Date.now(),{cache:"no-store"});
+  if(!res.ok)throw new Error("Research feed unavailable ("+res.status+")");
+  const d=await res.json();
+  meta.textContent="Latest report: "+(d.report_date||"date unavailable")+" · "+(d.source||"Research feed")+" · Auto-refreshes every 5 minutes while open";
+  const metrics=[
+   ["Verified personal money",d.totals?.verified_personal_money??0],
+   ["Qualified contracts",d.totals?.verified_assignable_contracts??0],
+   ["Qualified property deals",d.totals?.qualified_land_or_property_deals??0],
+   ["SC property watchlist",d.totals?.south_carolina_state_surplus_watchlist??0],
+   ["Confirmed payments",d.totals?.confirmed_payments??0]
+  ];
+  $("researchReportMetrics").innerHTML=metrics.map(x=>'<div class="panel"><div class="metric">'+esc(x[1])+'</div><div class="metric-label">'+esc(x[0])+'</div></div>').join("");
+  summary.textContent=d.summary||"Report loaded.";
+  $("researchReportCategories").innerHTML='<h4>Research by category</h4>'+(d.categories||[]).map(c=>'<div class="source"><div class="desc"><b>'+esc(c.name)+'</b><div class="tiny gold">'+esc(c.status)+'</div><div class="tiny muted">'+esc(c.detail)+'</div></div></div>').join("");
+  $("researchReportWatchlist").innerHTML='<h4>Property watchlist</h4><p class="tiny muted">Watchlist entries are not verified bargains or assignable deals.</p>'+(d.watchlist||[]).map(w=>'<div class="source"><div class="desc"><b>'+esc(w.label)+'</b><div class="tiny muted">'+esc(w.detail)+'</div><a href="'+esc(safeUrl(w.url))+'" target="_blank" rel="noopener">Open source ↗</a></div></div>').join("");
+  $("researchReportLinks").innerHTML='<h4>Official research links</h4>'+(d.official_links||[]).map(x=>'<a class="btnlink" href="'+esc(safeUrl(x.url))+'" target="_blank" rel="noopener">'+esc(x.label)+' ↗</a>').join("");
+ }catch(e){
+  meta.textContent="Research report feed could not be loaded.";
+  summary.textContent="The dashboard could not retrieve the latest published research report. Try refreshing.";
+ }
+}
+$("refreshResearchReport").onclick=loadResearchReport;
+loadResearchReport();
+setInterval(loadResearchReport,300000);
+
 async function loadDailyScan(){
  const when=$("dailyScanWhen"),host=$("dailyScanResults");
  try{
