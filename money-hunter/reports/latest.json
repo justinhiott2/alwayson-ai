@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-23T05:13:29.660993Z",
+  "report_date": "2026-11-22",
+  "source": "Money Hunter AI daily research automation",
+  "run_id": "1641534e-a3ac-8327-a523-47c1d71f6130",
+  "status": "research_only",
+  "summary": "No verified personal funds and no property deal meeting the current purchase/title requirements were identified in this run. Findings below are leads and research status, not verified entitlements or deals.",
+  "totals": {
+    "verified_personal_money": 0,
+    "verified_assignable_contracts": 0,
+    "qualified_land_or_property_deals": 0,
+    "south_carolina_state_surplus_watchlist": 9,
+    "confirmed_payments": 0
+  },
+  "categories": [
+    {
+      "name": "Personal money claims",
+      "status": "No verified match",
+      "detail": "Official SC name-search result, nationwide individual matches, state-issued checks and other claim categories were not verified by an individual-name search."
+    },
+    {
+      "name": "Tax-sale / foreclosure surplus",
+      "status": "Research leads only",
+      "detail": "Public county surplus procedures and selected county lists reviewed; no record tying a surplus fund to the user was identified."
+    },
+    {
+      "name": "Land / state surplus property",
+      "status": "9 watchlist entries",
+      "detail": "Nine South Carolina state-owned property listings were identified. Published listing lacked asking prices and did not establish title, access, deposits or assignment rights."
+    },
+    {
+      "name": "Contract middleman opportunities",
+      "status": "No qualified deal",
+      "detail": "Assignment screening is focused on North Carolina and Tennessee, with a $0 upfront-cash constraint. No contract was verified as assignable and feasible with zero out-of-pocket costs."
+    }
+  ],
+  "watchlist": [
+    {
+      "label": "565 Country Club Road, Blackville, SC",
+      "detail": "Approx. 6 acres and 7,624 sq ft former maintenance shop",
+      "url": "https://admin.sc.gov/services/real-estate"
+    },
+    {
+      "label": "3960 Spring Hill Road, Bishopville, SC",
+      "detail": "Approx. 1.57 acres, tower site",
+      "url": "https://admin.sc.gov/services/real-estate"
+    },
+    {
+      "label": "Hwy S-88, Nichols, SC",
+      "detail": "Approx. 1.5 acres, tower site",
+      "url": "https://admin.sc.gov/services/real-estate"
+    },
+    {
+      "label": "110 S. Cleveland Street, Kershaw, SC",
+      "detail": "Approx. 0.29 acres and 3,350 sq ft office",
+      "url": "https://admin.sc.gov/services/real-estate"
+    },
+    {
+      "label": "St. Johns Ave, North Charleston, SC",
+      "detail": "Approx. 3.54 acres with storage buildings",
+      "url": "https://admin.sc.gov/services/real-estate"
+    },
+    {
+      "label": "1824 McMillan Ave, North Charleston, SC",
+      "detail": "Approx. 1.4 acres and 4,859 sq ft buildable area",
+      "url": "https://admin.sc.gov/services/real-estate"
+    },
+    {
+      "label": "2334 Noisette Blvd, North Charleston, SC",
+      "detail": "Approx. 1.19 acres and 25,304 sq ft buildable area",
+      "url": "https://admin.sc.gov/services/real-estate"
+    },
+    {
+      "label": "1731 Bush River Road, Columbia, SC",
+      "detail": "Approx. 3.948 acres, office building and basement",
+      "url": "https://admin.sc.gov/services/real-estate"
+    },
+    {
+      "label": "1414 Sunset Drive, Columbia, SC",
+      "detail": "Approx. 2 acres undeveloped land",
+      "url": "https://admin.sc.gov/services/real-estate"
+    }
+  ],
+  "official_links": [
+    {
+      "label": "South Carolina Unclaimed Property",
+      "url": "https://southcarolina.findyourunclaimedproperty.com/"
+    },
+    {
+      "label": "MissingMoney nationwide search",
+      "url": "https://www.missingmoney.com/"
+    },
+    {
+      "label": "SC state surplus real estate listings",
+      "url": "https://admin.sc.gov/services/real-estate"
+    },
+    {
+      "label": "SC procurement opportunities",
+      "url": "https://procurement.sc.gov/doing-biz"
+    }
+  ],
+  "limitations": [
+    "A website availability check is not a personal-name search.",
+    "Possible matches and public listings are not proof of ownership, entitlement, fair value, clean title or assignability.",
+    "No claims, contacts, offers, contracts, or payments were submitted."
+  ]
+}
