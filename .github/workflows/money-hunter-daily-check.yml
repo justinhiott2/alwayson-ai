@@ -1,6 +1,11 @@
 name: Money Hunter Daily Source Check
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "money-hunter/**"
+      - ".github/workflows/money-hunter-daily-check.yml"
   schedule:
     - cron: "0 13 * * *"
   workflow_dispatch:
@@ -14,6 +19,7 @@ concurrency:
 
 jobs:
   check-official-sources:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
