@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1220"><title>Money Hunter AI — Deep Search Bot</title>
+<style>
+:root{color-scheme:dark;--bg:#090d16;--panel:#121a29;--line:#293951;--gold:#e8bd58;--muted:#a9b5c8;--green:#63d6a2}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#eef3fa;font:15px/1.5 system-ui}header{padding:20px max(16px,calc((100% - 1000px)/2));background:#0b1220;border-bottom:1px solid var(--line)}h1{margin:0;color:var(--gold);font-size:1.35rem}.wrap{max-width:1000px;margin:auto;padding:18px 14px 40px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 14px}.muted,small{color:var(--muted)}.notice{border-left:3px solid var(--gold);background:#211d13;padding:11px;margin:12px 0;border-radius:7px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.field{margin:9px 0}label{display:block;color:#c5d0df;font-size:.85rem;margin-bottom:4px}input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#0b1220;color:white;font:inherit}textarea{min-height:75px}button,.btn{border:0;border-radius:8px;padding:10px 13px;background:var(--gold);color:#17130a;font-weight:750;cursor:pointer;text-decoration:none;display:inline-block}button.secondary,.btn.secondary{background:#26354b;color:#eef3fa;border:1px solid #3b4d68}.row{display:flex;gap:9px;flex-wrap:wrap;align-items:center}.row>*{flex:0 0 auto}.task{padding:12px 0;border-bottom:1px solid var(--line)}.task:last-child{border:0}.tag{font-size:.75rem;border:1px solid var(--line);border-radius:20px;padding:2px 8px;color:var(--muted)}.tiny{font-size:.78rem}.count{font-size:1.6rem;color:var(--gold);font-weight:800}.task a{color:#f0ca70}@media(max-width:600px){.row button{flex:1}.panel{padding:13px}}
+</style></head><body>
+<header><h1>✦ MONEY HUNTER AI — DEEP SEARCH BOT</h1><div class="muted tiny">Second search assistant · 50-state public-record discovery</div></header>
+<main class="wrap">
+<div class="notice"><b>Important:</b> This bot builds targeted searches across public websites and official databases. It does not have privileged access to government systems, does not establish ownership, and cannot guarantee money exists. Search results must be verified with the agency. Never enter your SSN, bank login, card number, or private credentials.</div>
+<div class="panel">
+<h2>Build your search plan</h2>
+<p class="muted tiny">Profile stays in this browser. Search phrases are sent to Google only when you open a search link.</p>
+<div class="grid">
+<div class="field"><label>Full legal name</label><input id="name" autocomplete="name" placeholder="Full name"></div>
+<div class="field"><label>Other names / former names (one per line)</label><textarea id="aliases" placeholder="Former name&#10;Spelling variation"></textarea></div>
+<div class="field"><label>Past cities, counties, employers, or addresses (one per line)</label><textarea id="places" placeholder="Summerville, SC&#10;Charleston County, SC&#10;Former employer"></textarea></div>
+<div class="field"><label>States to search</label><select id="scope"><option value="all">All 50 states</option><option value="sc">South Carolina first</option><option value="custom">Only states listed below</option></select></div>
+</div>
+<div class="field"><label>Custom states (comma-separated, if selected)</label><input id="customStates" placeholder="SC, GA, NC"></div>
+<div class="row"><button id="save">Save profile on this device</button><button class="secondary" id="build">Build deep-search plan</button><a class="btn secondary" href="./index.html">Back to Money Hunter</a></div>
+<p id="profileStatus" class="muted tiny"></p>
+</div>
+<div class="panel">
+<div class="row"><div><h2>Search queue</h2><p class="muted tiny">Each task opens a targeted public-web query. Run a few at a time to avoid opening too many tabs.</p></div><div class="count" id="count">0</div></div>
+<div class="row"><button id="open5">Open next 5 searches</button><button class="secondary" id="reset">Reset queue</button><button class="secondary" id="export">Export search plan CSV</button></div>
+<p id="queueStatus" class="muted tiny">Save your profile and build a plan to begin.</p>
+<div id="tasks"></div>
+</div>
+<div class="panel">
+<h3>What this second bot adds</h3>
+<ul class="muted">
+<li>Creates name-specific searches using former names and prior locations.</li>
+<li>Searches state unclaimed-property programs plus wage, pension, court, mortgage-refund, savings-bond, and other public-record categories.</li>
+<li>Builds separate queries for each state instead of relying on one national search.</li>
+<li>Lets you track the queue locally and export a checklist.</li>
+</ul>
+<p class="tiny muted">The bot does not automatically scrape restricted sites or submit claims. That would require supported agency APIs or approved access. Results are leads only, not proof of entitlement.</p>
+</div>
+</main>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id),KEY='mh_deep_profile_v1',QKEY='mh_deep_queue_v1';
+const states=['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
+const stateCode={'Alabama':'AL','Alaska':'AK','Arizona':'AZ','Arkansas':'AR','California':'CA','Colorado':'CO','Connecticut':'CT','Delaware':'DE','Florida':'FL','Georgia':'GA','Hawaii':'HI','Idaho':'ID','Illinois':'IL','Indiana':'IN','Iowa':'IA','Kansas':'KS','Kentucky':'KY','Louisiana':'LA','Maine':'ME','Maryland':'MD','Massachusetts':'MA','Michigan':'MI','Minnesota':'MN','Mississippi':'MS','Missouri':'MO','Montana':'MT','Nebraska':'NE','Nevada':'NV','New Hampshire':'NH','New Jersey':'NJ','New Mexico':'NM','New York':'NY','North Carolina':'NC','North Dakota':'ND','Ohio':'OH','Oklahoma':'OK','Oregon':'OR','Pennsylvania':'PA','Rhode Island':'RI','South Carolina':'SC','South Dakota':'SD','Tennessee':'TN','Texas':'TX','Utah':'UT','Vermont':'VT','Virginia':'VA','Washington':'WA','West Virginia':'WV','Wisconsin':'WI','Wyoming':'WY'};
+const sources=[
+['State unclaimed property','site:treasurer.*.gov OR site:*.gov "unclaimed property"'],
+['Missing wages','site:dol.gov "back wages" OR "unpaid wages"'],
+['Pension benefits','site:pbgc.gov "unclaimed" pension benefits'],
+['Bankruptcy court funds','site:uscourts.gov "unclaimed funds" bankruptcy'],
+['FHA mortgage refunds','site:hud.gov FHA refund "unclaimed"'],
+['Savings bonds','site:treasurydirect.gov "savings bonds" unclaimed'],
+['FDIC failed-bank funds','site:fdic.gov unclaimed funds'],
+['Credit union liquidation funds','site:ncua.gov liquidation unclaimed funds'],
+['SEC distributions','site:sec.gov "unclaimed funds" investor'],
+['VA insurance benefits','site:va.gov unclaimed life insurance benefits'],
+['County court surplus funds','site:*.gov "surplus funds" court foreclosure'],
+['County tax sale excess proceeds','site:*.gov "excess proceeds" tax sale']
+];
+let tasks=[],cursor=0;
+function lines(v){return v.split(/\n|,/).map(x=>x.trim()).filter(Boolean)}
+function profile(){return {name:$('name').value.trim(),aliases:lines($('aliases').value),places:lines($('places').value)}}
+function save(){localStorage.setItem(KEY,JSON.stringify(profile()));$('profileStatus').textContent='Profile saved on this device.'}
+function load(){try{let p=JSON.parse(localStorage.getItem(KEY)||'{}');$('name').value=p.name||'';$('aliases').value=(p.aliases||[]).join('\n');$('places').value=(p.places||[]).join('\n');}catch(e){}}
+function statesToUse(){let mode=$('scope').value;if(mode==='sc')return ['South Carolina'];if(mode==='custom'){let vals=lines($('customStates').value).map(x=>x.toUpperCase());return states.filter(s=>vals.includes(s.toUpperCase())||vals.includes(stateCode[s]));}return states}
+function make(){let p=profile();if(!p.name){$('queueStatus').textContent='Enter your full legal name first.';return}let names=[p.name,...p.aliases],locs=p.places;let selected=statesToUse();tasks=[];
+for(const st of selected){const code=stateCode[st];for(const nm of names){const location=[st+' '+code,...locs].join(' OR ');tasks.push({category:'State unclaimed property',state:st,name:nm,q:'"'+nm+'" ('+location+') ("unclaimed property" OR "unclaimed funds" OR "missing money")'});}}
+for(const [cat,pattern] of sources.slice(1)){for(const nm of names){let terms=locs.length?' ('+locs.join(' OR ')+')':'';tasks.push({category:cat,state:'Nationwide',name:nm,q:'"'+nm+'" '+pattern+terms});}}
+for(const nm of names){tasks.push({category:'General public records',state:'Nationwide',name:nm,q:'"'+nm+'" ("unclaimed funds" OR "surplus proceeds" OR "excess proceeds" OR "unpaid wages" OR "missing pension") '+locs.join(' OR ')});}
+cursor=0;localStorage.setItem(QKEY,JSON.stringify({created:new Date().toISOString(),total:tasks.length}));render();$('queueStatus').textContent='Plan built: '+tasks.length+' targeted searches across '+selected.length+' states plus federal/public-record categories. No records have been verified yet.';}
+function url(t){return 'https://www.google.com/search?q='+encodeURIComponent(t.q)}
+function render(){ $('count').textContent=tasks.length?cursor+'/'+tasks.length:'0';$('tasks').innerHTML=tasks.slice(0,Math.min(tasks.length,100)).map((t,i)=>'<div class="task"><div><b>'+(i+1)+'. '+t.category+'</b> <span class="tag">'+t.state+'</span></div><div class="tiny muted">'+t.name+'</div><div class="tiny">'+t.q.replace(/</g,'&lt;')+'</div><a target="_blank" rel="noopener" href="'+url(t)+'">Open search ↗</a></div>').join('');}
+function openBatch(){if(!tasks.length){$('queueStatus').textContent='Build a search plan first.';return}let end=Math.min(cursor+5,tasks.length);for(let i=cursor;i<end;i++)window.open(url(tasks[i]),'_blank','noopener');cursor=end;$('count').textContent=cursor+'/'+tasks.length;$('queueStatus').textContent='Opened '+(end-(cursor-5))+' search links. Review each result and confirm directly with the official agency.';}
+function csv(){let rows=[['Category','State','Name','Search query','Search URL'],...tasks.map(t=>[t.category,t.state,t.name,t.q,url(t)])];let data=rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([data],{type:'text/csv'}));a.download='money-hunter-deep-search-plan.csv';a.click();URL.revokeObjectURL(a.href)}
+$('save').addEventListener('click',save);$('build').addEventListener('click',()=>{save();make()});$('open5').addEventListener('click',openBatch);$('reset').addEventListener('click',()=>{cursor=0;render();$('queueStatus').textContent='Queue reset.'});$('export').addEventListener('click',csv);load();
+})();
+</script></body></html>
