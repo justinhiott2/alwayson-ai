@@ -1,9 +1,9 @@
 {
   "bot": "Money Hunter App Repair & Upgrade Bot",
-  "checked_at": "2026-11-23T10:57:40.685537+00:00",
+  "checked_at": "2026-11-23T13:41:44.985305+00:00",
   "status": "needs_attention",
   "summary": {
-    "checks_run": 27,
+    "checks_run": 28,
     "errors": 1,
     "warnings": 0
   },
