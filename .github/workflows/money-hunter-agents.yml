@@ -1,0 +1,36 @@
+name: Money Hunter Autonomous Free Agents
+
+on:
+  schedule:
+    - cron: "15 12 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "money-hunter/agents/**"
+      - ".github/workflows/money-hunter-agents.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: money-hunter-autonomous-agents
+  cancel-in-progress: false
+
+jobs:
+  run-agents:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run independent free agents against public sources
+        run: python3 money-hunter/agents/run_agents.py
+      - name: Publish consolidated report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add money-hunter/agents/reports/
+          git diff --cached --quiet && exit 0
+          git commit -m "Publish autonomous agent findings"
+          git push
