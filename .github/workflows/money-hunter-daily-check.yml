@@ -1,0 +1,75 @@
+name: Money Hunter Daily Source Check
+
+on:
+  schedule:
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: money-hunter-source-check
+  cancel-in-progress: false
+
+jobs:
+  check-official-sources:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check official source availability
+        run: |
+          python3 - <<'PY'
+          import json, datetime, urllib.request, urllib.error, pathlib
+
+          sources = [
+            ("NAUPA state directory", "https://unclaimed.org/search/"),
+            ("MissingMoney national search", "https://www.missingmoney.com/"),
+            ("USA.gov unclaimed money guide", "https://www.usa.gov/unclaimed-money"),
+            ("US Department of Labor wage search", "https://webapps.dol.gov/WOW/"),
+            ("PBGC missing pensions", "https://www.pbgc.gov/workers-retirees/find-unclaimed-retirement-benefits"),
+            ("FDIC unclaimed funds", "https://closedbanks.fdic.gov/funds/"),
+            ("NCUA credit union liquidations", "https://ncua.gov/support-services/conservatorships-liquidations"),
+            ("HUD FHA refunds", "https://www.hud.gov/program_offices/housing/sfh/fha_refunds"),
+            ("US Courts bankruptcy unclaimed funds", "https://ucf.uscourts.gov/"),
+            ("TreasuryDirect savings bonds", "https://www.treasurydirect.gov/savings-bonds/"),
+            ("SEC investor distributions", "https://www.sec.gov/enforce/investor-alerts-and-bulletins/investor-alert-unclaimed-funds"),
+          ]
+
+          results = []
+          for name, url in sources:
+              status = "unreachable"
+              code = None
+              detail = ""
+              try:
+                  req = urllib.request.Request(url, headers={"User-Agent": "MoneyHunterSC-SourceHealthCheck/1.0 (public official-source link checker)", "Range": "bytes=0-1023"})
+                  with urllib.request.urlopen(req, timeout=20) as response:
+                      code = response.status
+                      status = "reachable" if 200 <= code < 400 else "restricted"
+              except urllib.error.HTTPError as e:
+                  code = e.code
+                  status = "reachable" if 200 <= code < 400 else ("restricted" if code in (401,403,405,429) else "unreachable")
+                  detail = "The host refused or limited automated checks; open the official site manually."
+              except Exception as e:
+                  detail = type(e).__name__ + ": " + str(e)[:160]
+              results.append({"name": name, "url": url, "status": status, "http_status": code, "detail": detail})
+
+          payload = {
+              "checked_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              "check_type": "official_source_availability_only",
+              "important": "This checks whether official websites respond. It does not search personal names, verify ownership, or establish that money is owed.",
+              "sources": results,
+          }
+          pathlib.Path("money-hunter/scan-status.json").write_text(json.dumps(payload, indent=2) + "\n")
+          PY
+
+      - name: Publish latest check result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add money-hunter/scan-status.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Update Money Hunter daily source check"
+          git push
