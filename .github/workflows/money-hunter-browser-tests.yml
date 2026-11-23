@@ -1,6 +1,12 @@
 name: Money Hunter Browser Test Bot
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "money-hunter/**"
+      - "scripts/test_money_hunter_browser.mjs"
+      - ".github/workflows/money-hunter-browser-tests.yml"
   pull_request:
     paths:
       - "money-hunter/**"
