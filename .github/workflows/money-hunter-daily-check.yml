@@ -16,7 +16,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: money-hunter-source-check
+  group: money-hunter-repo-writes
   cancel-in-progress: false
 
 jobs:
@@ -85,6 +85,7 @@ jobs:
           git add money-hunter/scan-status.json
           git diff --cached --quiet && exit 0
           git commit -m "Update Money Hunter daily source check"
+          git pull --rebase origin main
           git push
 
       - name: Configure Pages
