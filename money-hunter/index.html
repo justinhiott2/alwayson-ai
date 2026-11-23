@@ -48,16 +48,22 @@
 <script>
 const STATES="Alabama,Alaska,Arizona,Arkansas,California,Colorado,Connecticut,Delaware,Florida,Georgia,Hawaii,Idaho,Illinois,Indiana,Iowa,Kansas,Kentucky,Louisiana,Maine,Maryland,Massachusetts,Michigan,Minnesota,Mississippi,Missouri,Montana,Nebraska,Nevada,New Hampshire,New Jersey,New Mexico,New York,North Carolina,North Dakota,Ohio,Oklahoma,Oregon,Pennsylvania,Rhode Island,South Carolina,South Dakota,Tennessee,Texas,Utah,Vermont,Virginia,Washington,West Virginia,Wisconsin,Wyoming".split(",");
 const SOURCES=[
-["Department of Labor — unpaid wages","https://www.dol.gov/agencies/whd/wow","Back wages recovered by the Wage and Hour Division; search worker data and follow DOL guidance."],
-["Pension Benefit Guaranty Corporation","https://www.pbgc.gov/workers-retirees/find-unclaimed-retirement-benefits","Search for certain missing pension benefits from terminated defined-benefit plans."],
-["FDIC — failed bank unclaimed deposits","https://closedbanks.fdic.gov/funds/","Search deposits from failed insured banks."],
-["National Credit Union Administration","https://ncua.gov/support-services/conservatorships-liquidations","Information about liquidated credit unions and unclaimed shares."],
-["HUD — FHA mortgage refunds","https://www.hud.gov/program_offices/housing/sfh/fha_refunds","Look for eligible FHA mortgage insurance refunds."],
-["SEC — distributions and claims","https://www.sec.gov/enforce/investor-alerts-and-bulletins/investor-alert-unclaimed-funds","Information on SEC-related distributions and unclaimed funds."],
-["U.S. Courts — bankruptcy unclaimed funds","https://www.uscourts.gov/court-programs/bankruptcy/unclaimed-funds","Search bankruptcy court unclaimed funds; procedures are court-specific."],
-["Treasury Hunt / savings bonds","https://www.treasurydirect.gov/savings-bonds/","Official Treasury savings bond information and search guidance."],
-["IRS — tax refund status","https://www.irs.gov/wheres-my-refund","Check a tax refund you already expect; this is not a general unclaimed-money database."],
-["USA.gov — full federal guide","https://www.usa.gov/unclaimed-money","Official directory of federal and state recovery sources."]
+["NAUPA — official state portal directory","https://unclaimed.org/search/","Directory of official state unclaimed-property programs; use every state where you lived, worked, owned property, or did business."],
+["MissingMoney — participating states","https://www.missingmoney.com/","Free multi-state search for participating state databases; not every state participates."],
+["USA.gov — federal unclaimed money directory","https://www.usa.gov/unclaimed-money","Official guide to separate federal databases and eligibility limits."],
+["Department of Labor — unpaid wages","https://webapps.dol.gov/WOW/","Search back wages recovered by the Wage and Hour Division."],
+["PBGC — missing pensions","https://www.pbgc.gov/workers-retirees/find-unclaimed-retirement-benefits","Search certain missing private defined-benefit pension benefits."],
+["VA — unclaimed life insurance","https://insurance.va.gov/","Relevant only if you or a qualifying beneficiary had eligible VA life insurance."],
+["HUD — FHA mortgage insurance refunds","https://entp.hud.gov/dsrs/refunds/","Search potential FHA mortgage insurance premium refunds."],
+["IRS — Where's My Refund","https://www.irs.gov/wheres-my-refund","Check a tax refund you already filed and expect; not a general property search."],
+["SEC — enforcement distributions","https://www.sec.gov/enforce/investor-alerts-and-bulletins/investor-alert-unclaimed-funds","Search distributions only if you were an eligible investor or claimant."],
+["FDIC — failed bank unclaimed funds","https://closedbanks.fdic.gov/funds/","Search funds from failed insured banks."],
+["NCUA — credit union unclaimed shares","https://ncua.gov/support-services/conservatorships-liquidations","Find resources for unclaimed deposits from liquidated credit unions."],
+["TreasuryDirect — savings bonds","https://www.treasurydirect.gov/savings-bonds/","Search and recover savings bonds through Treasury's current tools."],
+["U.S. Courts — bankruptcy unclaimed funds","https://ucf.uscourts.gov/","Search court-held bankruptcy funds; may require court selection and CAPTCHA."],
+["DOI BTFA — IIM whereabouts unknown","https://www.doi.gov/ost/financial-management/individual-indian-money-iim","Specialized search only for eligible Individual Indian Money beneficiaries."],
+["Railroad Retirement Board","https://www.rrb.gov/Benefits/FinancialAssistance/UnclaimedFunds","Check only if you or an eligible beneficiary had Railroad Retirement benefits."],
+["NAUPA — how to search beyond your state","https://unclaimed.org/search-beyond-your-state/","Additional official state and national sources and search guidance."]
 ];
 const $=id=>document.getElementById(id),money=n=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(Number(n)||0);
 const blank=()=>({profile:{},states:[],records:[],claims:[],searchLog:{}});
