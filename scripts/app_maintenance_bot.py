@@ -27,10 +27,11 @@ def inspect_markup(path:Path,content:str):
     except Exception as exc: return [{"level":"error","code":"html_parse_error","message":str(exc),"path":rel}]
     duplicates=sorted({x for x in parser.ids if parser.ids.count(x)>1})
     if duplicates: findings.append({"level":"error","code":"duplicate_html_ids","message":"Duplicate element IDs: "+", ".join(duplicates),"path":rel})
-    missing=sorted(REQUIRED_TABS-set(parser.ids))
-    if missing: findings.append({"level":"error","code":"missing_navigation_targets","message":"Missing tab sections: "+", ".join(missing),"path":rel})
-    broken=sorted(set(parser.tabs)-set(parser.ids))
-    if broken: findings.append({"level":"error","code":"broken_navigation_tabs","message":"Navigation points to missing sections: "+", ".join(broken),"path":rel})
+    if path.name=="index.html":
+        missing=sorted(REQUIRED_TABS-set(parser.ids))
+        if missing: findings.append({"level":"error","code":"missing_navigation_targets","message":"Missing tab sections: "+", ".join(missing),"path":rel})
+        broken=sorted(set(parser.tabs)-set(parser.ids))
+        if broken: findings.append({"level":"error","code":"broken_navigation_tabs","message":"Navigation points to missing sections: "+", ".join(broken),"path":rel})
     for src in parser.scripts:
         if src.startswith(("https://","http://","//")): continue
         target=(path.parent/src.split("?",1)[0].split("#",1)[0]).resolve()
