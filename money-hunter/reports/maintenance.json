@@ -1,0 +1,10 @@
+{
+  "bot": "Money Hunter App Repair & Upgrade Bot",
+  "status": "not_run",
+  "summary": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "findings": [],
+  "message": "Waiting for first GitHub Actions run. No diagnostic checks have completed yet."
+}
