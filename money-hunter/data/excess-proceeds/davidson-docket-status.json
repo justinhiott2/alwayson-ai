@@ -1,0 +1,101 @@
+{
+  "checked_at": "2026-11-23T07:55:52.927520+00:00",
+  "source_index_url": "https://chanceryclerkandmaster.nashville.gov/cases/motion-dockets/",
+  "check_type": "official_published_motion_docket_pdf_scan_case_level_only",
+  "pdfs_checked": 13,
+  "pdfs": [
+    {
+      "url": "https://chanceryclerkandmaster.nashville.gov/wp-content/uploads/10.30.26-Part-I-Response-Docket.pdf",
+      "docket_date": "2026-10-30",
+      "pages": 2,
+      "matched_case_events": 0
+    },
+    {
+      "url": "https://chanceryclerkandmaster.nashville.gov/wp-content/uploads/10.30.26-Part-II-Response-Docket.pdf",
+      "docket_date": "2026-10-30",
+      "pages": 4,
+      "matched_case_events": 0
+    },
+    {
+      "url": "https://chanceryclerkandmaster.nashville.gov/wp-content/uploads/10.30.26-Part-III-Response-Docket.pdf",
+      "docket_date": "2026-10-30",
+      "pages": 3,
+      "matched_case_events": 0
+    },
+    {
+      "url": "https://chanceryclerkandmaster.nashville.gov/wp-content/uploads/10.30.26-Part-IV-Response-Docket.pdf",
+      "docket_date": "2026-10-30",
+      "pages": 1,
+      "matched_case_events": 0
+    },
+    {
+      "url": "https://chanceryclerkandmaster.nashville.gov/wp-content/uploads/11.6.26-Part-I-Response-Docket.pdf",
+      "docket_date": "2026-11-06",
+      "pages": 4,
+      "matched_case_events": 0
+    },
+    {
+      "url": "https://chanceryclerkandmaster.nashville.gov/wp-content/uploads/11.6.26-Part-IV-Response-Docket.pdf",
+      "docket_date": "2026-11-06",
+      "pages": 2,
+      "matched_case_events": 0
+    },
+    {
+      "url": "https://chanceryclerkandmaster.nashville.gov/wp-content/uploads/11.13.26-Part-I-Response-Docket.pdf",
+      "docket_date": "2026-11-13",
+      "pages": 2,
+      "matched_case_events": 0
+    },
+    {
+      "url": "https://chanceryclerkandmaster.nashville.gov/wp-content/uploads/11.13.26-Part-II-Response-Docket.pdf",
+      "docket_date": "2026-11-13",
+      "pages": 3,
+      "matched_case_events": 0
+    },
+    {
+      "url": "https://chanceryclerkandmaster.nashville.gov/wp-content/uploads/11.13.26-Part-III-Response-Docket.pdf",
+      "docket_date": "2026-11-13",
+      "pages": 4,
+      "matched_case_events": 0
+    },
+    {
+      "url": "https://chanceryclerkandmaster.nashville.gov/wp-content/uploads/11.13.26-Part-IV-Response-Docket-v1.pdf",
+      "docket_date": "2026-11-13",
+      "pages": 2,
+      "matched_case_events": 0
+    },
+    {
+      "url": "https://chanceryclerkandmaster.nashville.gov/wp-content/uploads/11.20.26-Part-I-Response-Docket.pdf",
+      "docket_date": "2026-11-20",
+      "pages": 4,
+      "matched_case_events": 1
+    },
+    {
+      "url": "https://chanceryclerkandmaster.nashville.gov/wp-content/uploads/11.20.26-Part-II-Response-Docket.pdf",
+      "docket_date": "2026-11-20",
+      "pages": 6,
+      "matched_case_events": 0
+    },
+    {
+      "url": "https://chanceryclerkandmaster.nashville.gov/wp-content/uploads/11.20.26-Part-IV-Response-Docket.pdf",
+      "docket_date": "2026-11-20",
+      "pages": 1,
+      "matched_case_events": 0
+    }
+  ],
+  "event_count": 1,
+  "events": [
+    {
+      "case_number": "24-0388-I",
+      "docket_date": "2026-11-20",
+      "motion_filed_date": "10/14/2026",
+      "event_type": "excess_proceeds_motion_listed",
+      "event_label": "Motion to Claim Excess Sale Proceeds",
+      "source_pdf_url": "https://chanceryclerkandmaster.nashville.gov/wp-content/uploads/11.20.26-Part-I-Response-Docket.pdf",
+      "parcel_specific": false,
+      "result_status": "motion_listed_outcome_not_verified"
+    }
+  ],
+  "errors": [],
+  "important": "A motion appearing on a published response docket only establishes that a motion was listed for a case. It does not establish the motion was heard, granted, denied, withdrawn, parcel-specific, or paid. The tax-sale case may cover many parcels. Verify the signed order and custodian balance directly."
+}
