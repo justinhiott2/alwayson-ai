@@ -102,13 +102,25 @@ ul{padding-left:20px}.tiny{font-size:.78rem}.hidden{display:none!important}.foot
 </main>
 <script>
 const KEY='mh_excess_proceeds_cases_v1';let cases=[];try{cases=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){cases=[]}if(!cases.some(x=>x.id==='auto-davidson-24-0388-I-09402002900')){cases.unshift({id:'auto-davidson-24-0388-I-09402002900',state:'TN',county:'Davidson County Chancery Court',type:'Tax-sale overage',amount:'248942.87',caseNo:'24-0388-I',parcel:'09402002900',source:'https://chanceryclerkandmaster.nashville.gov/wp-content/uploads/Excess-Proceeds-11-18-26.pdf',stage:'Official verification pending',flag:'Pending claim / motion flagged',notes:'Published Nov. 18, 2026 report lists $248,942.87 held. Asterisk indicates a motion may be pending or resolved. Verify current docket and disbursement status before treating this as open or available. Not the app user\'s money unless a court establishes legal entitlement.',date:'2026-11-23'});try{localStorage.setItem(KEY,JSON.stringify(cases))}catch(e){}}
-const $=id=>document.getElementById(id);function save(){localStorage.setItem(KEY,JSON.stringify(cases));render()}
+const $=id=>document.getElementById(id);function save(){localStorage.setItem(KEY,JSON.stringify(cases));render();renderDocketList()}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function render(){const state=$('filterState').value,stage=$('filterStage').value,rows=cases.filter(x=>(!state||x.state===state)&&(!stage||x.stage===stage));$('countLeads').textContent=cases.length;$('countVerify').textContent=cases.filter(x=>['New public record','Official verification pending'].includes(x.stage)).length;$('countAuthorized').textContent=cases.filter(x=>x.stage==='Claimant authorized').length;const paid=cases.reduce((a,x)=>a+Number(x.feeReceived||0),0);$('countPaid').textContent=paid.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});$('leadList').innerHTML=rows.map(x=>'<article class="lead"><div class="row"><div><span class="tag">'+esc(x.state)+'</span> <span class="tag">'+esc(x.type)+'</span> <span class="tag '+(x.flag.includes('Pending')||x.flag.includes('Unknown')?'red':'gold')+'">'+esc(x.flag)+'</span><h3>'+esc(x.county)+' · '+esc(x.caseNo||x.parcel||'No case reference')+'</h3><b>'+Number(x.amount||0).toLocaleString('en-US',{style:'currency',currency:'USD'})+'</b><p class="tiny muted">Stage: '+esc(x.stage)+' · '+esc(x.date)+'</p><p class="tiny">'+esc(x.notes)+'</p><a href="'+esc(x.source)+'" target="_blank" rel="noopener">Open source ↗</a></div><div class="fit"><button class="secondary" onclick="changeStage(\''+x.id+'\')">Update stage</button> <button class="red" onclick="removeCase(\''+x.id+'\')">Delete</button></div></div></article>').join('');$('empty').classList.toggle('hidden',rows.length>0)}
+function docketUrl(x){return x.state==='SC'?'https://www.sccourts.org/case-records-search/':x.state==='TN'?'https://chanceryclerkandmaster.nashville.gov/cases/public-records-search/':'https://www.usa.gov/courts';}
+function checkDocket(id){
+ const x=cases.find(y=>y.id===id);if(!x)return;
+ window.open(docketUrl(x),'_blank','noopener');
+ const opts=['Motion/petition located','Hearing scheduled','Order entered — signed order reviewed','Disbursement/payment entry located','No result — not proof no claim exists','Portal unavailable / record restricted','Clerk confirmation needed'];
+ const v=prompt('The official docket portal has opened. Record the result number:\n'+opts.map((a,i)=>(i+1)+'. '+a).join('\n'),'1');
+ if(v&&opts[Number(v)-1]){x.docketStatus=opts[Number(v)-1];x.docketCheckedAt=new Date().toISOString().slice(0,10);const note=prompt('Add a short public docket note (event title/date only; no private claimant data):',x.docketNote||'');if(note!==null)x.docketNote=note;save();}
+}
+function renderDocketList(){
+ const el=$('docketCaseList');if(!el)return;
+ el.innerHTML=cases.map(x=>'<article class="lead"><b>'+esc(x.state)+' · '+esc(x.county)+' · '+esc(x.caseNo||x.parcel||'No case ref')+'</b><p class="tiny">Status: '+esc(x.docketStatus||'Not checked')+(x.docketCheckedAt?' · '+esc(x.docketCheckedAt):'')+'</p><p class="tiny muted">'+esc(x.docketNote||'No docket note recorded')+'</p><button class="secondary" onclick="checkDocket(\''+x.id+'\')">Open official docket &amp; record check</button></article>').join('')||'<p class="muted tiny">No saved cases yet.</p>';
+}
 function changeStage(id){const x=cases.find(y=>y.id===id);if(!x)return;const opts=['New public record','Official verification pending','Claim status checked','Eligibility review','Attorney/compliance review','Claimant authorized','Claim filed by claimant/counsel','Disbursed to claimant','Closed / not viable'];const v=prompt('Choose stage number:\n'+opts.map((a,i)=>(i+1)+'. '+a).join('\n'),String(opts.indexOf(x.stage)+1));if(v&&opts[Number(v)-1]){x.stage=opts[Number(v)-1];save()}}
 function removeCase(id){if(confirm('Delete this local record?')){cases=cases.filter(x=>x.id!==id);save()}}
 document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.section').forEach(x=>x.classList.toggle('active',x.id===b.dataset.tab))}));
-$('leadForm').addEventListener('submit',e=>{e.preventDefault();const x={id:Date.now().toString(36),state:$('state').value,county:$('county').value.trim(),type:$('type').value,amount:$('amount').value,caseNo:$('caseNo').value.trim(),parcel:$('parcel').value.trim(),source:$('source').value.trim(),stage:$('stage').value,flag:$('flag').value,notes:$('notes').value.trim(),feeReceived:$('feeReceived').value||'0',date:new Date().toISOString().slice(0,10)};cases.unshift(x);save();e.target.reset();document.querySelector('[data-tab="dashboard"]').click()});
+$('leadForm').addEventListener('submit',e=>{e.preventDefault();const x={id:Date.now().toString(36),state:$('state').value,county:$('county').value.trim(),type:$('type').value,amount:$('amount').value,caseNo:$('caseNo').value.trim(),parcel:$('parcel').value.trim(),source:$('source').value.trim(),stage:$('stage').value,flag:$('flag').value,notes:$('notes').value.trim(),feeReceived:$('feeReceived').value||'0',docketStatus:'Not checked',docketCheckedAt:'',docketNote:'',date:new Date().toISOString().slice(0,10)};cases.unshift(x);save();e.target.reset();document.querySelector('[data-tab="dashboard"]').click()});
 $('refreshRegisterBtn').addEventListener('click',refreshOfficialRegister);
 async function refreshOfficialRegister(){
   const btn=$('refreshRegisterBtn'),status=$('registerStatus');btn.disabled=true;btn.textContent='Refreshing…';status.textContent='Downloading the latest official public register feed…';
@@ -129,9 +141,23 @@ async function refreshOfficialRegister(){
   }catch(err){status.textContent='Refresh not completed: '+err.message;}
   finally{btn.disabled=false;btn.textContent='Refresh official Davidson register';}
 }
+async function loadSouthCarolinaSources(){
+ const target=$('scCountySources'),health=$('scSourceHealth');
+ try{
+  const sourceResp=await fetch('../data/excess-proceeds/south-carolina-county-sources.json?'+Date.now(),{cache:'no-store'});
+  if(!sourceResp.ok)throw new Error('SC source directory is not published yet');
+  const data=await sourceResp.json();
+  const statusResp=await fetch('../data/excess-proceeds/south-carolina-source-status.json?'+Date.now(),{cache:'no-store'});
+  let status=null;if(statusResp.ok)status=await statusResp.json();
+  health.textContent=status?'Last official-link check '+new Date(status.checked_at).toLocaleString()+' · '+status.reachable+' reachable · '+status.restricted+' restricted · '+status.unreachable+' unreachable. Link health only; not docket verification.':'Source health report not yet available; official links remain available below.';
+  target.innerHTML=data.counties.map(c=>'<article class="lead"><span class="tag">'+esc(c.priority)+'</span><h3>'+esc(c.county)+' County</h3><p class="tiny">'+esc(c.notes)+'</p><p class="tiny muted">Office: '+esc(c.contact_phone||'See official page')+(c.contact_email?' · '+esc(c.contact_email):'')+'</p><div><a href="'+esc(c.tax_office_url)+'" target="_blank" rel="noopener">Tax office ↗</a>'+(c.sale_announcement_url?' · <a href="'+esc(c.sale_announcement_url)+'" target="_blank" rel="noopener">Sale announcement ↗</a>':'')+(c.sale_information_url?' · <a href="'+esc(c.sale_information_url)+'" target="_blank" rel="noopener">Sale information ↗</a>':'')+(c.faq_url?' · <a href="'+esc(c.faq_url)+'" target="_blank" rel="noopener">County FAQ ↗</a>':'')+(c.overage_information_url?' · <a href="'+esc(c.overage_information_url)+'" target="_blank" rel="noopener">Overage guidance ↗</a>':'')+'</div></article>').join('');
+ }catch(e){health.textContent='Could not load SC source registry: '+e.message;target.innerHTML='';}
+}
 $('filterState').addEventListener('change',render);$('filterStage').addEventListener('change',render);
-$('exportBtn').addEventListener('click',()=>{const cols=['state','county','type','amount','caseNo','parcel','source','stage','flag','notes','feeReceived','date'];const csv=[cols.join(','),...cases.map(x=>cols.map(k=>'"'+String(x[k]??'').replace(/"/g,'""')+'"').join(','))].join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='excess-proceeds-cases.csv';a.click();URL.revokeObjectURL(a.href)});
+$('exportBtn').addEventListener('click',()=>{const cols=['state','county','type','amount','caseNo','parcel','source','stage','flag','notes','feeReceived','docketStatus','docketCheckedAt','docketNote','date'];const csv=[cols.join(','),...cases.map(x=>cols.map(k=>'"'+String(x[k]??'').replace(/"/g,'""')+'"').join(','))].join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='excess-proceeds-cases.csv';a.click();URL.revokeObjectURL(a.href)});
 render();
+renderDocketList();
+loadSouthCarolinaSources();
 refreshOfficialRegister();
 </script>
 </body></html>
