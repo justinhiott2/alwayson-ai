@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1220"><meta name="apple-mobile-web-app-capable" content="yes">
+<title>Excess Proceeds Recovery Bot | Money Hunter AI</title>
+<style>
+:root{color-scheme:dark;--bg:#090d16;--panel:#121a29;--panel2:#172337;--line:#293951;--gold:#e8bd58;--muted:#a9b5c8;--green:#63d6a2;--red:#ff9a8b;--blue:#8fc7ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 0%,#18253a 0,transparent 40%),var(--bg);color:#eef3fa;font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:#f0ca70}button,input,select,textarea{font:inherit}header{padding:20px max(16px,calc((100% - 1100px)/2));background:#0b1220;border-bottom:1px solid var(--line)}
+h1{margin:0;color:var(--gold);font-size:1.35rem;letter-spacing:.04em}header p{margin:4px 0;color:var(--muted);font-size:.85rem}
+.wrap{max-width:1100px;margin:auto;padding:18px 14px 44px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 14px}
+.hero{background:linear-gradient(120deg,#172337,#111a2a);border-color:#3c4a60}.hero h2{margin:4px 0 8px;font-size:1.55rem}.muted,small{color:var(--muted)}.notice{border-left:3px solid var(--gold);padding:11px 13px;background:#211d13;color:#f4dfaa;border-radius:7px;margin:0 0 14px}.danger{border-left-color:var(--red);background:#2b171b;color:#ffd4d0}.good{border-left-color:var(--green);background:#10251f;color:#b9f3d9}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:11px}.metric{font-size:1.7rem;font-weight:800;color:var(--gold)}.label{font-size:.8rem;color:var(--muted)}
+button,.btn{border:0;border-radius:9px;padding:10px 13px;background:var(--gold);color:#17130a;font-weight:750;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+button.secondary,.btn.secondary{background:#26354b;color:#eef3fa;border:1px solid #3b4d68}button.red{background:#482c32;color:#ffd9d4;border:1px solid #75454b}
+input,select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#0b1220;color:#fff}
+textarea{min-height:84px;resize:vertical}.field{margin:9px 0}.field label{display:block;color:#c5d0df;font-size:.82rem;margin-bottom:4px}
+.row{display:flex;gap:9px;flex-wrap:wrap;align-items:center}.row>*{flex:1}.row .fit{flex:0 0 auto}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}.tabs button.active{background:var(--gold);color:#17130a}
+.section{display:none}.section.active{display:block}.tag{display:inline-block;border:1px solid var(--line);border-radius:20px;padding:2px 8px;color:var(--muted);font-size:.72rem}
+.tag.green{color:var(--green);border-color:#316b58}.tag.red{color:var(--red);border-color:#75454b}.tag.gold{color:var(--gold);border-color:#765e2c}
+.lead{background:#0d1522;border:1px solid var(--line);border-radius:11px;padding:13px;margin:10px 0}.lead h3{margin:4px 0;color:var(--gold);font-size:1.02rem}
+table{width:100%;border-collapse:collapse;min-width:680px}th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);font-size:.83rem;vertical-align:top}.tablewrap{overflow:auto}
+ul{padding-left:20px}.tiny{font-size:.78rem}.hidden{display:none!important}.foot{text-align:center;color:var(--muted);font-size:.75rem;padding:20px}
+@media(max-width:600px){header{padding:16px}.wrap{padding:12px}.panel{padding:13px}.row>*{flex-basis:100%}.row .fit{flex-basis:auto}.tabs button{flex:1}}
+@media print{header,.tabs,button,.no-print{display:none!important}body{background:#fff;color:#111}.panel,.lead{background:#fff;color:#111}.section{display:block!important}}
+</style>
+</head>
+<body>
+<header><h1>✦ MONEY HUNTER AI · EXCESS PROCEEDS RECOVERY</h1><p>Dedicated research, eligibility screening and claimant-authorized case tracking</p></header>
+<main class="wrap">
+<div class="notice danger"><b>Compliance gate — read first.</b> This bot is a research and case-management assistant, not a law firm, licensed investigator, claims administrator or government representative. It does not make another person's funds yours. It must not scrape claimant personal details for marketing, cold-contact people, submit claims, sign declarations, or collect funds. No fee arrangement should be offered until the applicable state licensing, solicitation and fee rules are verified by a qualified attorney.</div>
+<section class="panel hero">
+<span class="tag green">Dedicated bot · $0-upfront operating design</span>
+<h2>Find the surplus. Verify the claimant. Track the lawful recovery.</h2>
+<p class="muted">This bot is strictly for court-held foreclosure surplus, tax-sale overages and state-held unclaimed property. It excludes land auctions, property wholesaling, general contracts and unrelated money searches.</p>
+<div class="grid">
+<div><div class="metric" id="countLeads">0</div><div class="label">Saved public-record leads</div></div>
+<div><div class="metric" id="countVerify">0</div><div class="label">Awaiting official verification</div></div>
+<div><div class="metric" id="countAuthorized">0</div><div class="label">Claimant-authorized cases</div></div>
+<div><div class="metric" id="countPaid">$0</div><div class="label">Confirmed fees received</div></div>
+</div>
+</section>
+<div class="tabs no-print">
+<button class="active" data-tab="dashboard">Dashboard</button><button data-tab="add">Add a record</button><button data-tab="rules">Legal gates</button><button data-tab="workflow">Workflow</button><button data-tab="sources">Official sources</button>
+</div>
+<section id="dashboard" class="section active">
+<div class="panel"><div class="row"><div><h2>Case register</h2><p class="muted tiny">Only enter public case/parcel references and non-sensitive status notes. Do not enter SSNs, dates of birth, claimant home addresses, bank details, IDs or private documents.</p></div><button class="secondary fit" id="exportBtn">Export CSV</button></div>
+<div class="row"><div class="field"><label>Filter by state</label><select id="filterState"><option value="">All states</option><option>SC</option><option>TN</option><option>NC</option><option>Other</option></select></div><div class="field"><label>Filter by stage</label><select id="filterStage"><option value="">All stages</option><option>New public record</option><option>Official verification pending</option><option>Claim status checked</option><option>Eligibility review</option><option>Attorney/compliance review</option><option>Claimant authorized</option><option>Claim filed by claimant/counsel</option><option>Disbursed to claimant</option><option>Closed / not viable</option></select></div></div>
+<div id="leadList"></div><p id="empty" class="muted">No records saved yet. Add a public-record reference to begin.</p></div>
+</section>
+<section id="add" class="section">
+<div class="panel"><h2>Add public record lead</h2><p class="muted tiny">This creates a local case note in this browser only. It does not contact the court, claimant or government office.</p>
+<form id="leadForm">
+<div class="row"><div class="field"><label>State *</label><select id="state" required><option value="">Choose state</option><option value="SC">South Carolina</option><option value="TN">Tennessee</option><option value="NC">North Carolina</option><option value="Other">Other</option></select></div><div class="field"><label>County / court *</label><input id="county" required placeholder="e.g. Davidson County Chancery Court"></div></div>
+<div class="row"><div class="field"><label>Record type *</label><select id="type" required><option value="Tax-sale overage">Tax-sale overage</option><option value="Foreclosure surplus">Foreclosure surplus</option><option value="State-held unclaimed property">State-held unclaimed property</option><option value="Other court-held surplus">Other court-held surplus</option></select></div><div class="field"><label>Reported amount (USD)</label><input id="amount" type="number" min="0" step=".01" placeholder="0.00"></div></div>
+<div class="row"><div class="field"><label>Case number</label><input id="caseNo" placeholder="Public docket / case reference"></div><div class="field"><label>Parcel / property reference</label><input id="parcel" placeholder="APN / parcel ID (if public)"></div></div>
+<div class="field"><label>Public official source URL *</label><input id="source" type="url" required placeholder="https://official-county-or-court.gov/..."></div>
+<div class="row"><div class="field"><label>Current stage</label><select id="stage"><option>New public record</option><option>Official verification pending</option><option>Claim status checked</option><option>Eligibility review</option><option>Attorney/compliance review</option><option>Claimant authorized</option><option>Claim filed by claimant/counsel</option><option>Disbursed to claimant</option><option>Closed / not viable</option></select></div><div class="field"><label>Claim / docket flag</label><select id="flag"><option>Unknown — must verify</option><option>Pending claim / motion flagged</option><option>Claim already filed</option><option>Claim denied</option><option>Paid / disbursed</option><option>No claim located in searched docket</option></select></div></div>
+<div class="field"><label>Public-record notes / next verification step</label><textarea id="notes" placeholder="Record what the official source actually says. Do not add private claimant contact details."></textarea></div>
+<label class="tiny"><input id="officialOnly" type="checkbox" required> I have checked that this is an official government/court source or I have clearly labeled it as an unverified secondary pointer.</label>
+<p><button type="submit">Save record</button> <button type="reset" class="secondary">Clear form</button></p>
+</form></div>
+</section>
+<section id="rules" class="section">
+<div class="panel"><h2>State legal gates — must pass before any recovery service</h2>
+<div class="notice danger"><b>Tennessee:</b> The Tennessee Treasury says third-party locators must be licensed as private investigators. Its locator rules for property held by the Treasurer include written agreements and compensation limits. These rules are for state-held unclaimed property; do not automatically apply them to tax-sale court surplus. <a href="https://treasury.tn.gov/Unclaimed-Property/About-Unclaimed-Property/Third-Party-Locators" target="_blank" rel="noopener">Official Tennessee Treasury locator guidance ↗</a></div>
+<div class="notice danger"><b>South Carolina:</b> S.C. Code §30-2-50 prohibits knowingly obtaining or using personal information from state/local government records for commercial solicitation directed to people in South Carolina. Do not use county claimant lists to build a cold-call, mail or email marketing campaign. Tax-sale overages generally belong to the owner of record immediately before the redemption period ends; counties may pay only the rightful claimant. <a href="https://www.scstatehouse.gov/query?conid=8576382&key=30-2&op=codeoflawssearch&perpage=10&searchtext=Public+Records&start=0" target="_blank" rel="noopener">SC Legislature §30-2-50 ↗</a> · <a href="https://www.scstatehouse.gov/query?conid=9334125&key=12-51&op=codeoflawssearch&perpage=10&searchtext=12-51&start=20" target="_blank" rel="noopener">SC Legislature §12-51-130 ↗</a></div>
+<div class="notice"><b>Tennessee tax-sale court surplus:</b> Tennessee Code §67-5-2702 provides a court-motion process and priority rules among tax entities, lienholders and qualifying taxpayers/heirs. Davidson County's information sheet states a $75 filing fee, signed motion, supporting documents and service requirements. This is a claimant/counsel court process, not a finder entitlement. <a href="https://law.justia.com/codes/tennessee/2024/title-67/chapter-5/part-27/section-67-5-2702/" target="_blank" rel="noopener">Statute ↗</a> · <a href="https://chanceryclerkandmaster.nashville.gov/wp-content/uploads/excess-sale-proceeds-information-sheet-revised-12.30.25.pdf" target="_blank" rel="noopener">Davidson County filing information ↗</a></div>
+<div class="notice"><b>South Carolina reported unclaimed property:</b> S.C. Code §27-18-360 makes agreements within 24 months after property is paid/delivered to the state unenforceable and caps covered locator compensation at 15%. This is a different regime from county tax-sale overages; do not mix the rules. <a href="https://law.justia.com/codes/south-carolina/title-27/chapter-18/section-27-18-360/" target="_blank" rel="noopener">SC Code §27-18-360 ↗</a></div>
+<h3>Mandatory checks before any paid assistance</h3>
+<ul><li>Confirm exact fund type: county tax-sale overage, foreclosure surplus, or state-held unclaimed property.</li><li>Confirm current amount, custodian, case status, filing deadline and whether funds were paid or transferred.</li><li>Identify legal priority and claimant category from law and official records; do not infer heirship from a surname.</li><li>Check licensing, private-investigator, attorney, claims-agent, solicitation, fee-cap and contract requirements in the relevant state.</li><li>Obtain claimant-initiated contact or documented authorization through a lawful channel. No cold solicitation from public-record personal information.</li><li>Have a qualified attorney review any compensation contract before it is offered or signed.</li><li>Do not advance a case if the claimant must pay fees the user cannot cover; show all fees and who must pay them.</li></ul>
+</div>
+</section>
+<section id="workflow" class="section">
+<div class="panel"><h2>Required case workflow</h2>
+<ol><li><b>Discover:</b> find a published public balance or official surplus list.</li><li><b>Verify custodian:</b> confirm directly against the current official register, docket or agency record.</li><li><b>Check case status:</b> search motions, hearings, orders, liens, redemptions and disbursement entries. “No result” is not proof no claim exists.</li><li><b>Determine legal claimant:</b> document the applicable statutory priority and the evidence required. Estates/heirs require special scrutiny.</li><li><b>Compliance gate:</b> verify whether the proposed service requires a PI, attorney or other license and whether outreach/fee agreements are permitted.</li><li><b>Authorization:</b> only proceed when the rightful claimant independently authorizes lawful assistance. The bot never initiates claimant outreach.</li><li><b>Claim:</b> claimant or their attorney signs and files the claim/motion. Bot may organize a checklist and draft neutral inquiry text, not legal pleadings presented as counsel.</li><li><b>Disbursement:</b> record official payment confirmation to the claimant. Any separate fee is handled only under the valid agreement and applicable law.</li></ol>
+<div class="notice good"><b>$0 rule:</b> The bot does not pay filing fees, buy records, retain counsel, purchase leads or advance expenses. Any case requiring money before recovery is marked “not viable under current $0 budget” unless a lawful third party has agreed in writing to cover it.</div>
+</div>
+</section>
+<section id="sources" class="section">
+<div class="panel"><h2>Official source directory</h2>
+<div class="lead"><b>Tennessee Treasury — third-party locators</b><p class="muted tiny">Licensing notice, contract requirements and state-held unclaimed property fee limits.</p><a href="https://treasury.tn.gov/Unclaimed-Property/About-Unclaimed-Property/Third-Party-Locators" target="_blank" rel="noopener">Open official guidance ↗</a></div>
+<div class="lead"><b>Davidson County Chancery Clerk & Master — excess proceeds</b><p class="muted tiny">Court-held tax-sale proceeds, claimant motion process and filing information.</p><a href="https://chanceryclerkandmaster.nashville.gov/" target="_blank" rel="noopener">Open Clerk & Master ↗</a></div>
+<div class="lead"><b>South Carolina Legislature — tax-sale overages</b><p class="muted tiny">S.C. Code §12-51-130: overage claimant, 90-day timing and five-year escheat period.</p><a href="https://www.scstatehouse.gov/query?conid=9334125&key=12-51&op=codeoflawssearch&perpage=10&searchtext=12-51&start=20" target="_blank" rel="noopener">Open official statute ↗</a></div>
+<div class="lead"><b>South Carolina Legislature — public-record solicitation restriction</b><p class="muted tiny">S.C. Code §30-2-50.</p><a href="https://www.scstatehouse.gov/query?conid=8576382&key=30-2&op=codeoflawssearch&perpage=10&searchtext=Public+Records&start=0" target="_blank" rel="noopener">Open official statute ↗</a></div>
+<div class="lead"><b>South Carolina Unclaimed Property</b><p class="muted tiny">State-held unclaimed property is a different category from county tax-sale overages.</p><a href="https://southcarolina.findyourunclaimedproperty.com/" target="_blank" rel="noopener">Open state search ↗</a></div>
+<div class="lead"><b>North Carolina Department of State Treasurer</b><p class="muted tiny">Official state unclaimed property program; verify current locator and fee rules before offering services.</p><a href="https://www.nctreasurer.com/Unclaimed-Property" target="_blank" rel="noopener">Open official program ↗</a></div>
+</div>
+</section>
+<p class="foot">Money Hunter AI · Excess Proceeds Recovery Bot · Local browser storage only. Export a backup regularly. Not legal advice, not a government service, and not proof of a recoverable claim.</p>
+</main>
+<script>
+const KEY='mh_excess_proceeds_cases_v1';let cases=[];try{cases=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){cases=[]}
+const $=id=>document.getElementById(id);function save(){localStorage.setItem(KEY,JSON.stringify(cases));render()}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function render(){const state=$('filterState').value,stage=$('filterStage').value,rows=cases.filter(x=>(!state||x.state===state)&&(!stage||x.stage===stage));$('countLeads').textContent=cases.length;$('countVerify').textContent=cases.filter(x=>['New public record','Official verification pending'].includes(x.stage)).length;$('countAuthorized').textContent=cases.filter(x=>x.stage==='Claimant authorized').length;const paid=cases.filter(x=>x.stage==='Disbursed to claimant').reduce((a,x)=>a+Number(x.amount||0),0);$('countPaid').textContent=paid.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});$('leadList').innerHTML=rows.map(x=>'<article class="lead"><div class="row"><div><span class="tag">'+esc(x.state)+'</span> <span class="tag">'+esc(x.type)+'</span> <span class="tag '+(x.flag.includes('Pending')||x.flag.includes('Unknown')?'red':'gold')+'">'+esc(x.flag)+'</span><h3>'+esc(x.county)+' · '+esc(x.caseNo||x.parcel||'No case reference')+'</h3><b>'+Number(x.amount||0).toLocaleString('en-US',{style:'currency',currency:'USD'})+'</b><p class="tiny muted">Stage: '+esc(x.stage)+' · '+esc(x.date)+'</p><p class="tiny">'+esc(x.notes)+'</p><a href="'+esc(x.source)+'" target="_blank" rel="noopener">Open source ↗</a></div><div class="fit"><button class="secondary" onclick="changeStage(\''+x.id+'\')">Update stage</button> <button class="red" onclick="removeCase(\''+x.id+'\')">Delete</button></div></div></article>').join('');$('empty').classList.toggle('hidden',rows.length>0)}
+function changeStage(id){const x=cases.find(y=>y.id===id);if(!x)return;const opts=['New public record','Official verification pending','Claim status checked','Eligibility review','Attorney/compliance review','Claimant authorized','Claim filed by claimant/counsel','Disbursed to claimant','Closed / not viable'];const v=prompt('Choose stage number:\n'+opts.map((a,i)=>(i+1)+'. '+a).join('\n'),String(opts.indexOf(x.stage)+1));if(v&&opts[Number(v)-1]){x.stage=opts[Number(v)-1];save()}}
+function removeCase(id){if(confirm('Delete this local record?')){cases=cases.filter(x=>x.id!==id);save()}}
+document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.section').forEach(x=>x.classList.toggle('active',x.id===b.dataset.tab))}));
+$('leadForm').addEventListener('submit',e=>{e.preventDefault();const x={id:Date.now().toString(36),state:$('state').value,county:$('county').value.trim(),type:$('type').value,amount:$('amount').value,caseNo:$('caseNo').value.trim(),parcel:$('parcel').value.trim(),source:$('source').value.trim(),stage:$('stage').value,flag:$('flag').value,notes:$('notes').value.trim(),date:new Date().toISOString().slice(0,10)};cases.unshift(x);save();e.target.reset();document.querySelector('[data-tab="dashboard"]').click()});
+$('filterState').addEventListener('change',render);$('filterStage').addEventListener('change',render);
+$('exportBtn').addEventListener('click',()=>{const cols=['state','county','type','amount','caseNo','parcel','source','stage','flag','notes','date'];const csv=[cols.join(','),...cases.map(x=>cols.map(k=>'"'+String(x[k]??'').replace(/"/g,'""')+'"').join(','))].join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='excess-proceeds-cases.csv';a.click();URL.revokeObjectURL(a.href)});
+render();
+</script>
+</body></html>
