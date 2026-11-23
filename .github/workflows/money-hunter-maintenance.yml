@@ -1,0 +1,68 @@
+name: Money Hunter App Repair and Upgrade Bot
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "money-hunter/**"
+      - "scripts/**"
+      - ".github/workflows/**"
+      - "AGENTS.md"
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: money-hunter-maintenance
+  cancel-in-progress: false
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out app
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run diagnostics
+        id: diagnostics
+        continue-on-error: true
+        run: python scripts/app_maintenance_bot.py | tee maintenance-output.json
+      - name: Publish maintenance report
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add money-hunter/reports/maintenance.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: publish app maintenance report"
+            git push
+          fi
+      - name: Create or update repair issue when checks fail
+        if: steps.diagnostics.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="Maintenance bot: app checks need attention"
+          BODY="$(cat <<'EOF'
+          The scheduled maintenance bot found one or more errors.
+
+          Review the latest diagnostic report:
+          https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/money-hunter/reports/maintenance.json
+
+          Run details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          Repair safely on a separate branch, add or update tests, and open a pull request. Do not access claimant personal data, introduce paid services without approval, or change claim/payment submission behavior.
+          EOF
+          )"
+          EXISTING="$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number')"
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$BODY"
+          else
+            gh issue create --title "$TITLE" --body "$BODY" --label "bug" || gh issue create --title "$TITLE" --body "$BODY"
+          fi
+      - name: Fail workflow if diagnostics failed
+        if: steps.diagnostics.outcome == 'failure'
+        run: exit 1
