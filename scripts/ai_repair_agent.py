@@ -79,7 +79,7 @@ Return a minimal unified diff for a reproducible issue only. If uncertain, retur
     if not patch: fail("Gemini returned an empty completion; no patch applied.")
     if patch == "NO_SAFE_PATCH": fail("No safe repair was established. No files changed.")
     if patch.startswith("```"): fail("Model returned fenced text instead of a raw diff. No files changed.")
-    paths = re.findall(r"^(?:\\+\\+\\+|---) [ab]/([^\\t\\n]+)", patch, re.M)
+    paths = re.findall(r"^(?:\+\+\+|---) [ab]/([^\t\n]+)", patch, re.M)
     if not paths: fail("Model did not return a valid unified diff. No files changed.")
     for path in paths:
         if not (path.startswith("money-hunter/") or path.startswith("tests/")): fail(f"Blocked patch path: {path}")
