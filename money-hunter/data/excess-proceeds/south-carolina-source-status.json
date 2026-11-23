@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-23T09:32:02.884595+00:00",
+  "checked_at": "2026-11-23T09:33:33.947058+00:00",
   "check_type": "official_source_link_health_only_not_docket_search",
   "county_count": 46,
   "county_coverage": {
@@ -837,7 +837,7 @@
       "kind": "sale_information_url",
       "url": "https://saludacounty.sc.gov/departments/tax-collector/delinquent-tax-sale",
       "status": "reachable",
-      "http_status": 206,
+      "http_status": 200,
       "detail": ""
     },
     {
