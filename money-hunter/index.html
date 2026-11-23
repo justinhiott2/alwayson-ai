@@ -46,3 +46,4 @@ document.getElementById('explore').onclick=()=>{let w=network.value,a=document.g
 document.getElementById('analyze').onclick=()=>{let t=document.getElementById('contract').value,terms=['earnest money','deposit','refund','termination','contingency','assignment','default','notice','deadline','credit','rebate','liquidated damages','closing costs','escrow','option period'];let found=terms.filter(k=>t.toLowerCase().includes(k));document.getElementById('analysis').textContent=found.length?'Terms to inspect: '+found.join(', ')+'. Review the full clause, definitions, deadlines, notice requirements, and governing law.':'No checklist keywords found. This does not mean the contract has no important obligations.'};
 render();
 </script></body></html>
+<!-- deploy refresh -->
