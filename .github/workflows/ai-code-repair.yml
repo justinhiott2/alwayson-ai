@@ -1,5 +1,19 @@
 name: AI Code Repair Agent
-on:
+on:curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent" \
+  -H 'Content-Type: application/json' \
+  -H 'X-goog-api-key: AQ.Ab8RN6Ji4Q9o3UD-ZQILIpDSkLl4INpPdvufatK9zt59J6tbqw' \
+  -X POST \
+  -d '{
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Explain how AI works in a few words"
+          }
+        ]
+      }
+    ]
+  }'
   workflow_dispatch:
     inputs:
       issue_number:
