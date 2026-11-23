@@ -1,0 +1,403 @@
+{
+  "generated_at": "2026-11-23T07:50:02.734935+00:00",
+  "source_name": "Davidson County Chancery Clerk & Master \u2014 official excess proceeds register",
+  "source_index_url": "https://chanceryclerkandmaster.nashville.gov/fees/property-tax-schedule/",
+  "source_pdf_url": "https://chanceryclerkandmaster.nashville.gov/wp-content/uploads/Excess-Proceeds-11-18-26.pdf",
+  "report_date_from_filename": "2026-11-18",
+  "parser": "pypdf line-table parser v1",
+  "record_count": 39,
+  "pdf_pages": 1,
+  "important": "This is a transcription of a public register, not a docket search or proof funds remain available. An asterisk means a motion to claim or redeem may be pending or resolved and funds may not yet be disbursed. No claimant names or contact information are stored. Verify current docket, custodian balance, legal priority and disbursement directly before any action.",
+  "records": [
+    {
+      "case_number": "25-0490-II",
+      "parcel_reference": "053120B03500CO",
+      "amount_reported_usd": 61953.44,
+      "funds_held_since": "6/25/2026",
+      "most_recent_financial_activity": "9/2/2026",
+      "confirming_order_date": "9/1/2026",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "25-0490-II",
+      "parcel_reference": "053120B03600CO",
+      "amount_reported_usd": 69953.44,
+      "funds_held_since": "6/25/2026",
+      "most_recent_financial_activity": "9/2/2026",
+      "confirming_order_date": "9/1/2026",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "25-0490-II",
+      "parcel_reference": "15000037600",
+      "amount_reported_usd": 316.48,
+      "funds_held_since": "8/18/2026",
+      "most_recent_financial_activity": "11/17/2026",
+      "confirming_order_date": "11/13/2026",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "24-0388-I",
+      "parcel_reference": "17500000100",
+      "amount_reported_usd": 41385.74,
+      "funds_held_since": "6/24/2025",
+      "most_recent_financial_activity": "10/10/2025",
+      "confirming_order_date": "10/6/2025",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "24-0388-I",
+      "parcel_reference": "02200014100",
+      "amount_reported_usd": 6455.83,
+      "funds_held_since": "7/17/2025",
+      "most_recent_financial_activity": "10/7/2025",
+      "confirming_order_date": "9/29/2025",
+      "asterisk_flag": true,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "25-0490-II",
+      "parcel_reference": "01700026000",
+      "amount_reported_usd": 8423.98,
+      "funds_held_since": "6/22/2026",
+      "most_recent_financial_activity": "9/2/2026",
+      "confirming_order_date": "9/1/2026",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "25-0490-II",
+      "parcel_reference": "02200007600",
+      "amount_reported_usd": 38940.56,
+      "funds_held_since": "8/20/2026",
+      "most_recent_financial_activity": "11/2/2026",
+      "confirming_order_date": "10/28/2026",
+      "asterisk_flag": true,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "23-0416-IV",
+      "parcel_reference": "03100005800",
+      "amount_reported_usd": 1201.43,
+      "funds_held_since": "8/7/2024",
+      "most_recent_financial_activity": "9/25/2024",
+      "confirming_order_date": "9/17/2024",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "23-0416-IV",
+      "parcel_reference": "09413005200",
+      "amount_reported_usd": 6408.49,
+      "funds_held_since": "6/14/2024",
+      "most_recent_financial_activity": "8/12/2024",
+      "confirming_order_date": "8/2/2024",
+      "asterisk_flag": true,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "24-0388-I",
+      "parcel_reference": "08415005400",
+      "amount_reported_usd": 6303.6,
+      "funds_held_since": "7/17/2025",
+      "most_recent_financial_activity": "10/7/2025",
+      "confirming_order_date": "9/29/2025",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "23-0416-IV",
+      "parcel_reference": "04307003500",
+      "amount_reported_usd": 66829.17,
+      "funds_held_since": "6/14/2024",
+      "most_recent_financial_activity": "8/12/2024",
+      "confirming_order_date": "8/2/2024",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "22-0464-III",
+      "parcel_reference": "04900036700",
+      "amount_reported_usd": 60054.63,
+      "funds_held_since": "6/23/2023",
+      "most_recent_financial_activity": "8/21/2023",
+      "confirming_order_date": "8/11/2023",
+      "asterisk_flag": true,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "24-0388-I",
+      "parcel_reference": "01816006300",
+      "amount_reported_usd": 157744.3,
+      "funds_held_since": "7/18/2025",
+      "most_recent_financial_activity": "10/7/2025",
+      "confirming_order_date": "9/29/2025",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "25-0490-II",
+      "parcel_reference": "03900007300",
+      "amount_reported_usd": 89765.74,
+      "funds_held_since": "8/19/2026",
+      "most_recent_financial_activity": "11/2/2026",
+      "confirming_order_date": "10/28/2026",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "24-0388-I",
+      "parcel_reference": "09402002900",
+      "amount_reported_usd": 248942.87,
+      "funds_held_since": "7/17/2025",
+      "most_recent_financial_activity": "10/7/2025",
+      "confirming_order_date": "9/29/2025",
+      "asterisk_flag": true,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "25-0490-II",
+      "parcel_reference": "051100E01800CO",
+      "amount_reported_usd": 106024.97,
+      "funds_held_since": "6/25/2026",
+      "most_recent_financial_activity": "9/2/2026",
+      "confirming_order_date": "9/1/2026",
+      "asterisk_flag": true,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "24-0388-I",
+      "parcel_reference": "08614D90300CO",
+      "amount_reported_usd": 1326.8,
+      "funds_held_since": "6/20/2025",
+      "most_recent_financial_activity": "10/28/2025",
+      "confirming_order_date": "10/23/2025",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "24-0388-I",
+      "parcel_reference": "03100000100",
+      "amount_reported_usd": 2950.62,
+      "funds_held_since": "1/28/2025",
+      "most_recent_financial_activity": "4/1/2025",
+      "confirming_order_date": "3/28/2025",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "23-0416-IV",
+      "parcel_reference": "069160A01100CO",
+      "amount_reported_usd": 22622.32,
+      "funds_held_since": "6/14/2024",
+      "most_recent_financial_activity": "8/12/2024",
+      "confirming_order_date": "8/2/2024",
+      "asterisk_flag": true,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "24-0388-I",
+      "parcel_reference": "164080A04400CO",
+      "amount_reported_usd": 51019.95,
+      "funds_held_since": "7/17/2025",
+      "most_recent_financial_activity": "10/7/2025",
+      "confirming_order_date": "9/29/2025",
+      "asterisk_flag": true,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "24-0388-I",
+      "parcel_reference": "17602016300",
+      "amount_reported_usd": 19476.35,
+      "funds_held_since": "7/18/2025",
+      "most_recent_financial_activity": "10/7/2025",
+      "confirming_order_date": "9/29/2025",
+      "asterisk_flag": true,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "24-0388-I",
+      "parcel_reference": "05915018900",
+      "amount_reported_usd": 1806.5,
+      "funds_held_since": "7/17/2025",
+      "most_recent_financial_activity": "10/7/2025",
+      "confirming_order_date": "9/29/2025",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "25-0490-II",
+      "parcel_reference": "107130A04000CO",
+      "amount_reported_usd": 78923.68,
+      "funds_held_since": "6/25/2026",
+      "most_recent_financial_activity": "9/2/2026",
+      "confirming_order_date": "9/1/2026",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "25-0490-II",
+      "parcel_reference": "072060N00100CO",
+      "amount_reported_usd": 205482.52,
+      "funds_held_since": "6/25/2026",
+      "most_recent_financial_activity": "9/2/2026",
+      "confirming_order_date": "9/1/2026",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "23-0416-IV",
+      "parcel_reference": "09213033100",
+      "amount_reported_usd": 135431.68,
+      "funds_held_since": "6/14/2024",
+      "most_recent_financial_activity": "11/5/2025",
+      "confirming_order_date": "8/2/2024",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "25-0490-II",
+      "parcel_reference": "043100B10200CO",
+      "amount_reported_usd": 71852.92,
+      "funds_held_since": "7/16/2026",
+      "most_recent_financial_activity": "9/2/2026",
+      "confirming_order_date": "9/1/2026",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "23-0416-IV",
+      "parcel_reference": "05916016200",
+      "amount_reported_usd": 4333.27,
+      "funds_held_since": "6/13/2024",
+      "most_recent_financial_activity": "8/12/2024",
+      "confirming_order_date": "8/2/2024",
+      "asterisk_flag": true,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "25-0490-II",
+      "parcel_reference": "05916011200",
+      "amount_reported_usd": 1171.74,
+      "funds_held_since": "6/22/2026",
+      "most_recent_financial_activity": "9/2/2026",
+      "confirming_order_date": "9/1/2026",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "22-0464-III",
+      "parcel_reference": "12810020100",
+      "amount_reported_usd": 3759.87,
+      "funds_held_since": "6/23/2023",
+      "most_recent_financial_activity": "8/21/2023",
+      "confirming_order_date": "8/11/2023",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "25-0490-II",
+      "parcel_reference": "10803019800",
+      "amount_reported_usd": 84881.28,
+      "funds_held_since": "1/21/2026",
+      "most_recent_financial_activity": "3/12/2026",
+      "confirming_order_date": "3/6/2026",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "24-0388-I",
+      "parcel_reference": "172050B11400CO",
+      "amount_reported_usd": 19507.85,
+      "funds_held_since": "7/18/2025",
+      "most_recent_financial_activity": "10/7/2025",
+      "confirming_order_date": "9/29/2025",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "23-0416-IV",
+      "parcel_reference": "06400003600",
+      "amount_reported_usd": 17624.03,
+      "funds_held_since": "6/13/2024",
+      "most_recent_financial_activity": "8/12/2024",
+      "confirming_order_date": "8/2/2024",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "24-0388-I",
+      "parcel_reference": "08112007400",
+      "amount_reported_usd": 22820.36,
+      "funds_held_since": "12/20/2024",
+      "most_recent_financial_activity": "2/5/2025",
+      "confirming_order_date": "2/5/2025",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "25-0490-II",
+      "parcel_reference": "092100B00500CO",
+      "amount_reported_usd": 71568.77,
+      "funds_held_since": "8/17/2026",
+      "most_recent_financial_activity": "11/2/2026",
+      "confirming_order_date": "10/28/2026",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "25-0490-II",
+      "parcel_reference": "051150C00700CO",
+      "amount_reported_usd": 157388.41,
+      "funds_held_since": "7/16/2026",
+      "most_recent_financial_activity": "9/2/2026",
+      "confirming_order_date": "9/1/2026",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "19-360-IV",
+      "parcel_reference": "05307008300",
+      "amount_reported_usd": 48009.02,
+      "funds_held_since": "7/17/2019",
+      "most_recent_financial_activity": "8/27/2019",
+      "confirming_order_date": "8/26/2019",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "25-0490-II",
+      "parcel_reference": "10100020100",
+      "amount_reported_usd": 22546.79,
+      "funds_held_since": "6/18/2026",
+      "most_recent_financial_activity": "9/2/2026",
+      "confirming_order_date": "9/1/2026",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "23-0416-IV",
+      "parcel_reference": "12815001100",
+      "amount_reported_usd": 1358.39,
+      "funds_held_since": "6/13/2024",
+      "most_recent_financial_activity": "8/12/2024",
+      "confirming_order_date": "8/2/2024",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    },
+    {
+      "case_number": "24-0388-I",
+      "parcel_reference": "14900034000",
+      "amount_reported_usd": 21143.4,
+      "funds_held_since": "7/17/2025",
+      "most_recent_financial_activity": "10/7/2025",
+      "confirming_order_date": "9/29/2025",
+      "asterisk_flag": false,
+      "verification_status": "public_register_only_unverified"
+    }
+  ]
+}
