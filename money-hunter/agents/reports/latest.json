@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T05:57:23.355360+00:00",
+  "generated_at": "2026-11-23T13:37:47.659661+00:00",
   "mode": "free_public_source_autonomous_scan",
   "important": "This run searches public APIs where available and refreshes official source links. It does not perform personal claimant searches, prove ownership, submit claims, bid, sign contracts, or confirm income.",
   "agents": [
@@ -168,9 +168,10 @@
       "title": "US Courts unclaimed funds",
       "url": "https://ucf.uscourts.gov/",
       "summary": "Bankruptcy court unclaimed funds search.",
-      "status": "reachable",
+      "status": "unreachable",
       "evidence": {
-        "http_status": 200
+        "http_status": 404,
+        "note": "Automated request blocked or failed; manual official-site check may still work."
       },
       "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
     },
