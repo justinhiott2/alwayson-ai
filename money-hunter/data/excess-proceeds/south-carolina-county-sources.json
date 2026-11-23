@@ -58,13 +58,14 @@
       "county": "Anderson",
       "priority": "statewide_directory",
       "county_website_url": "https://www.andersoncountysc.org",
-      "tax_office_url": null,
+      "tax_office_url": "https://www.andersoncountysc.org/departments-a-z/treasurer/",
       "sale_announcement_url": null,
       "sale_information_url": null,
       "public_overage_register_url": null,
       "overage_claim_form_url": null,
-      "coverage_status": "county_portal_only_needs_tax_office_review",
-      "notes": "Official county website link supplied by the South Carolina Association of Counties directory. The county's delinquent-tax office page, overage claim procedure, current balance register and contact details have not yet been individually verified for Money Hunter. Open the county website and locate the Treasurer/Delinquent Tax Collector; ask whether tax-sale overages exist, who may claim them, and what public records are available. This is a directory lead only, not evidence of available funds."
+      "coverage_status": "official_tax_office_source_reviewed",
+      "notes": "Official Treasurer page identifies the elected county tax-collection office and contact details. The reviewed page does not publish a dedicated overage register or claim form; request tax-sale overage public records and claimant instructions from the Treasurer.",
+      "contact_phone": "864-260-4033"
     },
     {
       "county": "Bamberg",
@@ -186,13 +187,14 @@
       "county": "Clarendon",
       "priority": "statewide_directory",
       "county_website_url": "http://www.clarendoncountygov.org",
-      "tax_office_url": null,
+      "tax_office_url": "https://www.clarendoncountysc.gov/our-government/treasurer/",
       "sale_announcement_url": null,
-      "sale_information_url": null,
+      "sale_information_url": "https://www.clarendoncountysc.gov/news/posts/2026-delinquent-tax-sale-notice-october-28-30-2026/",
       "public_overage_register_url": null,
       "overage_claim_form_url": null,
-      "coverage_status": "county_portal_only_needs_tax_office_review",
-      "notes": "Official county website link supplied by the South Carolina Association of Counties directory. The county's delinquent-tax office page, overage claim procedure, current balance register and contact details have not yet been individually verified for Money Hunter. Open the county website and locate the Treasurer/Delinquent Tax Collector; ask whether tax-sale overages exist, who may claim them, and what public records are available. This is a directory lead only, not evidence of available funds."
+      "coverage_status": "official_tax_office_source_reviewed",
+      "notes": "Official Treasurer page and 2026 county delinquent-tax sale notice confirm the responsible office and current sale process. These sources are not an overage register; no public overage balance list or claim form was identified in this review. Contact the Treasurer for post-sale public records and claimant process.",
+      "contact_phone": "803-435-8307"
     },
     {
       "county": "Colleton",
@@ -621,9 +623,9 @@
   },
   "coverage_summary": {
     "total_counties": 46,
-    "tax_office_sources_reviewed": 39,
-    "county_portal_only_needs_tax_office_review": 7,
+    "tax_office_sources_reviewed": 41,
+    "county_portal_only_needs_tax_office_review": 5,
     "public_overage_registers_found_in_review": 1,
-    "meaning": "All 46 county websites are listed. Thirty-nine counties have individually reviewed official delinquent-tax, tax-sale, overage or office sources; seven remain county-portal entry points awaiting page-level review. Fairfield is the only county with a published historical overage listing located in this review (tax-sale years 2021–2024)."
+    "meaning": "All 46 county websites are listed. Forty-one counties have individually reviewed official delinquent-tax, tax-sale, overage or office sources; five remain county-portal entry points awaiting page-level review. Fairfield is the only county with a published historical overage listing located in this review (tax-sale years 2021–2024)."
   }
 }
