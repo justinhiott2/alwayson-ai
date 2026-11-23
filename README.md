@@ -1,24 +1,36 @@
-# GearScout
+# Money Hunter AI
 
-A free-first, mobile-friendly storefront foundation for an independent product-discovery and affiliate-commerce business.
+A free-first, mobile-friendly personal recovery research workspace hosted as a static Progressive Web App.
 
-## Current state
-- Responsive public storefront and category search are implemented.
-- No product offers, checkout, affiliate tracking, revenue, or customer data are fabricated.
-- No affiliate network has been connected. The site cannot earn commissions until a program approves the business and tracked merchant links are configured.
-- No AI model or autonomous agent is connected. This is currently a static storefront foundation, not an autonomous operator.
+## What is implemented
+
+- Responsive iPhone-friendly PWA with offline app-shell caching.
+- Official-source launchpad for nationwide state unclaimed-property searches and separate federal recovery databases.
+- State-by-state research checklist.
+- Local-only matching profile for current/former names and prior locations (no SSN, DOB, bank credentials, or identity-document numbers).
+- CSV import for records downloaded from supported official portals; matching runs in the browser.
+- Manual record entry, local opportunity scoring, evidence/source links, claim-preparation summaries, print-to-PDF, status tracking, CSV export, and full JSON backup/restore.
+- Local storage only; records and profile are not uploaded to a server by this static app.
+
+## Important limitations
+
+- There is no single government-wide unclaimed-money database. State programs and federal agencies maintain separate records.
+- MissingMoney covers most participating states, not all states.
+- Public portal links are not the same as a live API integration. This app does not scrape private claimant data or bypass agency controls.
+- A name/location score is a lead-screening hint, not identity verification or proof of ownership.
+- Claim packet preparation is supported; the app does not sign legal declarations, bypass CAPTCHA, or submit claims automatically. The claimant must verify the official record, satisfy the agency's evidence requirements, personally review/sign, and submit through the agency's official process.
+- No recovered money or eligibility is guaranteed.
+
+## Official starting points
+
+- https://www.missingmoney.com/
+- https://unclaimed.org/search/
+- https://www.usa.gov/unclaimed-money
 
 ## Free deployment
-This is a static site. It can be hosted with GitHub Pages at no hosting cost, subject to GitHub Pages being enabled for this repository. Open repository Settings → Pages and select deploy from the main branch (root).
 
-## Monetization prerequisites
-1. Apply to an affiliate program whose terms fit the products and audience.
-2. Wait for approval and comply with its traffic, disclosure, and content rules.
-3. Add only approved, working tracked links and truthful product information.
-4. Publish original buying guides and attract visitors. No revenue is guaranteed.
+Static hosting can be provided through GitHub Pages. The app itself does not require a paid model/API. It does not include an autonomous cloud AI agent or scheduled background searches; adding those would require a server-side runtime, data-source permissions, and potentially paid services.
 
-## AI operation
-Unattended AI research, publishing, inventory/price monitoring and support requires a model/API and trusted product-data sources. Those services may have usage limits or costs. Free static hosting does not supply those capabilities.
+## Privacy
 
-## Local preview
-Open `index.html` in a browser.
+The profile and records are stored in the current browser's local storage. Do not enter SSNs, dates of birth, bank passwords, payment card details, private keys, or seed phrases. Export a backup before clearing browser data or changing devices.
