@@ -30,6 +30,8 @@ def get_json(url, method="GET", body=None):
 def source_link_agent():
     agent = "Money Discovery"
     sources = [
+      ("South Carolina direct unclaimed-property search","https://southcarolina.findyourunclaimedproperty.com/","Official South Carolina Treasurer search portal; search by name and city. Free to search."),
+      ("South Carolina Palmetto Payback","https://treasurer.sc.gov/what-we-do/for-citizens/unclaimed-property-program/palmetto-payback/","Official program that can automatically return some matched unclaimed property; other claims still require documentation."),
       ("USA.gov unclaimed money guide","https://www.usa.gov/unclaimed-money","Official guide to federal and state unclaimed money."),
       ("NAUPA state directory","https://unclaimed.org/search/","Directory of official state unclaimed-property programs."),
       ("MissingMoney","https://www.missingmoney.com/","Participating-state unclaimed-property search; coverage varies."),
@@ -111,7 +113,12 @@ def contracts_agent():
 def state_land_agent():
     agent="State & County Land Discovery"
     portals=[
-      ("South Carolina State Surplus Property","https://admin.sc.gov/office-state-surplus-property","Official state surplus property program."),
+      ("South Carolina State Surplus Property","https://www.admin.sc.gov/services/surplus-property","Official state surplus property program and public auctions."),
+      ("Berkeley County tax-sale listings and status","https://berkeleycountysc.gov/dept/delinquent-tax-collector/taxsale/","Official local tax-sale page; check current sale status and linked property research resources."),
+      ("Berkeley County balance-in-trust / excess proceeds FAQ","https://berkeleycountysc.gov/dept/delinquent-tax-collector/faq_delinquent-tax/","Official FAQ explains that a balance-in-trust may exist when a tax-sale bid exceeds taxes, penalties, levy costs and current-year taxes; the defaulting taxpayer is entitled to that balance if the property is conveyed to the bidder."),
+      ("Berkeley County Forfeited Land Commission","https://berkeleycountysc.gov/dept/forfeited-land-commission/","Official county commission information about disposition of forfeited lands after the redemption period."),
+      ("Berkeley County Master in Equity sales","https://berkeleycountysc.gov/dept/mie/sale/","Official foreclosure-sale information and court roster instructions; title and property condition require independent diligence."),
+      ("Charleston County delinquent tax sale","https://www.charlestoncounty.gov/departments/delinquent-tax/tax-sale.php","Official neighboring-county tax-sale listings and bidder information."),
       ("South Carolina Treasurer","https://treasurer.sc.gov/","State financial and unclaimed-property information; not a land-sale list."),
       ("South Carolina county tax sale directory search","https://www.google.com/search?q=site%3Asc.gov+county+tax+sale+real+property+South+Carolina","Searches public county-government pages for tax-sale notices."),
       ("Federal real property disposal information","https://disposal.gsa.gov/","Federal property disposal information.")
