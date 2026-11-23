@@ -1,7 +1,6 @@
 name: Request an AI code repair
 description: Describe an app bug or requested technical upgrade for the guarded coding agent.
 title: "[AI repair] "
-labels: ["ai-repair"]
 body:
   - type: textarea
     id: problem
