@@ -22,6 +22,7 @@
 </section>
 <section id="search" class="tabs">
 <div class="panel"><h2>Nationwide search center</h2><p class="muted">Search the national participating-state index, then use official state and federal sources. Check every state where you lived, worked, owned property, or did business.</p><div class="row"><a class="btn" href="https://www.missingmoney.com/" target="_blank" rel="noopener">Search MissingMoney ↗</a><a class="btn secondary" href="https://unclaimed.org/search/" target="_blank" rel="noopener">Official state directory ↗</a><a class="btn secondary" href="https://www.usa.gov/unclaimed-money" target="_blank" rel="noopener">Federal database guide ↗</a></div><p class="tiny muted">MissingMoney covers most, not all, states. State databases are separately administered. Use the official state directory for any state not participating.</p></div>
+<div class="panel" id="dailyScanPanel"><div class="row"><div><h3>Daily automated source check</h3><p class="tiny muted">Checks whether official recovery websites respond. This is not a personal-name search or proof of a claim.</p></div><button class="secondary fit" id="refreshScan">Refresh status</button></div><p id="dailyScanWhen" class="muted tiny">Loading latest check…</p><div id="dailyScanResults" class="tiny muted">Waiting for the first scheduled check.</div></div>
 <div class="panel"><h3>Choose states to investigate</h3><p class="muted tiny">Selecting a state saves it to your search checklist; it does not imply a database has been searched.</p><div class="field"><input id="stateFilter" placeholder="Filter states…"></div><div id="stateList" class="grid"></div><div class="row"><button class="secondary" id="selectAllStates">Select all 50</button><button class="secondary" id="clearStates">Clear selection</button><button id="saveStates">Save selected states</button></div><p id="stateStatus" class="muted tiny"></p><div id="stateSearchLog"></div></div>
 <div class="panel"><h3>Federal and national databases</h3><div id="federalSources"></div></div>
 <div class="panel"><h3>Import search results for automatic matching</h3><p class="muted tiny">If a government portal lets you download a CSV of search results, upload it here. This app compares available name/address fields on your device. It does not send the file to a server.</p><label>Choose a CSV file</label><input id="csvFile" type="file" accept=".csv,text/csv"><div class="row"><button id="importCsv">Import and match records</button><button class="secondary" id="addManual">Enter a result manually</button></div><p id="importStatus" class="muted tiny"></p></div>
@@ -117,6 +118,17 @@ function download(content,name,type){let a=document.createElement("a"),u=URL.cre
 $("backup").onclick=()=>download(JSON.stringify(db,null,2),"money-hunter-backup.json","application/json");
 $("restoreFile").onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let d=JSON.parse(await f.text());if(!d||!Array.isArray(d.records)||!d.profile)throw Error();db=Object.assign(blank(),d);persist();fillProfile();drawStates();alert("Backup restored on this device.")}catch(err){alert("Backup file was not recognized.")}e.target.value=""};
 $("wipeAll").onclick=()=>{if(confirm("Permanently erase profile, records and claims saved in this browser? Export a backup first if needed.")){db=blank();persist();fillProfile();drawStates()}};
-fillProfile();drawStates();renderAll();
+async function loadDailyScan(){
+ const when=$("dailyScanWhen"),host=$("dailyScanResults");
+ try{
+  const res=await fetch("./scan-status.json?ts="+Date.now(),{cache:"no-store"});
+  if(!res.ok)throw new Error("Status feed unavailable ("+res.status+")");
+  const data=await res.json();
+  when.textContent=data.checked_at?"Last automated source check: "+new Date(data.checked_at).toLocaleString():"No completed automated check has been published yet.";
+  host.innerHTML=(data.sources||[]).map(s=>'<div class="source"><div class="desc"><b>'+esc(s.name)+'</b><div class="muted tiny">'+esc(s.detail||"")+'</div><a href="'+esc(s.url)+'" target="_blank" rel="noopener">Open official source ↗</a></div><span class="tag '+(s.status==="reachable"?"green":s.status==="restricted"?"gold":"")+'">'+esc(s.status)+(s.http_status?" · "+esc(s.http_status):"")+'</span></div>').join("")||"No source results yet.";
+ }catch(e){when.textContent="Could not load automated check status.";host.textContent=e.message}
+}
+$("refreshScan").onclick=loadDailyScan;
+fillProfile();drawStates();renderAll();loadDailyScan();
 if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
 </script></body></html>
