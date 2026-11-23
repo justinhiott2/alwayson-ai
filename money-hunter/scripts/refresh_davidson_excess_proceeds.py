@@ -67,7 +67,7 @@ def parse_pdf(data: bytes):
         if not m:
             continue
         g = m.groupdict()
-        amount = float(g["amount"].replace("$", "").replace(",", ""))
+        amount = float(g["amount"].replace("$", "").replace(",", "").strip())
         rows.append({
             "case_number": g["case"],
             "parcel_reference": g["parcel"],
