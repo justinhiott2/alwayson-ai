@@ -96,7 +96,7 @@ ul{padding-left:20px}.tiny{font-size:.78rem}.hidden{display:none!important}.foot
 <section id="docket" class="section"><div class="panel"><h2>Official docket verification</h2><div class="notice danger"><b>Automation limit:</b> South Carolina's public trial-court index is interactive and does not expose a supported public bulk-search API for this bot. The bot opens the official portal and records your check result; it cannot claim automatic motion/order/disbursement verification. A blank search is not proof that no claim exists.</div>
 <p><b>South Carolina:</b> <a href="https://www.sccourts.org/case-records-search/" target="_blank" rel="noopener">Open Trial Court Case Records Search ↗</a> · <a href="https://www.sccourts.org/media/eFiling/Args/ARG-21-Using_the_Trial_Court_Public_Index.pdf" target="_blank" rel="noopener">Official search guide ↗</a></p>
 <p><b>Davidson County, Tennessee:</b> <a href="https://chanceryclerkandmaster.nashville.gov/cases/public-records-search/" target="_blank" rel="noopener">Open Clerk &amp; Master public records search ↗</a> · <a href="https://portal-tnnashville.tylertech.cloud/PublicAccess/default.aspx" target="_blank" rel="noopener">Open Odyssey case access ↗</a></p>
-<h3>Saved case docket checks</h3><div id="docketCaseList"></div></div>
+<h3>Latest automated Davidson docket scan</h3><p class="tiny muted">This scan looks for excess-proceeds motion entries in official published Davidson County response-docket PDFs. It is case-level only, not parcel-specific and not a ruling.</p><div id="davidsonDocketFeed" class="tiny muted">Loading latest docket scan…</div><h3>Saved case docket checks</h3><div id="docketCaseList"></div></div>
 <div class="panel"><h3>What to verify</h3><ol><li>Correct court, case number and parcel.</li><li>Motion/petition to claim surplus, objections and service.</li><li>Hearing date, continuance or appeal/stay.</li><li>Signed order deciding priority and entitlement.</li><li>Disbursement/payment entry and custodian confirmation of remaining balance.</li></ol><p class="tiny muted">A docket event alone may not show the current balance. Obtain the signed order and confirm with the custodian.</p></div></section>
 <p class="foot">Money Hunter AI · Excess Proceeds Recovery Bot · Local browser storage only. Export a backup regularly. Not legal advice, not a government service, and not proof of a recoverable claim.</p>
 </main>
@@ -141,6 +141,18 @@ async function refreshOfficialRegister(){
   }catch(err){status.textContent='Refresh not completed: '+err.message;}
   finally{btn.disabled=false;btn.textContent='Refresh official Davidson register';}
 }
+async function loadDocketFeed(){
+ const el=$('davidsonDocketFeed');if(!el)return;
+ try{
+  const response=await fetch('../data/excess-proceeds/davidson-docket-status.json?'+Date.now(),{cache:'no-store'});
+  if(!response.ok)throw new Error('Latest docket scan feed not published yet');
+  const data=await response.json();
+  const events=data.events||[];
+  el.innerHTML='<p>Checked '+new Date(data.checked_at).toLocaleString()+' · '+data.pdfs_checked+' official PDF dockets scanned · '+events.length+' matching case-level motion entries.</p>'+
+   (events.map(e=>'<article class="lead"><b>'+esc(e.case_number)+'</b><p>'+esc(e.event_label)+' · filed '+esc(e.motion_filed_date||'date not extracted')+' · docket '+esc(e.docket_date||'date not extracted')+'</p><p class="muted">Not parcel-specific. Outcome, signed order and payment not verified.</p><a href="'+esc(e.source_pdf_url)+'" target="_blank" rel="noopener">Open official docket PDF ↗</a></article>').join('')||'<p>No matching motion entries found in the scanned PDFs. This is not proof no claim exists.</p>');
+  if(data.errors&&data.errors.length)el.innerHTML+='<p class="muted">Some PDFs could not be checked: '+data.errors.length+'</p>';
+ }catch(e){el.textContent='Docket scan unavailable: '+e.message;}
+}
 async function loadSouthCarolinaSources(){
  const target=$('scCountySources'),health=$('scSourceHealth');
  try{
@@ -158,6 +170,7 @@ $('exportBtn').addEventListener('click',()=>{const cols=['state','county','type'
 render();
 renderDocketList();
 loadSouthCarolinaSources();
+loadDocketFeed();
 refreshOfficialRegister();
 </script>
 </body></html>
