@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-23T16:25:19.288614+00:00",
+  "checked_at": "2026-11-23T23:28:44.472947+00:00",
   "check_type": "official_source_link_health_only_not_docket_search",
   "county_count": 46,
   "county_coverage": {
@@ -11,8 +11,8 @@
   },
   "source_count": 117,
   "reachable": 90,
-  "restricted": 25,
-  "unreachable": 2,
+  "restricted": 26,
+  "unreachable": 1,
   "docket_checking": "manual_case_lookup_required_no_supported_public_api",
   "important": "This registry is a verified-source directory and monitoring checklist, not a statewide list of money owed. The bot cannot automatically determine entitlement or confirm current balances from these pages.",
   "sources": [
@@ -612,9 +612,9 @@
       "county": "Laurens",
       "kind": "sale_information_url",
       "url": "https://laurenscounty.us/wp-content/uploads/2024/06/TAX-SALE-REGISTRATION-INFORMATION-2024.pdf",
-      "status": "unreachable",
-      "http_status": null,
-      "detail": "TimeoutError: The read operation timed out"
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
     },
     {
       "county": "Lee",
