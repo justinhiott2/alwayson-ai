@@ -11,6 +11,7 @@ A free-first, mobile-friendly personal recovery research workspace hosted as a s
 - CSV import for records downloaded from supported official portals; matching runs in the browser.
 - Manual record entry, local opportunity scoring, evidence/source links, claim-preparation summaries, print-to-PDF, status tracking, CSV export, and full JSON backup/restore.
 - Local storage only; records and profile are not uploaded to a server by this static app.
+- Local revenue ledger for confirmed receipts, pending fees/deposits, expenses, daily/monthly revenue, net recorded cash, and CSV export; financial entries are stored locally in the browser and are not synced to payment processors.
 
 ## Important limitations
 
