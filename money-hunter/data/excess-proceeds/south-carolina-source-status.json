@@ -1,14 +1,85 @@
 {
-  "checked_at": "2026-11-23T08:00:17.318963+00:00",
+  "checked_at": "2026-11-23T08:03:02.718330+00:00",
   "check_type": "official_source_link_health_only_not_docket_search",
   "county_count": 46,
-  "source_count": 13,
-  "reachable": 6,
-  "restricted": 7,
-  "unreachable": 0,
+  "county_coverage": {
+    "total_counties": 46,
+    "tax_office_sources_reviewed": 5,
+    "county_portal_only_needs_tax_office_review": 41,
+    "public_overage_registers_found_in_review": 0,
+    "meaning": "Coverage means official county entry points are present. It does not mean all county overage lists or balances have been found."
+  },
+  "source_count": 59,
+  "reachable": 40,
+  "restricted": 16,
+  "unreachable": 3,
   "docket_checking": "manual_case_lookup_required_no_supported_public_api",
   "important": "This registry is a verified-source directory and monitoring checklist, not a statewide list of money owed. The bot cannot automatically determine entitlement or confirm current balances from these pages.",
   "sources": [
+    {
+      "county": "Abbeville",
+      "kind": "county_website_url",
+      "url": "https://abbevillecountysc.com",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Aiken",
+      "kind": "county_website_url",
+      "url": "http://www.aikencountysc.gov",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Allendale",
+      "kind": "county_website_url",
+      "url": "https://www.allendalecounty.com",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Anderson",
+      "kind": "county_website_url",
+      "url": "https://www.andersoncountysc.org",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Bamberg",
+      "kind": "county_website_url",
+      "url": "https://www.bambergcounty.sc.gov",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Barnwell",
+      "kind": "county_website_url",
+      "url": "https://www.barnwellcountysc.us",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Beaufort",
+      "kind": "county_website_url",
+      "url": "https://www.beaufortcountysc.gov",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Berkeley",
+      "kind": "county_website_url",
+      "url": "https://www.berkeleycountysc.gov",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
     {
       "county": "Berkeley",
       "kind": "tax_office_url",
@@ -24,6 +95,22 @@
       "status": "restricted",
       "http_status": 403,
       "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Calhoun",
+      "kind": "county_website_url",
+      "url": "https://calhouncounty.sc.gov",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Charleston",
+      "kind": "county_website_url",
+      "url": "https://www.charlestoncounty.org",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
     },
     {
       "county": "Charleston",
@@ -42,6 +129,70 @@
       "detail": ""
     },
     {
+      "county": "Cherokee",
+      "kind": "county_website_url",
+      "url": "https://cherokeecountysc.gov",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Chester",
+      "kind": "county_website_url",
+      "url": "https://www.chestercountysc.gov",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Chesterfield",
+      "kind": "county_website_url",
+      "url": "http://www.chesterfieldcountysc.com",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Clarendon",
+      "kind": "county_website_url",
+      "url": "http://www.clarendoncountygov.org",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Colleton",
+      "kind": "county_website_url",
+      "url": "http://www.colletoncounty.org",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Darlington",
+      "kind": "county_website_url",
+      "url": "http://www.darcosc.com",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Dillon",
+      "kind": "county_website_url",
+      "url": "https://www.dilloncountysc.org",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Dorchester",
+      "kind": "county_website_url",
+      "url": "https://www.dorchestercountysc.gov/",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
       "county": "Dorchester",
       "kind": "tax_office_url",
       "url": "https://www.dorchestercountysc.gov/government/property-tax-services/delinquent-tax",
@@ -58,6 +209,158 @@
       "detail": "Host refused or rate-limited automated link check; open manually."
     },
     {
+      "county": "Edgefield",
+      "kind": "county_website_url",
+      "url": "https://edgefieldcounty.sc.gov/",
+      "status": "reachable",
+      "http_status": 202,
+      "detail": ""
+    },
+    {
+      "county": "Fairfield",
+      "kind": "county_website_url",
+      "url": "https://www.fairfieldsc.com/",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Florence",
+      "kind": "county_website_url",
+      "url": "http://www.florenceco.org",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Georgetown",
+      "kind": "county_website_url",
+      "url": "http://www.gtcountysc.gov",
+      "status": "unreachable",
+      "http_status": null,
+      "detail": "TimeoutError: timed out"
+    },
+    {
+      "county": "Greenville",
+      "kind": "county_website_url",
+      "url": "https://www.greenvillecounty.org",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Greenwood",
+      "kind": "county_website_url",
+      "url": "https://www.greenwoodcounty-sc.gov/",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Hampton",
+      "kind": "county_website_url",
+      "url": "http://www.hamptoncountysc.org",
+      "status": "unreachable",
+      "http_status": null,
+      "detail": "TimeoutError: timed out"
+    },
+    {
+      "county": "Horry",
+      "kind": "county_website_url",
+      "url": "https://www.horrycountysc.gov",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Jasper",
+      "kind": "county_website_url",
+      "url": "https://www.jaspercountysc.gov/",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Kershaw",
+      "kind": "county_website_url",
+      "url": "https://www.kershaw.sc.gov/",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Lancaster",
+      "kind": "county_website_url",
+      "url": "https://www.lancastercountysc.gov",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Laurens",
+      "kind": "county_website_url",
+      "url": "https://laurenscounty.us/",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Lee",
+      "kind": "county_website_url",
+      "url": "https://www.leecountysc.org/",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Lexington",
+      "kind": "county_website_url",
+      "url": "https://lex-co.sc.gov",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Marion",
+      "kind": "county_website_url",
+      "url": "https://www.marionsc.org/",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Marlboro",
+      "kind": "county_website_url",
+      "url": "https://marlborocounty.sc.gov/",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "McCormick",
+      "kind": "county_website_url",
+      "url": "http://www.mccormickcountysc.org",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Newberry",
+      "kind": "county_website_url",
+      "url": "https://www.newberrycounty.net/",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Oconee",
+      "kind": "county_website_url",
+      "url": "https://oconeesc.com/",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
       "county": "Oconee",
       "kind": "tax_office_url",
       "url": "https://oconeesc.com/departments/delinquent-tax",
@@ -72,6 +375,78 @@
       "status": "reachable",
       "http_status": 200,
       "detail": ""
+    },
+    {
+      "county": "Orangeburg",
+      "kind": "county_website_url",
+      "url": "https://www.orangeburgcounty.org/",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Pickens",
+      "kind": "county_website_url",
+      "url": "https://www.pickenscountysc.gov",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Richland",
+      "kind": "county_website_url",
+      "url": "http://www.richlandcountysc.gov/",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Saluda",
+      "kind": "county_website_url",
+      "url": "https://saludacounty.sc.gov/",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Spartanburg",
+      "kind": "county_website_url",
+      "url": "https://www.spartanburgcounty.org/",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Sumter",
+      "kind": "county_website_url",
+      "url": "http://www.sumtercountysc.gov",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Union",
+      "kind": "county_website_url",
+      "url": "https://www.gearupunionsc.com",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Williamsburg",
+      "kind": "county_website_url",
+      "url": "https://www.williamsburgcounty.sc.gov/",
+      "status": "unreachable",
+      "http_status": null,
+      "detail": "TimeoutError: The read operation timed out"
+    },
+    {
+      "county": "York",
+      "kind": "county_website_url",
+      "url": "https://www.yorkcountysc.gov",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
     },
     {
       "county": "York",
