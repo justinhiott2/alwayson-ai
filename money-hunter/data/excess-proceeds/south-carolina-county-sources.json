@@ -86,14 +86,14 @@
       "county": "Barnwell",
       "priority": "statewide_directory",
       "county_website_url": "https://www.barnwellcountysc.us",
-      "tax_office_url": null,
+      "tax_office_url": "https://www.barnwellcountysc.gov/175/Treasurer",
       "sale_announcement_url": null,
       "sale_information_url": "https://barnwellcountysc.us/DocumentCenter/View/1570/TAX-SALE-TERMS-AND-CONDITIONS",
       "public_overage_register_url": null,
       "overage_claim_form_url": null,
-      "coverage_status": "tax_office_or_sale_source_reviewed",
-      "notes": "Official county tax-sale terms document identifies the Tax Collector and 2026 sale process. This is a bidder-terms document, not an overage list. No public overage register or claim form identified in the reviewed source; contact the county for post-sale public records and claimant procedure.",
-      "contact_phone": "803-541-1048"
+      "coverage_status": "official_tax_office_source_reviewed",
+      "notes": "Official county Treasurer page identifies the office and explains its tax collection and taxpayer refund responsibilities. The county-hosted 2026 tax-sale terms document is linked separately; neither source is an overage register. Contact the Treasurer/Tax Collector for post-sale public records and claimant procedure.",
+      "contact_phone": "803-541-1050"
     },
     {
       "county": "Beaufort",
@@ -396,13 +396,14 @@
       "county": "Laurens",
       "priority": "statewide_directory",
       "county_website_url": "https://laurenscounty.us/",
-      "tax_office_url": null,
+      "tax_office_url": "https://laurenscounty.us/wp-content/uploads/2023/04/FOIAprocedures.pdf",
       "sale_announcement_url": null,
       "sale_information_url": "https://laurenscounty.us/wp-content/uploads/2024/06/TAX-SALE-REGISTRATION-INFORMATION-2024.pdf",
       "public_overage_register_url": null,
       "overage_claim_form_url": null,
-      "coverage_status": "tax_office_or_sale_source_reviewed",
-      "notes": "Official county-hosted 2024 tax-sale procedures PDF. This is an older bidder-information document, not an overage list; current office details and current overage process still need confirmation."
+      "coverage_status": "official_tax_office_source_reviewed",
+      "notes": "Official county Delinquent Tax Office FOIA procedure explains how to request research of tax-sale books: submit a written FOIA request naming sale year(s) and information sought, then schedule supervised review. The office requires photo ID for in-person research. This is a records-access procedure, not a public overage register; confirm current process and fees with the county. Do not use obtained personal information for commercial solicitation.",
+      "contact_phone": "864-984-4742"
     },
     {
       "county": "Lee",
@@ -447,14 +448,14 @@
       "county": "Marlboro",
       "priority": "statewide_directory",
       "county_website_url": "https://marlborocounty.sc.gov/",
-      "tax_office_url": null,
+      "tax_office_url": "https://marlborocounty.sc.gov/services/staff_directory.php",
       "sale_announcement_url": null,
       "sale_information_url": "https://cms2.revize.com/revize/marlborocosc/Documents/Delinquent%20Tax/Tax%20Sale%20-%202026%20Calendar.pdf?t=202603261132470",
       "public_overage_register_url": null,
       "overage_claim_form_url": null,
-      "coverage_status": "tax_office_or_sale_source_reviewed",
-      "notes": "Official county-hosted 2026 tax-sale calendar provides the current sale schedule and delinquent-tax office contact. It is a sale calendar, not an overage list. No public overage register or claim form identified in this review.",
-      "contact_phone": "843-479-5602 ext. 210, 754, 205 or 201"
+      "coverage_status": "official_tax_office_source_reviewed",
+      "notes": "Official county staff directory identifies the Delinquent Tax Collector and direct office contact. The county-hosted 2026 tax-sale calendar is linked separately; it is a sale calendar, not an overage list. No public overage register or claim form identified in this review.",
+      "contact_phone": "843-479-5602 ext. 210"
     },
     {
       "county": "McCormick",
@@ -512,13 +513,13 @@
       "county": "Pickens",
       "priority": "statewide_directory",
       "county_website_url": "https://www.pickenscountysc.gov",
-      "tax_office_url": null,
+      "tax_office_url": "https://www.co.pickens.sc.us/departments/delinquent_tax/index.php",
       "sale_announcement_url": null,
       "sale_information_url": "https://cms5.revize.com/revize/pickenscountysc/document_center/I%20WAnt%20To/Document%20%26%20Forms/Delinquent%20Tax/Delinquent%20Tax%20Sale%20Procedures.pdf",
       "public_overage_register_url": null,
       "overage_claim_form_url": null,
-      "coverage_status": "tax_office_or_sale_source_reviewed",
-      "notes": "Official county-hosted delinquent-tax sale procedures PDF, dated 2020. This is an older procedure document, not a current overage list; confirm current procedures and public records with the county.",
+      "coverage_status": "official_tax_office_source_reviewed",
+      "notes": "Official Delinquent Tax page is referenced by county-hosted procedures and current county tax-sale notices; the portal returned an access restriction during this review. The county-hosted procedure PDF is older (2020) and is linked separately. Current tax-sale property lists are not overage lists. Contact the office for post-sale overage records and claimant process.",
       "contact_phone": "864-898-5890"
     },
     {
