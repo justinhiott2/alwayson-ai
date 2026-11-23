@@ -1,19 +1,5 @@
 name: AI Code Repair Agent
-on:curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent" \
-  -H 'Content-Type: application/json' \
-  -H 'X-goog-api-key: AQ.Ab8RN6Ji4Q9o3UD-ZQILIpDSkLl4INpPdvufatK9zt59J6tbqw' \
-  -X POST \
-  -d '{
-    "contents": [
-      {
-        "parts": [
-          {
-            "text": "Explain how AI works in a few words"
-          }
-        ]
-      }
-    ]
-  }'
+on:
   workflow_dispatch:
     inputs:
       issue_number:
@@ -88,12 +74,12 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh pr create --draft --base main --head "${{ steps.branch.outputs.name }}" \\
-            --title "AI repair proposal for issue #${{ steps.issue.outputs.number }}" \\
-            --body "Automated repair proposal generated from issue #${{ steps.issue.outputs.number }}.\n\nChecks ran before opening this draft. Review every changed line before merging. This workflow never merges or deploys automatically."
+          gh pr create --draft --base main --head "${{ steps.branch.outputs.name }}" \
+            --title "AI repair proposal for issue #${{ steps.issue.outputs.number }}" \
+            --body "Automated repair proposal generated from issue #${{ steps.issue.outputs.number }}. Review every changed line before merging. This workflow never merges or deploys automatically."
       - name: Explain model connection failure
         if: steps.agent.outcome == 'failure'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh issue comment "${{ steps.issue.outputs.number }}" --body "The AI repair agent did not complete. Check this workflow run's logs. Confirm the repository Actions secret GEMINI_API_KEY is a valid Google AI Studio Gemini API key and that the Gemini API free-tier quota is available. No production code was deployed."
+          gh issue comment "${{ steps.issue.outputs.number }}" --body "The AI repair agent did not complete. Check this workflow run's logs. Confirm GEMINI_API_KEY is a valid Google AI Studio key and that Gemini API quota is available. No production code was deployed."
