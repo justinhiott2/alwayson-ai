@@ -1,5 +1,11 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Money Hunter AI</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#0b1220">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Money Hunter">
+<link rel="apple-touch-icon" href="./icon.svg">
 <style>
 :root{color-scheme:dark;--bg:#090d16;--panel:#121a29;--line:#26344a;--gold:#e8bd58;--muted:#a9b5c8;--green:#63d6a2}*{box-sizing:border-box}body{margin:0;background:linear-gradient(140deg,#0b1020,#101a29);color:#eef3fa;font:15px system-ui, sans-serif}header{padding:25px max(18px,calc((100% - 1100px)/2));border-bottom:1px solid var(--line);background:#0b1220}h1{margin:0;color:var(--gold);letter-spacing:.08em}header p{color:var(--muted);margin:6px 0 0}.wrap{max-width:1100px;margin:auto;padding:22px 16px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:17px;margin-bottom:14px}.metric{font-size:28px;color:var(--gold);font-weight:700}.muted{color:var(--muted)}a{color:#f0ca70}button,.btn{background:var(--gold);color:#17130a;border:0;border-radius:8px;padding:10px 13px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}input,select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#0b1220;color:#fff;margin:6px 0 12px}label{display:block;color:var(--muted);font-size:13px}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:9px;border-bottom:1px solid var(--line);font-size:13px}small{color:var(--muted)}.pill{color:var(--green)}.links a{display:inline-block;margin:5px 8px 5px 0}.warn{border-left:3px solid var(--gold);padding:10px;background:#211d13;color:#f4dfaa}footer{padding:25px;color:var(--muted);text-align:center}
 </style></head><body>
@@ -45,5 +51,6 @@ document.getElementById('clear').onclick=()=>{if(confirm('Delete all locally sav
 document.getElementById('explore').onclick=()=>{let w=network.value,a=document.getElementById('wallet').value.trim();if(!a){alert('Enter a public wallet address you own.');return}let u=w==='btc'?'https://mempool.space/address/':'https://etherscan.io/address/';window.open(u+encodeURIComponent(a),'_blank','noopener');document.getElementById('walletNote').textContent='Opened public explorer. Visible balances do not prove ownership or recoverability.'};
 document.getElementById('analyze').onclick=()=>{let t=document.getElementById('contract').value,terms=['earnest money','deposit','refund','termination','contingency','assignment','default','notice','deadline','credit','rebate','liquidated damages','closing costs','escrow','option period'];let found=terms.filter(k=>t.toLowerCase().includes(k));document.getElementById('analysis').textContent=found.length?'Terms to inspect: '+found.join(', ')+'. Review the full clause, definitions, deadlines, notice requirements, and governing law.':'No checklist keywords found. This does not mean the contract has no important obligations.'};
 render();
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
 </script></body></html>
 <!-- deploy refresh -->
