@@ -1,18 +1,18 @@
 {
-  "checked_at": "2026-11-23T08:03:02.718330+00:00",
+  "checked_at": "2026-11-23T08:14:28.296197+00:00",
   "check_type": "official_source_link_health_only_not_docket_search",
   "county_count": 46,
   "county_coverage": {
     "total_counties": 46,
-    "tax_office_sources_reviewed": 5,
-    "county_portal_only_needs_tax_office_review": 41,
-    "public_overage_registers_found_in_review": 0,
-    "meaning": "Coverage means official county entry points are present. It does not mean all county overage lists or balances have been found."
+    "tax_office_sources_reviewed": 46,
+    "county_portal_only_needs_tax_office_review": 0,
+    "public_overage_registers_found_in_review": 1,
+    "meaning": "All 46 South Carolina counties now have an individually reviewed official county tax-office, delinquent-tax, Treasurer, or tax-sale source link. This is source-directory coverage, not proof that each county publishes an overage register. Only Fairfield's historical 2021\u20132024 overage list was found in this review; other counties require direct public-record or clerk inquiries."
   },
-  "source_count": 59,
-  "reachable": 40,
-  "restricted": 16,
-  "unreachable": 3,
+  "source_count": 117,
+  "reachable": 90,
+  "restricted": 26,
+  "unreachable": 1,
   "docket_checking": "manual_case_lookup_required_no_supported_public_api",
   "important": "This registry is a verified-source directory and monitoring checklist, not a statewide list of money owed. The bot cannot automatically determine entitlement or confirm current balances from these pages.",
   "sources": [
@@ -20,6 +20,14 @@
       "county": "Abbeville",
       "kind": "county_website_url",
       "url": "https://abbevillecountysc.com",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Abbeville",
+      "kind": "tax_office_url",
+      "url": "https://abbevillecountysc.com/delinquent-tax-collector/",
       "status": "reachable",
       "http_status": 200,
       "detail": ""
@@ -33,9 +41,33 @@
       "detail": "Host refused or rate-limited automated link check; open manually."
     },
     {
+      "county": "Aiken",
+      "kind": "tax_office_url",
+      "url": "https://www.aikencountysc.gov/273/Delinquent-Tax-Collector",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Aiken",
+      "kind": "sale_information_url",
+      "url": "https://www.aikencountysc.gov/309/Delinquent-Tax-Sale",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
       "county": "Allendale",
       "kind": "county_website_url",
       "url": "https://www.allendalecounty.com",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Allendale",
+      "kind": "tax_office_url",
+      "url": "https://www.allendalecounty.com/government/county_government/county_offices.php",
       "status": "reachable",
       "http_status": 200,
       "detail": ""
@@ -49,11 +81,43 @@
       "detail": ""
     },
     {
+      "county": "Anderson",
+      "kind": "tax_office_url",
+      "url": "https://www.andersoncountysc.org/departments-a-z/treasurer/",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
       "county": "Bamberg",
       "kind": "county_website_url",
       "url": "https://www.bambergcounty.sc.gov",
       "status": "reachable",
       "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Bamberg",
+      "kind": "tax_office_url",
+      "url": "https://www.bambergcounty.sc.gov/tax-services/delinquent-tax-office",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Bamberg",
+      "kind": "sale_information_url",
+      "url": "https://www.bambergcounty.sc.gov/tax-services/delinquent-tax-office/delinquent-tax-properties",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Bamberg",
+      "kind": "faq_url",
+      "url": "https://www.bambergcounty.sc.gov/tax-services/delinquent-tax-office/faqs",
+      "status": "reachable",
+      "http_status": 200,
       "detail": ""
     },
     {
@@ -65,12 +129,36 @@
       "detail": ""
     },
     {
+      "county": "Barnwell",
+      "kind": "tax_office_url",
+      "url": "https://www.barnwellcountysc.gov/175/Treasurer",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Barnwell",
+      "kind": "sale_information_url",
+      "url": "https://barnwellcountysc.us/DocumentCenter/View/1570/TAX-SALE-TERMS-AND-CONDITIONS",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
       "county": "Beaufort",
       "kind": "county_website_url",
       "url": "https://www.beaufortcountysc.gov",
       "status": "reachable",
       "http_status": 206,
       "detail": ""
+    },
+    {
+      "county": "Beaufort",
+      "kind": "tax_office_url",
+      "url": "https://treasurerhelp.zendesk.com/hc/en-us/articles/4406548216205-If-I-lose-my-property-at-the-tax-sale-do-I-get-anything-in-return",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
     },
     {
       "county": "Berkeley",
@@ -100,6 +188,14 @@
       "county": "Calhoun",
       "kind": "county_website_url",
       "url": "https://calhouncounty.sc.gov",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Calhoun",
+      "kind": "tax_office_url",
+      "url": "https://calhouncounty.sc.gov/departments/tax-collector",
       "status": "reachable",
       "http_status": 206,
       "detail": ""
@@ -137,9 +233,33 @@
       "detail": ""
     },
     {
+      "county": "Cherokee",
+      "kind": "tax_office_url",
+      "url": "https://cherokeecountysc.gov/delinquent-tax/",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Cherokee",
+      "kind": "sale_information_url",
+      "url": "https://cherokeecountysc.gov/delinquent-tax/tax-collection-and-tax-sale-procedures/",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
       "county": "Chester",
       "kind": "county_website_url",
       "url": "https://www.chestercountysc.gov",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Chester",
+      "kind": "tax_office_url",
+      "url": "https://chestercountysc.gov/departments/tax-and-finance-departments/tax-collector/",
       "status": "reachable",
       "http_status": 200,
       "detail": ""
@@ -153,6 +273,14 @@
       "detail": ""
     },
     {
+      "county": "Chesterfield",
+      "kind": "tax_office_url",
+      "url": "https://www.chesterfieldcountysc.com/tax-collector",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
       "county": "Clarendon",
       "kind": "county_website_url",
       "url": "http://www.clarendoncountygov.org",
@@ -161,11 +289,35 @@
       "detail": ""
     },
     {
+      "county": "Clarendon",
+      "kind": "tax_office_url",
+      "url": "https://www.clarendoncountysc.gov/our-government/treasurer/",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Clarendon",
+      "kind": "sale_information_url",
+      "url": "https://www.clarendoncountysc.gov/news/posts/2026-delinquent-tax-sale-notice-october-28-30-2026/",
+      "status": "unreachable",
+      "http_status": 404,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
       "county": "Colleton",
       "kind": "county_website_url",
       "url": "http://www.colletoncounty.org",
       "status": "reachable",
       "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Colleton",
+      "kind": "tax_office_url",
+      "url": "https://www.colletoncounty.org/department/delinquent-tax",
+      "status": "reachable",
+      "http_status": 200,
       "detail": ""
     },
     {
@@ -177,9 +329,25 @@
       "detail": ""
     },
     {
+      "county": "Darlington",
+      "kind": "tax_office_url",
+      "url": "https://www.darcosc.com/departments/tax_collector.php",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
       "county": "Dillon",
       "kind": "county_website_url",
       "url": "https://www.dilloncountysc.org",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Dillon",
+      "kind": "tax_office_url",
+      "url": "https://www.dilloncountysc.org/departments/treasurer.php",
       "status": "reachable",
       "http_status": 200,
       "detail": ""
@@ -213,13 +381,45 @@
       "kind": "county_website_url",
       "url": "https://edgefieldcounty.sc.gov/",
       "status": "reachable",
-      "http_status": 202,
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Edgefield",
+      "kind": "tax_office_url",
+      "url": "https://edgefieldcounty.sc.gov/tax-collector/",
+      "status": "reachable",
+      "http_status": 200,
       "detail": ""
     },
     {
       "county": "Fairfield",
       "kind": "county_website_url",
       "url": "https://www.fairfieldsc.com/",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Fairfield",
+      "kind": "tax_office_url",
+      "url": "https://www.fairfieldsc.com/departments/tax-collector",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Fairfield",
+      "kind": "public_overage_register_url",
+      "url": "https://www.fairfieldsc.com/uploads/uploads/Tax_Sale_Overage_List___Public_Records_Notice.pdf",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Fairfield",
+      "kind": "overage_claim_form_url",
+      "url": "https://www.fairfieldsc.com/uploads/uploads/2025_Tax_Sale_OVERAGE_CLAIM_FORM.pdf",
       "status": "reachable",
       "http_status": 206,
       "detail": ""
@@ -233,12 +433,36 @@
       "detail": ""
     },
     {
+      "county": "Florence",
+      "kind": "tax_office_url",
+      "url": "https://www.florencecountysc.gov/offices/delinquent-tax/",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Florence",
+      "kind": "sale_information_url",
+      "url": "https://www.florencecountysc.gov/offices/delinquent-tax/index.php",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
       "county": "Georgetown",
       "kind": "county_website_url",
       "url": "http://www.gtcountysc.gov",
-      "status": "unreachable",
-      "http_status": null,
-      "detail": "TimeoutError: timed out"
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Georgetown",
+      "kind": "tax_office_url",
+      "url": "https://gtcountysc.gov/286/Tax-Collector",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
     },
     {
       "county": "Greenville",
@@ -246,6 +470,30 @@
       "url": "https://www.greenvillecounty.org",
       "status": "reachable",
       "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Greenville",
+      "kind": "tax_office_url",
+      "url": "https://www.greenvillecounty.org/taxcollector/",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Greenville",
+      "kind": "overage_information_url",
+      "url": "https://www.greenvillecounty.org/taxcollector/pdf/taxsaleoverbid.pdf",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Greenville",
+      "kind": "overage_claim_form_url",
+      "url": "https://www.greenvillecounty.org/taxcollector/pdf/taxsaleclaimform.pdf",
+      "status": "reachable",
+      "http_status": 206,
       "detail": ""
     },
     {
@@ -257,17 +505,41 @@
       "detail": ""
     },
     {
+      "county": "Greenwood",
+      "kind": "tax_office_url",
+      "url": "https://www.greenwoodcounty-sc.gov/tax-collector",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
       "county": "Hampton",
       "kind": "county_website_url",
       "url": "http://www.hamptoncountysc.org",
-      "status": "unreachable",
-      "http_status": null,
-      "detail": "TimeoutError: timed out"
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Hampton",
+      "kind": "tax_office_url",
+      "url": "https://www.hamptoncountysc.org/29/Delinquent-Tax",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
     },
     {
       "county": "Horry",
       "kind": "county_website_url",
       "url": "https://www.horrycountysc.gov",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Horry",
+      "kind": "tax_office_url",
+      "url": "https://horrycountysc.gov/departments/treasurer/delinquent-tax",
       "status": "reachable",
       "http_status": 200,
       "detail": ""
@@ -281,9 +553,25 @@
       "detail": ""
     },
     {
+      "county": "Jasper",
+      "kind": "tax_office_url",
+      "url": "https://www.jaspercountysc.gov/services/taxes/delinquent-tax-collection/",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
       "county": "Kershaw",
       "kind": "county_website_url",
       "url": "https://www.kershaw.sc.gov/",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Kershaw",
+      "kind": "tax_office_url",
+      "url": "https://www.kershaw.sc.gov/government/departments-r-z/treasurer/delinquent-matters",
       "status": "restricted",
       "http_status": 403,
       "detail": "Host refused or rate-limited automated link check; open manually."
@@ -293,13 +581,37 @@
       "kind": "county_website_url",
       "url": "https://www.lancastercountysc.gov",
       "status": "reachable",
-      "http_status": 206,
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Lancaster",
+      "kind": "tax_office_url",
+      "url": "https://www.lancastercountysc.gov/194/Delinquent-Tax-Collection",
+      "status": "reachable",
+      "http_status": 200,
       "detail": ""
     },
     {
       "county": "Laurens",
       "kind": "county_website_url",
       "url": "https://laurenscounty.us/",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Laurens",
+      "kind": "tax_office_url",
+      "url": "https://laurenscounty.us/wp-content/uploads/2023/04/FOIAprocedures.pdf",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Laurens",
+      "kind": "sale_information_url",
+      "url": "https://laurenscounty.us/wp-content/uploads/2024/06/TAX-SALE-REGISTRATION-INFORMATION-2024.pdf",
       "status": "restricted",
       "http_status": 403,
       "detail": "Host refused or rate-limited automated link check; open manually."
@@ -313,9 +625,25 @@
       "detail": ""
     },
     {
+      "county": "Lee",
+      "kind": "tax_office_url",
+      "url": "https://www.leecountysc.org/directory/departments___elected_officials/lee_county_delinquent_tax.php",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
       "county": "Lexington",
       "kind": "county_website_url",
       "url": "https://lex-co.sc.gov",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Lexington",
+      "kind": "tax_office_url",
+      "url": "https://lex-co.sc.gov/treasurer/delinquent-taxes",
       "status": "reachable",
       "http_status": 206,
       "detail": ""
@@ -329,11 +657,35 @@
       "detail": ""
     },
     {
+      "county": "Marion",
+      "kind": "tax_office_url",
+      "url": "https://www.marionsc.org/departments/tax_collector/index.php",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
       "county": "Marlboro",
       "kind": "county_website_url",
       "url": "https://marlborocounty.sc.gov/",
       "status": "reachable",
       "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Marlboro",
+      "kind": "tax_office_url",
+      "url": "https://marlborocounty.sc.gov/services/staff_directory.php",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Marlboro",
+      "kind": "sale_information_url",
+      "url": "https://cms2.revize.com/revize/marlborocosc/Documents/Delinquent%20Tax/Tax%20Sale%20-%202026%20Calendar.pdf?t=202603261132470",
+      "status": "reachable",
+      "http_status": 206,
       "detail": ""
     },
     {
@@ -345,11 +697,35 @@
       "detail": ""
     },
     {
+      "county": "McCormick",
+      "kind": "tax_office_url",
+      "url": "https://www.mccormickcountysc.org/departments/treasurer.php",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
       "county": "Newberry",
       "kind": "county_website_url",
       "url": "https://www.newberrycounty.net/",
       "status": "reachable",
       "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Newberry",
+      "kind": "tax_office_url",
+      "url": "https://www.newberrycounty.gov/delinquent-tax",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Newberry",
+      "kind": "sale_information_url",
+      "url": "https://www.newberrycounty.gov/delinquent-tax/tax-sales",
+      "status": "reachable",
+      "http_status": 200,
       "detail": ""
     },
     {
@@ -385,6 +761,14 @@
       "detail": "Host refused or rate-limited automated link check; open manually."
     },
     {
+      "county": "Orangeburg",
+      "kind": "tax_office_url",
+      "url": "https://www.orangeburgcounty.org/m/directory/department?did=83",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
       "county": "Pickens",
       "kind": "county_website_url",
       "url": "https://www.pickenscountysc.gov",
@@ -393,9 +777,41 @@
       "detail": ""
     },
     {
+      "county": "Pickens",
+      "kind": "tax_office_url",
+      "url": "https://www.co.pickens.sc.us/departments/delinquent_tax/index.php",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Pickens",
+      "kind": "sale_information_url",
+      "url": "https://cms5.revize.com/revize/pickenscountysc/document_center/I%20WAnt%20To/Document%20%26%20Forms/Delinquent%20Tax/Delinquent%20Tax%20Sale%20Procedures.pdf",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
       "county": "Richland",
       "kind": "county_website_url",
       "url": "http://www.richlandcountysc.gov/",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Richland",
+      "kind": "tax_office_url",
+      "url": "https://www.richlandcountysc.gov/Property-Business/Taxes/Delinquent-Taxes",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Richland",
+      "kind": "sale_information_url",
+      "url": "https://www.richlandcountysc.gov/Property-Business/Taxes/Delinquent-Taxes/Tax-Sale",
       "status": "restricted",
       "http_status": 403,
       "detail": "Host refused or rate-limited automated link check; open manually."
@@ -409,9 +825,33 @@
       "detail": ""
     },
     {
+      "county": "Saluda",
+      "kind": "tax_office_url",
+      "url": "https://saludacounty.sc.gov/departments/tax-collector",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
+      "county": "Saluda",
+      "kind": "sale_information_url",
+      "url": "https://saludacounty.sc.gov/departments/tax-collector/delinquent-tax-sale",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
       "county": "Spartanburg",
       "kind": "county_website_url",
       "url": "https://www.spartanburgcounty.org/",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Spartanburg",
+      "kind": "tax_office_url",
+      "url": "https://www.spartanburgcounty.gov/178/Tax-Collector",
       "status": "restricted",
       "http_status": 403,
       "detail": "Host refused or rate-limited automated link check; open manually."
@@ -425,6 +865,14 @@
       "detail": ""
     },
     {
+      "county": "Sumter",
+      "kind": "tax_office_url",
+      "url": "https://www.sumtercountysc.gov/departments/s_-_z/treasurer/delinquent_tax.php",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
       "county": "Union",
       "kind": "county_website_url",
       "url": "https://www.gearupunionsc.com",
@@ -433,12 +881,28 @@
       "detail": ""
     },
     {
+      "county": "Union",
+      "kind": "tax_office_url",
+      "url": "https://gearupunionsc.com/departments/delinquent-tax-office/",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    },
+    {
       "county": "Williamsburg",
       "kind": "county_website_url",
       "url": "https://www.williamsburgcounty.sc.gov/",
-      "status": "unreachable",
-      "http_status": null,
-      "detail": "TimeoutError: The read operation timed out"
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Williamsburg",
+      "kind": "tax_office_url",
+      "url": "https://williamsburgcounty.sc.gov/237/Tax-Collector",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
     },
     {
       "county": "York",
