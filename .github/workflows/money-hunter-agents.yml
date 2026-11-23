@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: money-hunter-autonomous-agents
+  group: money-hunter-repo-writes
   cancel-in-progress: false
 
 jobs:
@@ -33,4 +33,5 @@ jobs:
           git add money-hunter/agents/reports/
           git diff --cached --quiet && exit 0
           git commit -m "Publish autonomous agent findings"
+          git pull --rebase origin main
           git push
