@@ -1,0 +1,26 @@
+name: Request an AI code repair
+description: Describe an app bug or requested technical upgrade for the guarded coding agent.
+title: "[AI repair] "
+labels: ["ai-repair"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is broken or what should improve?
+      description: Include exact steps, error text, and expected behavior. Do not include passwords, API keys, SSNs, bank details, or claimant records.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Open the app... 2. Tap... 3. Observe..."
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I have not included passwords, API keys, financial account details, SSNs, or private claimant information.
+          required: true
