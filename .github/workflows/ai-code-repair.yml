@@ -43,11 +43,11 @@ jobs:
           BRANCH="ai-repair/issue-${{ steps.issue.outputs.number }}-${{ github.run_id }}"
           git switch -c "$BRANCH"
           echo "name=$BRANCH" >> "$GITHUB_OUTPUT"
-      - name: Ask GitHub Models to propose a guarded code patch
+      - name: Ask Gemini to propose a guarded code patch
         id: agent
         env:
-          GH_MODELS_TOKEN: ${{ secrets.GH_MODELS_TOKEN }}
-          GH_MODELS_MODEL: openai/gpt-4.1
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-2.5-flash-lite
           ISSUE_NUMBER: ${{ steps.issue.outputs.number }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GH_TOKEN: ${{ github.token }}
@@ -74,12 +74,12 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh pr create --draft --base main --head "${{ steps.branch.outputs.name }}" \
-            --title "AI repair proposal for issue #${{ steps.issue.outputs.number }}" \
+          gh pr create --draft --base main --head "${{ steps.branch.outputs.name }}" \\
+            --title "AI repair proposal for issue #${{ steps.issue.outputs.number }}" \\
             --body "Automated repair proposal generated from issue #${{ steps.issue.outputs.number }}.\n\nChecks ran before opening this draft. Review every changed line before merging. This workflow never merges or deploys automatically."
-      - name: Explain missing model connection
+      - name: Explain model connection failure
         if: steps.agent.outcome == 'failure'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh issue comment "${{ steps.issue.outputs.number }}" --body "The AI repair agent did not complete. Check this workflow run's logs. If the error says GH_MODELS_TOKEN is missing, add a GitHub Models token as a repository Actions secret named GH_MODELS_TOKEN (models:read permission), then rerun the workflow. No production code was deployed."
+          gh issue comment "${{ steps.issue.outputs.number }}" --body "The AI repair agent did not complete. Check this workflow run's logs. Confirm the repository Actions secret GEMINI_API_KEY is a valid Google AI Studio Gemini API key and that the Gemini API free-tier quota is available. No production code was deployed."
