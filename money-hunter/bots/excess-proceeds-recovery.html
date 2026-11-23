@@ -123,5 +123,6 @@ async function refreshOfficialRegister(){
 $('filterState').addEventListener('change',render);$('filterStage').addEventListener('change',render);
 $('exportBtn').addEventListener('click',()=>{const cols=['state','county','type','amount','caseNo','parcel','source','stage','flag','notes','feeReceived','date'];const csv=[cols.join(','),...cases.map(x=>cols.map(k=>'"'+String(x[k]??'').replace(/"/g,'""')+'"').join(','))].join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='excess-proceeds-cases.csv';a.click();URL.revokeObjectURL(a.href)});
 render();
+refreshOfficialRegister();
 </script>
 </body></html>
