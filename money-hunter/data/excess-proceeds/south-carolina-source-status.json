@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-23T16:16:39.741658+00:00",
+  "checked_at": "2026-11-23T16:18:03.671921+00:00",
   "check_type": "official_source_link_health_only_not_docket_search",
   "county_count": 46,
   "county_coverage": {
@@ -10,9 +10,9 @@
     "meaning": "All 46 South Carolina counties now have an individually reviewed official county tax-office, delinquent-tax, Treasurer, or tax-sale source link. This is source-directory coverage, not proof that each county publishes an overage register. Only Fairfield's historical 2021\u20132024 overage list was found in this review; other counties require direct public-record or clerk inquiries."
   },
   "source_count": 117,
-  "reachable": 81,
+  "reachable": 90,
   "restricted": 26,
-  "unreachable": 10,
+  "unreachable": 1,
   "docket_checking": "manual_case_lookup_required_no_supported_public_api",
   "important": "This registry is a verified-source directory and monitoring checklist, not a statewide list of money owed. The bot cannot automatically determine entitlement or confirm current balances from these pages.",
   "sources": [
@@ -124,25 +124,25 @@
       "county": "Barnwell",
       "kind": "county_website_url",
       "url": "https://www.barnwellcountysc.us",
-      "status": "unreachable",
-      "http_status": null,
-      "detail": "URLError: <urlopen error timed out>"
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
     },
     {
       "county": "Barnwell",
       "kind": "tax_office_url",
       "url": "https://www.barnwellcountysc.gov/175/Treasurer",
-      "status": "unreachable",
-      "http_status": null,
-      "detail": "URLError: <urlopen error timed out>"
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
     },
     {
       "county": "Barnwell",
       "kind": "sale_information_url",
       "url": "https://barnwellcountysc.us/DocumentCenter/View/1570/TAX-SALE-TERMS-AND-CONDITIONS",
-      "status": "unreachable",
-      "http_status": null,
-      "detail": "URLError: <urlopen error timed out>"
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
     },
     {
       "county": "Beaufort",
@@ -197,7 +197,7 @@
       "kind": "tax_office_url",
       "url": "https://calhouncounty.sc.gov/departments/tax-collector",
       "status": "reachable",
-      "http_status": 206,
+      "http_status": 200,
       "detail": ""
     },
     {
@@ -452,17 +452,17 @@
       "county": "Georgetown",
       "kind": "county_website_url",
       "url": "http://www.gtcountysc.gov",
-      "status": "unreachable",
-      "http_status": null,
-      "detail": "URLError: <urlopen error timed out>"
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
     },
     {
       "county": "Georgetown",
       "kind": "tax_office_url",
       "url": "https://gtcountysc.gov/286/Tax-Collector",
-      "status": "unreachable",
-      "http_status": null,
-      "detail": "URLError: <urlopen error timed out>"
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
     },
     {
       "county": "Greenville",
@@ -516,17 +516,17 @@
       "county": "Hampton",
       "kind": "county_website_url",
       "url": "http://www.hamptoncountysc.org",
-      "status": "unreachable",
-      "http_status": null,
-      "detail": "URLError: <urlopen error timed out>"
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
     },
     {
       "county": "Hampton",
       "kind": "tax_office_url",
       "url": "https://www.hamptoncountysc.org/29/Delinquent-Tax",
-      "status": "unreachable",
-      "http_status": null,
-      "detail": "URLError: <urlopen error timed out>"
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
     },
     {
       "county": "Horry",
@@ -892,17 +892,17 @@
       "county": "Williamsburg",
       "kind": "county_website_url",
       "url": "https://www.williamsburgcounty.sc.gov/",
-      "status": "unreachable",
-      "http_status": null,
-      "detail": "URLError: <urlopen error timed out>"
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
     },
     {
       "county": "Williamsburg",
       "kind": "tax_office_url",
       "url": "https://williamsburgcounty.sc.gov/237/Tax-Collector",
-      "status": "unreachable",
-      "http_status": null,
-      "detail": "URLError: <urlopen error timed out>"
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
     },
     {
       "county": "York",
