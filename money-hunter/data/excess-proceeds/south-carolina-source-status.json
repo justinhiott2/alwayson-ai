@@ -1,0 +1,117 @@
+{
+  "checked_at": "2026-11-23T07:54:16.185841+00:00",
+  "check_type": "official_source_link_health_only_not_docket_search",
+  "county_count": 5,
+  "source_count": 13,
+  "reachable": 6,
+  "restricted": 6,
+  "unreachable": 1,
+  "docket_checking": "manual_case_lookup_required_no_supported_public_api",
+  "important": "This registry is a verified-source directory and monitoring checklist, not a statewide list of money owed. The bot cannot automatically determine entitlement or confirm current balances from these pages.",
+  "sources": [
+    {
+      "county": "Berkeley",
+      "kind": "tax_office_url",
+      "url": "https://berkeleycountysc.gov/dept/delinquent-tax-collector/taxsale/",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Berkeley",
+      "kind": "sale_announcement_url",
+      "url": "https://berkeleycountysc.gov/berkeley-county-delinquent-tax-sale-set-for-november-16/",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Charleston",
+      "kind": "tax_office_url",
+      "url": "https://www.charlestoncounty.gov/departments/delinquent-tax/index.php",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Charleston",
+      "kind": "sale_information_url",
+      "url": "https://www.charlestoncounty.gov/departments/delinquent-tax/tax-sale.php",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Dorchester",
+      "kind": "tax_office_url",
+      "url": "https://www.dorchestercountysc.gov/government/property-tax-services/delinquent-tax",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Dorchester",
+      "kind": "faq_url",
+      "url": "https://www.dorchestercountysc.gov/government/property-tax-services/delinquent-tax/common-terms-faq",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Oconee",
+      "kind": "tax_office_url",
+      "url": "https://oconeesc.com/departments/delinquent-tax",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Oconee",
+      "kind": "overage_information_url",
+      "url": "https://oconeesc.com/delinquent-tax/tax-sale-information/overage-information",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "York",
+      "kind": "tax_office_url",
+      "url": "https://www.yorkcountysc.gov/",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "York",
+      "kind": "overage_information_url",
+      "url": "https://www.yorkcountysc.gov/DocumentCenter/View/1193/OVERAGE-CLAIM-FORM-AND-INSTRUCTIONS-PDF",
+      "status": "restricted",
+      "http_status": 403,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Statewide",
+      "kind": "official_reference",
+      "url": "https://www.scstatehouse.gov/code/t12c051",
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
+    },
+    {
+      "county": "Statewide",
+      "kind": "official_reference",
+      "url": "https://www.sccourts.org/case-records-search/",
+      "status": "unreachable",
+      "http_status": 406,
+      "detail": "Host refused or rate-limited automated link check; open manually."
+    },
+    {
+      "county": "Statewide",
+      "kind": "official_user_guide",
+      "url": "https://www.sccourts.org/media/eFiling/Args/ARG-21-Using_the_Trial_Court_Public_Index.pdf",
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
+    }
+  ]
+}
