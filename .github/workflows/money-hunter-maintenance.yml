@@ -27,10 +27,17 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run app smoke tests
+        id: tests
+        run: python -m unittest discover -s scripts -p "test_*.py" -v
       - name: Run diagnostics
         id: diagnostics
         continue-on-error: true
-        run: python scripts/app_maintenance_bot.py | tee maintenance-output.json
+        run: python scripts/app_maintenance_bot.py
       - name: Publish maintenance report
         if: always()
         run: |
@@ -42,20 +49,16 @@ jobs:
             git push
           fi
       - name: Create or update repair issue when checks fail
-        if: steps.diagnostics.outcome == 'failure'
+        if: steps.diagnostics.outcome == 'failure' || steps.tests.outcome == 'failure'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           TITLE="Maintenance bot: app checks need attention"
           BODY="$(cat <<'EOF'
-          The scheduled maintenance bot found one or more errors.
-
-          Review the latest diagnostic report:
-          https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/money-hunter/reports/maintenance.json
-
-          Run details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-
-          Repair safely on a separate branch, add or update tests, and open a pull request. Do not access claimant personal data, introduce paid services without approval, or change claim/payment submission behavior.
+          The scheduled Money Hunter test bot found one or more errors.
+          Review the latest diagnostic report and workflow logs:
+          ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          Repair safely on a separate branch and open a pull request. Do not access claimant personal data, introduce paid services without approval, or change claim/payment submission behavior.
           EOF
           )"
           EXISTING="$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number')"
