@@ -7,6 +7,7 @@ on:
     branches: [main]
     paths:
       - "money-hunter/**"
+      - "!money-hunter/reports/**"
       - "scripts/**"
       - ".github/workflows/**"
       - "AGENTS.md"
