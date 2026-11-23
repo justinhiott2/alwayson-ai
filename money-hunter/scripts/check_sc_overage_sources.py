@@ -18,7 +18,7 @@ def main():
     data = json.loads(REGISTRY.read_text(encoding="utf-8"))
     targets = []
     for county in data["counties"]:
-        for key in ("tax_office_url", "sale_announcement_url", "sale_information_url",
+        for key in ("county_website_url", "tax_office_url", "sale_announcement_url", "sale_information_url",
                     "faq_url", "overage_information_url", "public_overage_register_url",
                     "overage_claim_form_url"):
             url = county.get(key)
@@ -48,6 +48,7 @@ def main():
         "checked_at": dt.datetime.now(dt.timezone.utc).isoformat(),
         "check_type": "official_source_link_health_only_not_docket_search",
         "county_count": len(data["counties"]),
+        "county_coverage": data.get("coverage_summary", {}),
         "source_count": len(results),
         "reachable": sum(x["status"] == "reachable" for x in results),
         "restricted": sum(x["status"] == "restricted" for x in results),
