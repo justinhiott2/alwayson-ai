@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T05:52:54.882977+00:00",
+  "generated_at": "2026-11-23T05:57:23.355360+00:00",
   "mode": "free_public_source_autonomous_scan",
   "important": "This run searches public APIs where available and refreshes official source links. It does not perform personal claimant searches, prove ownership, submit claims, bid, sign contracts, or confirm income.",
   "agents": [
@@ -12,10 +12,34 @@
     "revenue_agent"
   ],
   "counts": {
-    "total": 80,
+    "total": 87,
     "errors": 0
   },
   "results": [
+    {
+      "agent": "Money Discovery",
+      "type": "official_source",
+      "title": "South Carolina direct unclaimed-property search",
+      "url": "https://southcarolina.findyourunclaimedproperty.com/",
+      "summary": "Official South Carolina Treasurer search portal; search by name and city. Free to search.",
+      "status": "reachable",
+      "evidence": {
+        "http_status": 200
+      },
+      "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
+    },
+    {
+      "agent": "Money Discovery",
+      "type": "official_source",
+      "title": "South Carolina Palmetto Payback",
+      "url": "https://treasurer.sc.gov/what-we-do/for-citizens/unclaimed-property-program/palmetto-payback/",
+      "summary": "Official program that can automatically return some matched unclaimed property; other claims still require documentation.",
+      "status": "reachable",
+      "evidence": {
+        "http_status": 200
+      },
+      "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
+    },
     {
       "agent": "Money Discovery",
       "type": "official_source",
@@ -2138,8 +2162,58 @@
       "agent": "State & County Land Discovery",
       "type": "land_source",
       "title": "South Carolina State Surplus Property",
-      "url": "https://admin.sc.gov/office-state-surplus-property",
-      "summary": "Official state surplus property program.",
+      "url": "https://www.admin.sc.gov/services/surplus-property",
+      "summary": "Official state surplus property program and public auctions.",
+      "status": "source_link",
+      "evidence": {},
+      "next_action": "Confirm the parcel is actually offered for sale. Obtain parcel ID, title search, tax status, access, zoning, utilities and redemption information before any bid or payment."
+    },
+    {
+      "agent": "State & County Land Discovery",
+      "type": "land_source",
+      "title": "Berkeley County tax-sale listings and status",
+      "url": "https://berkeleycountysc.gov/dept/delinquent-tax-collector/taxsale/",
+      "summary": "Official local tax-sale page; check current sale status and linked property research resources.",
+      "status": "source_link",
+      "evidence": {},
+      "next_action": "Confirm the parcel is actually offered for sale. Obtain parcel ID, title search, tax status, access, zoning, utilities and redemption information before any bid or payment."
+    },
+    {
+      "agent": "State & County Land Discovery",
+      "type": "land_source",
+      "title": "Berkeley County balance-in-trust / excess proceeds FAQ",
+      "url": "https://berkeleycountysc.gov/dept/delinquent-tax-collector/faq_delinquent-tax/",
+      "summary": "Official FAQ explains that a balance-in-trust may exist when a tax-sale bid exceeds taxes, penalties, levy costs and current-year taxes; the defaulting taxpayer is entitled to that balance if the property is conveyed to the bidder.",
+      "status": "source_link",
+      "evidence": {},
+      "next_action": "Confirm the parcel is actually offered for sale. Obtain parcel ID, title search, tax status, access, zoning, utilities and redemption information before any bid or payment."
+    },
+    {
+      "agent": "State & County Land Discovery",
+      "type": "land_source",
+      "title": "Berkeley County Forfeited Land Commission",
+      "url": "https://berkeleycountysc.gov/dept/forfeited-land-commission/",
+      "summary": "Official county commission information about disposition of forfeited lands after the redemption period.",
+      "status": "source_link",
+      "evidence": {},
+      "next_action": "Confirm the parcel is actually offered for sale. Obtain parcel ID, title search, tax status, access, zoning, utilities and redemption information before any bid or payment."
+    },
+    {
+      "agent": "State & County Land Discovery",
+      "type": "land_source",
+      "title": "Berkeley County Master in Equity sales",
+      "url": "https://berkeleycountysc.gov/dept/mie/sale/",
+      "summary": "Official foreclosure-sale information and court roster instructions; title and property condition require independent diligence.",
+      "status": "source_link",
+      "evidence": {},
+      "next_action": "Confirm the parcel is actually offered for sale. Obtain parcel ID, title search, tax status, access, zoning, utilities and redemption information before any bid or payment."
+    },
+    {
+      "agent": "State & County Land Discovery",
+      "type": "land_source",
+      "title": "Charleston County delinquent tax sale",
+      "url": "https://www.charlestoncounty.gov/departments/delinquent-tax/tax-sale.php",
+      "summary": "Official neighboring-county tax-sale listings and bidder information.",
       "status": "source_link",
       "evidence": {},
       "next_action": "Confirm the parcel is actually offered for sale. Obtain parcel ID, title search, tax status, access, zoning, utilities and redemption information before any bid or payment."

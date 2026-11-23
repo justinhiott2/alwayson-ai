@@ -1,0 +1,2301 @@
+{
+  "generated_at": "2026-11-23T05:57:23.355360+00:00",
+  "mode": "free_public_source_autonomous_scan",
+  "important": "This run searches public APIs where available and refreshes official source links. It does not perform personal claimant searches, prove ownership, submit claims, bid, sign contracts, or confirm income.",
+  "agents": [
+    "source_link_agent",
+    "federal_register_agent",
+    "contracts_agent",
+    "state_land_agent",
+    "ownership_agent",
+    "claims_agent",
+    "revenue_agent"
+  ],
+  "counts": {
+    "total": 87,
+    "errors": 0
+  },
+  "results": [
+    {
+      "agent": "Money Discovery",
+      "type": "official_source",
+      "title": "South Carolina direct unclaimed-property search",
+      "url": "https://southcarolina.findyourunclaimedproperty.com/",
+      "summary": "Official South Carolina Treasurer search portal; search by name and city. Free to search.",
+      "status": "reachable",
+      "evidence": {
+        "http_status": 200
+      },
+      "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
+    },
+    {
+      "agent": "Money Discovery",
+      "type": "official_source",
+      "title": "South Carolina Palmetto Payback",
+      "url": "https://treasurer.sc.gov/what-we-do/for-citizens/unclaimed-property-program/palmetto-payback/",
+      "summary": "Official program that can automatically return some matched unclaimed property; other claims still require documentation.",
+      "status": "reachable",
+      "evidence": {
+        "http_status": 200
+      },
+      "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
+    },
+    {
+      "agent": "Money Discovery",
+      "type": "official_source",
+      "title": "USA.gov unclaimed money guide",
+      "url": "https://www.usa.gov/unclaimed-money",
+      "summary": "Official guide to federal and state unclaimed money.",
+      "status": "reachable",
+      "evidence": {
+        "http_status": 200
+      },
+      "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
+    },
+    {
+      "agent": "Money Discovery",
+      "type": "official_source",
+      "title": "NAUPA state directory",
+      "url": "https://unclaimed.org/search/",
+      "summary": "Directory of official state unclaimed-property programs.",
+      "status": "reachable",
+      "evidence": {
+        "http_status": 200
+      },
+      "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
+    },
+    {
+      "agent": "Money Discovery",
+      "type": "official_source",
+      "title": "MissingMoney",
+      "url": "https://www.missingmoney.com/",
+      "summary": "Participating-state unclaimed-property search; coverage varies.",
+      "status": "restricted",
+      "evidence": {
+        "http_status": 403,
+        "note": "Automated request blocked or failed; manual official-site check may still work."
+      },
+      "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
+    },
+    {
+      "agent": "Money Discovery",
+      "type": "official_source",
+      "title": "US Department of Labor wage search",
+      "url": "https://webapps.dol.gov/WOW/",
+      "summary": "Search tool for wages held by the Department of Labor.",
+      "status": "reachable",
+      "evidence": {
+        "http_status": 200
+      },
+      "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
+    },
+    {
+      "agent": "Money Discovery",
+      "type": "official_source",
+      "title": "PBGC missing pensions",
+      "url": "https://www.pbgc.gov/workers-retirees/find-unclaimed-retirement-benefits",
+      "summary": "Pension benefit search.",
+      "status": "reachable",
+      "evidence": {
+        "http_status": 200
+      },
+      "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
+    },
+    {
+      "agent": "Money Discovery",
+      "type": "official_source",
+      "title": "FDIC unclaimed funds",
+      "url": "https://closedbanks.fdic.gov/funds/",
+      "summary": "Unclaimed deposits from failed banks.",
+      "status": "reachable",
+      "evidence": {
+        "http_status": 200
+      },
+      "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
+    },
+    {
+      "agent": "Money Discovery",
+      "type": "official_source",
+      "title": "NCUA liquidations",
+      "url": "https://ncua.gov/support-services/conservatorships-liquidations",
+      "summary": "Credit union liquidation and asset information.",
+      "status": "reachable",
+      "evidence": {
+        "http_status": 200
+      },
+      "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
+    },
+    {
+      "agent": "Money Discovery",
+      "type": "official_source",
+      "title": "Treasury savings bonds",
+      "url": "https://www.treasurydirect.gov/savings-bonds/",
+      "summary": "Official savings bond information and search guidance.",
+      "status": "reachable",
+      "evidence": {
+        "http_status": 200
+      },
+      "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
+    },
+    {
+      "agent": "Money Discovery",
+      "type": "official_source",
+      "title": "SEC distributions",
+      "url": "https://www.sec.gov/enforce/investor-alerts-and-bulletins/investor-alert-unclaimed-funds",
+      "summary": "Investor distributions and unclaimed funds guidance.",
+      "status": "restricted",
+      "evidence": {
+        "http_status": 403,
+        "note": "Automated request blocked or failed; manual official-site check may still work."
+      },
+      "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
+    },
+    {
+      "agent": "Money Discovery",
+      "type": "official_source",
+      "title": "VA life insurance",
+      "url": "https://insurance.va.gov/",
+      "summary": "VA insurance information.",
+      "status": "reachable",
+      "evidence": {
+        "http_status": 200
+      },
+      "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
+    },
+    {
+      "agent": "Money Discovery",
+      "type": "official_source",
+      "title": "US Courts unclaimed funds",
+      "url": "https://ucf.uscourts.gov/",
+      "summary": "Bankruptcy court unclaimed funds search.",
+      "status": "reachable",
+      "evidence": {
+        "http_status": 200
+      },
+      "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Implementing the Guiding and Establishing National Innovation for U.S. Stablecoins Act for the Issuance of Stablecoins by Entities Subject to the Jurisdiction of the Office of the Comptroller of the Currency",
+      "url": "https://www.federalregister.gov/documents/2026/10/23/2026-21706/implementing-the-guiding-and-establishing-national-innovation-for-us-stablecoins-act-for-the",
+      "summary": "Federal Register result for: surplus real property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-10-23",
+        "document_type": "Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE TREASURY",
+            "name": "Treasury Department",
+            "id": 497,
+            "url": "https://www.federalregister.gov/agencies/treasury-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+            "parent_id": null,
+            "slug": "treasury-department"
+          },
+          {
+            "raw_name": "Office of the Comptroller of the Currency",
+            "name": "Comptroller of the Currency",
+            "id": 80,
+            "url": "https://www.federalregister.gov/agencies/comptroller-of-the-currency",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/80",
+            "parent_id": 497,
+            "slug": "comptroller-of-the-currency"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Implementing the Federal Reserve Board's Responsibilities Under the GENIUS Act",
+      "url": "https://www.federalregister.gov/documents/2026/09/29/2026-19860/implementing-the-federal-reserve-boards-responsibilities-under-the-genius-act",
+      "summary": "Federal Register result for: surplus real property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-09-29",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "FEDERAL RESERVE SYSTEM",
+            "name": "Federal Reserve System",
+            "id": 188,
+            "url": "https://www.federalregister.gov/agencies/federal-reserve-system",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/188",
+            "parent_id": null,
+            "slug": "federal-reserve-system"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Implementing the Safe Explosives Act",
+      "url": "https://www.federalregister.gov/documents/2026/09/25/2026-19693/implementing-the-safe-explosives-act",
+      "summary": "Federal Register result for: surplus real property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-09-25",
+        "document_type": "Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF JUSTICE",
+            "name": "Justice Department",
+            "id": 268,
+            "url": "https://www.federalregister.gov/agencies/justice-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/268",
+            "parent_id": null,
+            "slug": "justice-department"
+          },
+          {
+            "raw_name": "Bureau of Alcohol, Tobacco, Firearms, and Explosives",
+            "name": "Alcohol, Tobacco, Firearms, and Explosives Bureau",
+            "id": 19,
+            "url": "https://www.federalregister.gov/agencies/alcohol-tobacco-firearms-and-explosives-bureau",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/19",
+            "parent_id": 268,
+            "slug": "alcohol-tobacco-firearms-and-explosives-bureau"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 14, 28, 36, and 52",
+      "url": "https://www.federalregister.gov/documents/2026/09/18/2026-19158/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-14-28-36",
+      "summary": "Federal Register result for: surplus real property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-09-18",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "OFFICE OF MANAGEMENT AND BUDGET",
+            "name": "Management and Budget Office",
+            "id": 280,
+            "url": "https://www.federalregister.gov/agencies/management-and-budget-office",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/280",
+            "parent_id": null,
+            "slug": "management-and-budget-office"
+          },
+          {
+            "raw_name": "Office of Federal Procurement Policy",
+            "name": "Federal Procurement Policy Office",
+            "id": 184,
+            "url": "https://www.federalregister.gov/agencies/federal-procurement-policy-office",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/184",
+            "parent_id": 280,
+            "slug": "federal-procurement-policy-office"
+          },
+          {
+            "raw_name": "DEPARTMENT OF DEFENSE",
+            "name": "Defense Department",
+            "id": 103,
+            "url": "https://www.federalregister.gov/agencies/defense-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/103",
+            "parent_id": null,
+            "slug": "defense-department"
+          },
+          {
+            "raw_name": "GENERAL SERVICES ADMINISTRATION",
+            "name": "General Services Administration",
+            "id": 210,
+            "url": "https://www.federalregister.gov/agencies/general-services-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/210",
+            "parent_id": null,
+            "slug": "general-services-administration"
+          },
+          {
+            "raw_name": "NATIONAL AERONAUTICS AND SPACE ADMINISTRATION",
+            "name": "National Aeronautics and Space Administration",
+            "id": 301,
+            "url": "https://www.federalregister.gov/agencies/national-aeronautics-and-space-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/301",
+            "parent_id": null,
+            "slug": "national-aeronautics-and-space-administration"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "General Services Administration Property Management Regulation (GSPMR): Nondiscrimination in Programs Receiving Federal Financial Assistance",
+      "url": "https://www.federalregister.gov/documents/2026/08/14/2026-16584/general-services-administration-property-management-regulation-gspmr-nondiscrimination-in-programs",
+      "summary": "Federal Register result for: surplus real property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-08-14",
+        "document_type": "Rule",
+        "agencies": [
+          {
+            "raw_name": "GENERAL SERVICES ADMINISTRATION",
+            "name": "General Services Administration",
+            "id": 210,
+            "url": "https://www.federalregister.gov/agencies/general-services-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/210",
+            "parent_id": null,
+            "slug": "general-services-administration"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Agency Information Collection Activities: Submission for OMB Review, Comment Request; Application for Surplus Federal Real Property Public Benefit Conveyance and BRAC Program for Emergency Management Use",
+      "url": "https://www.federalregister.gov/documents/2026/07/30/2026-15333/agency-information-collection-activities-submission-for-omb-review-comment-request-application-for",
+      "summary": "Federal Register result for: surplus real property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-07-30",
+        "document_type": "Notice",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
+            "name": "Homeland Security Department",
+            "id": 227,
+            "url": "https://www.federalregister.gov/agencies/homeland-security-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
+            "parent_id": null,
+            "slug": "homeland-security-department"
+          },
+          {
+            "raw_name": "FEDERAL EMERGENCY MANAGEMENT AGENCY",
+            "name": "Federal Emergency Management Agency",
+            "id": 166,
+            "url": "https://www.federalregister.gov/agencies/federal-emergency-management-agency",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/166",
+            "parent_id": 227,
+            "slug": "federal-emergency-management-agency"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Reducing Barriers to Medical Use Licensing",
+      "url": "https://www.federalregister.gov/documents/2026/07/27/2026-15080/reducing-barriers-to-medical-use-licensing",
+      "summary": "Federal Register result for: surplus real property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-07-27",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "NUCLEAR REGULATORY COMMISSION",
+            "name": "Nuclear Regulatory Commission",
+            "id": 383,
+            "url": "https://www.federalregister.gov/agencies/nuclear-regulatory-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/383",
+            "parent_id": null,
+            "slug": "nuclear-regulatory-commission"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Procedures for Implementing the National Environmental Policy Act",
+      "url": "https://www.federalregister.gov/documents/2026/07/01/2026-13245/procedures-for-implementing-the-national-environmental-policy-act",
+      "summary": "Federal Register result for: surplus real property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-07-01",
+        "document_type": "Rule",
+        "agencies": [
+          {
+            "raw_name": "NATIONAL AERONAUTICS AND SPACE ADMINISTRATION",
+            "name": "National Aeronautics and Space Administration",
+            "id": 301,
+            "url": "https://www.federalregister.gov/agencies/national-aeronautics-and-space-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/301",
+            "parent_id": null,
+            "slug": "national-aeronautics-and-space-administration"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+      "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+      "summary": "Federal Register result for: surplus real property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-06-23",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "OFFICE OF MANAGEMENT AND BUDGET",
+            "name": "Management and Budget Office",
+            "id": 280,
+            "url": "https://www.federalregister.gov/agencies/management-and-budget-office",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/280",
+            "parent_id": null,
+            "slug": "management-and-budget-office"
+          },
+          {
+            "raw_name": "Office of Federal Procurement Policy",
+            "name": "Federal Procurement Policy Office",
+            "id": 184,
+            "url": "https://www.federalregister.gov/agencies/federal-procurement-policy-office",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/184",
+            "parent_id": 280,
+            "slug": "federal-procurement-policy-office"
+          },
+          {
+            "raw_name": "DEPARTMENT OF DEFENSE",
+            "name": "Defense Department",
+            "id": 103,
+            "url": "https://www.federalregister.gov/agencies/defense-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/103",
+            "parent_id": null,
+            "slug": "defense-department"
+          },
+          {
+            "raw_name": "GENERAL SERVICES ADMINISTRATION",
+            "name": "General Services Administration",
+            "id": 210,
+            "url": "https://www.federalregister.gov/agencies/general-services-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/210",
+            "parent_id": null,
+            "slug": "general-services-administration"
+          },
+          {
+            "raw_name": "NATIONAL AERONAUTICS AND SPACE ADMINISTRATION",
+            "name": "National Aeronautics and Space Administration",
+            "id": 301,
+            "url": "https://www.federalregister.gov/agencies/national-aeronautics-and-space-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/301",
+            "parent_id": null,
+            "slug": "national-aeronautics-and-space-administration"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Regulation for Federal Financial Assistance",
+      "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+      "summary": "Federal Register result for: surplus real property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-05-29",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "OFFICE OF MANAGEMENT AND BUDGET",
+            "name": "Management and Budget Office",
+            "id": 280,
+            "url": "https://www.federalregister.gov/agencies/management-and-budget-office",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/280",
+            "parent_id": null,
+            "slug": "management-and-budget-office"
+          },
+          {
+            "raw_name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+            "name": "Health and Human Services Department",
+            "id": 221,
+            "url": "https://www.federalregister.gov/agencies/health-and-human-services-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/221",
+            "parent_id": null,
+            "slug": "health-and-human-services-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF AGRICULTURE",
+            "name": "Agriculture Department",
+            "id": 12,
+            "url": "https://www.federalregister.gov/agencies/agriculture-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/12",
+            "parent_id": null,
+            "slug": "agriculture-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF STATE",
+            "name": "State Department",
+            "id": 476,
+            "url": "https://www.federalregister.gov/agencies/state-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/476",
+            "parent_id": null,
+            "slug": "state-department"
+          },
+          {
+            "raw_name": "Agency for International Development",
+            "name": "Agency for International Development",
+            "id": 6,
+            "url": "https://www.federalregister.gov/agencies/agency-for-international-development",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/6",
+            "parent_id": null,
+            "slug": "agency-for-international-development"
+          },
+          {
+            "raw_name": "DEPARTMENT OF VETERANS AFFAIRS",
+            "name": "Veterans Affairs Department",
+            "id": 520,
+            "url": "https://www.federalregister.gov/agencies/veterans-affairs-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/520",
+            "parent_id": null,
+            "slug": "veterans-affairs-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF ENERGY",
+            "name": "Energy Department",
+            "id": 136,
+            "url": "https://www.federalregister.gov/agencies/energy-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/136",
+            "parent_id": null,
+            "slug": "energy-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF THE TREASURY",
+            "name": "Treasury Department",
+            "id": 497,
+            "url": "https://www.federalregister.gov/agencies/treasury-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+            "parent_id": null,
+            "slug": "treasury-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF DEFENSE",
+            "name": "Defense Department",
+            "id": 103,
+            "url": "https://www.federalregister.gov/agencies/defense-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/103",
+            "parent_id": null,
+            "slug": "defense-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF TRANSPORTATION",
+            "name": "Transportation Department",
+            "id": 492,
+            "url": "https://www.federalregister.gov/agencies/transportation-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+            "parent_id": null,
+            "slug": "transportation-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF COMMERCE",
+            "name": "Commerce Department",
+            "id": 54,
+            "url": "https://www.federalregister.gov/agencies/commerce-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+            "parent_id": null,
+            "slug": "commerce-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+            "name": "Environmental Protection Agency",
+            "id": 145,
+            "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+            "parent_id": null,
+            "slug": "environmental-protection-agency"
+          },
+          {
+            "raw_name": "U.S. INTERNATIONAL DEVELOPMENT FINANCE CORPORATION",
+            "name": "U.S. International Development Finance Corporation",
+            "id": 606,
+            "url": "https://www.federalregister.gov/agencies/u-s-international-development-finance-corporation",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/606",
+            "parent_id": null,
+            "slug": "u-s-international-development-finance-corporation"
+          },
+          {
+            "raw_name": "NATIONAL AERONAUTICS AND SPACE ADMINISTRATION",
+            "name": "National Aeronautics and Space Administration",
+            "id": 301,
+            "url": "https://www.federalregister.gov/agencies/national-aeronautics-and-space-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/301",
+            "parent_id": null,
+            "slug": "national-aeronautics-and-space-administration"
+          },
+          {
+            "raw_name": "U.S. Agency for Global Media",
+            "name": "United States Agency for Global Media",
+            "id": 608,
+            "url": "https://www.federalregister.gov/agencies/united-states-agency-for-global-media",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/608",
+            "parent_id": null,
+            "slug": "united-states-agency-for-global-media"
+          },
+          {
+            "raw_name": "NUCLEAR REGULATORY COMMISSION",
+            "name": "Nuclear Regulatory Commission",
+            "id": 383,
+            "url": "https://www.federalregister.gov/agencies/nuclear-regulatory-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/383",
+            "parent_id": null,
+            "slug": "nuclear-regulatory-commission"
+          },
+          {
+            "raw_name": "CORPORATION FOR NATIONAL AND COMMUNITY SERVICE",
+            "name": "Corporation for National and Community Service",
+            "id": 91,
+            "url": "https://www.federalregister.gov/agencies/corporation-for-national-and-community-service",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/91",
+            "parent_id": null,
+            "slug": "corporation-for-national-and-community-service"
+          },
+          {
+            "raw_name": "Social Security Administration",
+            "name": "Social Security Administration",
+            "id": 470,
+            "url": "https://www.federalregister.gov/agencies/social-security-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/470",
+            "parent_id": null,
+            "slug": "social-security-administration"
+          },
+          {
+            "raw_name": "DEPARTMENT OF HOUSING AND URBAN DEVELOPMENT",
+            "name": "Housing and Urban Development Department",
+            "id": 228,
+            "url": "https://www.federalregister.gov/agencies/housing-and-urban-development-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/228",
+            "parent_id": null,
+            "slug": "housing-and-urban-development-department"
+          },
+          {
+            "raw_name": "NATIONAL SCIENCE FOUNDATION",
+            "name": "National Science Foundation",
+            "id": 366,
+            "url": "https://www.federalregister.gov/agencies/national-science-foundation",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/366",
+            "parent_id": null,
+            "slug": "national-science-foundation"
+          },
+          {
+            "raw_name": "NATIONAL ARCHIVES AND RECORDS ADMINISTRATION",
+            "name": "National Archives and Records Administration",
+            "id": 304,
+            "url": "https://www.federalregister.gov/agencies/national-archives-and-records-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/304",
+            "parent_id": null,
+            "slug": "national-archives-and-records-administration"
+          },
+          {
+            "raw_name": "SMALL BUSINESS ADMINISTRATION",
+            "name": "Small Business Administration",
+            "id": 468,
+            "url": "https://www.federalregister.gov/agencies/small-business-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/468",
+            "parent_id": null,
+            "slug": "small-business-administration"
+          },
+          {
+            "raw_name": "DEPARTMENT OF JUSTICE",
+            "name": "Justice Department",
+            "id": 268,
+            "url": "https://www.federalregister.gov/agencies/justice-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/268",
+            "parent_id": null,
+            "slug": "justice-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF LABOR",
+            "name": "Labor Department",
+            "id": 271,
+            "url": "https://www.federalregister.gov/agencies/labor-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/271",
+            "parent_id": null,
+            "slug": "labor-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
+            "name": "Homeland Security Department",
+            "id": 227,
+            "url": "https://www.federalregister.gov/agencies/homeland-security-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
+            "parent_id": null,
+            "slug": "homeland-security-department"
+          },
+          {
+            "raw_name": "NATIONAL FOUNDATION ON THE ARTS AND THE HUMANITIES",
+            "name": "National Foundation on the Arts and the Humanities",
+            "id": 342,
+            "url": "https://www.federalregister.gov/agencies/national-foundation-on-the-arts-and-the-humanities",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/342",
+            "parent_id": null,
+            "slug": "national-foundation-on-the-arts-and-the-humanities"
+          },
+          {
+            "raw_name": "Institute of Museum and Library Services",
+            "name": "Institute of Museum and Library Services",
+            "id": 591,
+            "url": "https://www.federalregister.gov/agencies/institute-of-museum-and-library-services",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/591",
+            "parent_id": 342,
+            "slug": "institute-of-museum-and-library-services"
+          },
+          {
+            "raw_name": "NATIONAL ENDOWMENT FOR THE ARTS",
+            "name": "National Endowment for the Arts",
+            "id": 588,
+            "url": "https://www.federalregister.gov/agencies/national-endowment-for-the-arts",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/588",
+            "parent_id": 342,
+            "slug": "national-endowment-for-the-arts"
+          },
+          {
+            "raw_name": "National Endowment for the Humanities",
+            "name": "National Endowment for the Humanities",
+            "id": 589,
+            "url": "https://www.federalregister.gov/agencies/national-endowment-for-the-humanities",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/589",
+            "parent_id": 342,
+            "slug": "national-endowment-for-the-humanities"
+          },
+          {
+            "raw_name": "DEPARTMENT OF EDUCATION",
+            "name": "Education Department",
+            "id": 126,
+            "url": "https://www.federalregister.gov/agencies/education-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/126",
+            "parent_id": null,
+            "slug": "education-department"
+          },
+          {
+            "raw_name": "EXPORT IMPORT BANK",
+            "name": "Export-Import Bank",
+            "id": 151,
+            "url": "https://www.federalregister.gov/agencies/export-import-bank",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/151",
+            "parent_id": null,
+            "slug": "export-import-bank"
+          },
+          {
+            "raw_name": "EXECUTIVE OFFICE OF THE PRESIDENT",
+            "name": "Executive Office of the President",
+            "id": 538,
+            "url": "https://www.federalregister.gov/agencies/executive-office-of-the-president",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/538",
+            "parent_id": null,
+            "slug": "executive-office-of-the-president"
+          },
+          {
+            "raw_name": "OFFICE OF NATIONAL DRUG CONTROL POLICY",
+            "name": "Office of National Drug Control Policy",
+            "id": 390,
+            "url": "https://www.federalregister.gov/agencies/office-of-national-drug-control-policy",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/390",
+            "parent_id": 538,
+            "slug": "office-of-national-drug-control-policy"
+          },
+          {
+            "raw_name": "PEACE CORPS",
+            "name": "Peace Corps",
+            "id": 403,
+            "url": "https://www.federalregister.gov/agencies/peace-corps",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/403",
+            "parent_id": null,
+            "slug": "peace-corps"
+          },
+          {
+            "raw_name": "ELECTION ASSISTANCE COMMISSION",
+            "name": "Election Assistance Commission",
+            "id": 127,
+            "url": "https://www.federalregister.gov/agencies/election-assistance-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/127",
+            "parent_id": null,
+            "slug": "election-assistance-commission"
+          },
+          {
+            "raw_name": "GULF COAST ECOSYSTEM RESTORATION COUNCIL",
+            "name": "Gulf Coast Ecosystem Restoration Council",
+            "id": 583,
+            "url": "https://www.federalregister.gov/agencies/gulf-coast-ecosystem-restoration-council",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/583",
+            "parent_id": null,
+            "slug": "gulf-coast-ecosystem-restoration-council"
+          },
+          {
+            "raw_name": "FEDERAL COMMUNICATIONS COMMISSION",
+            "name": "Federal Communications Commission",
+            "id": 161,
+            "url": "https://www.federalregister.gov/agencies/federal-communications-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/161",
+            "parent_id": null,
+            "slug": "federal-communications-commission"
+          },
+          {
+            "raw_name": "CONSUMER PRODUCT SAFETY COMMISSION",
+            "name": "Consumer Product Safety Commission",
+            "id": 84,
+            "url": "https://www.federalregister.gov/agencies/consumer-product-safety-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/84",
+            "parent_id": null,
+            "slug": "consumer-product-safety-commission"
+          },
+          {
+            "raw_name": "Delta Regional Authority",
+            "name": "Delta Regional Authority",
+            "id": 624,
+            "url": "https://www.federalregister.gov/agencies/delta-regional-authority",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/624",
+            "parent_id": null,
+            "slug": "delta-regional-authority"
+          },
+          {
+            "raw_name": "Appraisal Subcommittee of the Federal Financial Institutions Examination Council",
+            "name": "Appraisal Subcommittee of the Federal Financial Institutions Examination Council",
+            "id": 621,
+            "url": "https://www.federalregister.gov/agencies/appraisal-subcommittee-of-the-federal-financial-institutions-examination-council",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/621",
+            "parent_id": null,
+            "slug": "appraisal-subcommittee-of-the-federal-financial-institutions-examination-council"
+          },
+          {
+            "raw_name": "MARINE MAMMAL COMMISSION",
+            "name": "Marine Mammal Commission",
+            "id": 281,
+            "url": "https://www.federalregister.gov/agencies/marine-mammal-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/281",
+            "parent_id": null,
+            "slug": "marine-mammal-commission"
+          },
+          {
+            "raw_name": "Millennium Challenge Corporation",
+            "name": "Millennium Challenge Corporation",
+            "id": 287,
+            "url": "https://www.federalregister.gov/agencies/millennium-challenge-corporation",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/287",
+            "parent_id": null,
+            "slug": "millennium-challenge-corporation"
+          },
+          {
+            "raw_name": "NATIONAL CREDIT UNION ADMINISTRATION",
+            "name": "National Credit Union Administration",
+            "id": 335,
+            "url": "https://www.federalregister.gov/agencies/national-credit-union-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/335",
+            "parent_id": null,
+            "slug": "national-credit-union-administration"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Employee or Independent Contractor Status Under the Fair Labor Standards Act, Family and Medical Leave Act, and Migrant and Seasonal Agricultural Worker Protection Act",
+      "url": "https://www.federalregister.gov/documents/2026/11/23/2026-23777/employee-or-independent-contractor-status-under-the-fair-labor-standards-act-family-and-medical",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-23",
+        "document_type": "Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF LABOR",
+            "name": "Labor Department",
+            "id": 271,
+            "url": "https://www.federalregister.gov/agencies/labor-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/271",
+            "parent_id": null,
+            "slug": "labor-department"
+          },
+          {
+            "raw_name": "Wage and Hour Division",
+            "name": "Wage and Hour Division",
+            "id": 524,
+            "url": "https://www.federalregister.gov/agencies/wage-and-hour-division",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/524",
+            "parent_id": 271,
+            "slug": "wage-and-hour-division"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Endangered and Threatened Wildlife and Plants; Threatened Species Status With Section 4(d) Rule for White Sands Pupfish and Critical Habitat Determination",
+      "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23711/endangered-and-threatened-wildlife-and-plants-threatened-species-status-with-section-4d-rule-for",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-20",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "Fish and Wildlife Service",
+            "name": "Fish and Wildlife Service",
+            "id": 197,
+            "url": "https://www.federalregister.gov/agencies/fish-and-wildlife-service",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/197",
+            "parent_id": 253,
+            "slug": "fish-and-wildlife-service"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Endangered and Threatened Wildlife and Plants; Endangered Species Status for Mazama Newt",
+      "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23706/endangered-and-threatened-wildlife-and-plants-endangered-species-status-for-mazama-newt",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-20",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "Fish and Wildlife Service",
+            "name": "Fish and Wildlife Service",
+            "id": 197,
+            "url": "https://www.federalregister.gov/agencies/fish-and-wildlife-service",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/197",
+            "parent_id": 253,
+            "slug": "fish-and-wildlife-service"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Arms Sales Notification",
+      "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23656/arms-sales-notification",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-20",
+        "document_type": "Notice",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF DEFENSE",
+            "name": "Defense Department",
+            "id": 103,
+            "url": "https://www.federalregister.gov/agencies/defense-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/103",
+            "parent_id": null,
+            "slug": "defense-department"
+          },
+          {
+            "raw_name": "Office of the Secretary"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Realty Action: Modified Competitive Sale of 20 Parcels of Public Land in Clark County, Nevada; Modification of Recreation and Public Purposes Act Classification",
+      "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23587/realty-action-modified-competitive-sale-of-20-parcels-of-public-land-in-clark-county-nevada",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-19",
+        "document_type": "Notice",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "Bureau of Land Management",
+            "name": "Land Management Bureau",
+            "id": 275,
+            "url": "https://www.federalregister.gov/agencies/land-management-bureau",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/275",
+            "parent_id": 253,
+            "slug": "land-management-bureau"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Air Plan Approval; Texas; Collin County Second 10-Year Maintenance Plan for the 2008 Lead Standard",
+      "url": "https://www.federalregister.gov/documents/2026/11/18/2026-23519/air-plan-approval-texas-collin-county-second-10-year-maintenance-plan-for-the-2008-lead-standard",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-18",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+            "name": "Environmental Protection Agency",
+            "id": 145,
+            "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+            "parent_id": null,
+            "slug": "environmental-protection-agency"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Atlantic Highly Migratory Species; Atlantic Bluefin Tuna Fisheries; General Category December Quota Transfer",
+      "url": "https://www.federalregister.gov/documents/2026/11/18/2026-23477/atlantic-highly-migratory-species-atlantic-bluefin-tuna-fisheries-general-category-december-quota",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-18",
+        "document_type": "Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF COMMERCE",
+            "name": "Commerce Department",
+            "id": 54,
+            "url": "https://www.federalregister.gov/agencies/commerce-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+            "parent_id": null,
+            "slug": "commerce-department"
+          },
+          {
+            "raw_name": "National Oceanic and Atmospheric Administration",
+            "name": "National Oceanic and Atmospheric Administration",
+            "id": 361,
+            "url": "https://www.federalregister.gov/agencies/national-oceanic-and-atmospheric-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/361",
+            "parent_id": 54,
+            "slug": "national-oceanic-and-atmospheric-administration"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Modernizing the Commission's National Environmental Policy Act Rules",
+      "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23385/modernizing-the-commissions-national-environmental-policy-act-rules",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-17",
+        "document_type": "Rule",
+        "agencies": [
+          {
+            "raw_name": "FEDERAL COMMUNICATIONS COMMISSION",
+            "name": "Federal Communications Commission",
+            "id": 161,
+            "url": "https://www.federalregister.gov/agencies/federal-communications-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/161",
+            "parent_id": null,
+            "slug": "federal-communications-commission"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Horse Protection",
+      "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23086/horse-protection",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-13",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF AGRICULTURE",
+            "name": "Agriculture Department",
+            "id": 12,
+            "url": "https://www.federalregister.gov/agencies/agriculture-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/12",
+            "parent_id": null,
+            "slug": "agriculture-department"
+          },
+          {
+            "raw_name": "Animal and Plant Health Inspection Service",
+            "name": "Animal and Plant Health Inspection Service",
+            "id": 22,
+            "url": "https://www.federalregister.gov/agencies/animal-and-plant-health-inspection-service",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/22",
+            "parent_id": 12,
+            "slug": "animal-and-plant-health-inspection-service"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Direct Sale of Public Land for Affordable Housing Purposes in Clark County, Nevada",
+      "url": "https://www.federalregister.gov/documents/2026/11/12/2026-23080/direct-sale-of-public-land-for-affordable-housing-purposes-in-clark-county-nevada",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-12",
+        "document_type": "Notice",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "Bureau of Land Management",
+            "name": "Land Management Bureau",
+            "id": 275,
+            "url": "https://www.federalregister.gov/agencies/land-management-bureau",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/275",
+            "parent_id": 253,
+            "slug": "land-management-bureau"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Employee or Independent Contractor Status Under the Fair Labor Standards Act, Family and Medical Leave Act, and Migrant and Seasonal Agricultural Worker Protection Act",
+      "url": "https://www.federalregister.gov/documents/2026/11/23/2026-23777/employee-or-independent-contractor-status-under-the-fair-labor-standards-act-family-and-medical",
+      "summary": "Federal Register result for: tax sale property notice",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-23",
+        "document_type": "Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF LABOR",
+            "name": "Labor Department",
+            "id": 271,
+            "url": "https://www.federalregister.gov/agencies/labor-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/271",
+            "parent_id": null,
+            "slug": "labor-department"
+          },
+          {
+            "raw_name": "Wage and Hour Division",
+            "name": "Wage and Hour Division",
+            "id": 524,
+            "url": "https://www.federalregister.gov/agencies/wage-and-hour-division",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/524",
+            "parent_id": 271,
+            "slug": "wage-and-hour-division"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Executive Compensation Disclosure Reform",
+      "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23555/executive-compensation-disclosure-reform",
+      "summary": "Federal Register result for: tax sale property notice",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-19",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "SECURITIES AND EXCHANGE COMMISSION",
+            "name": "Securities and Exchange Commission",
+            "id": 466,
+            "url": "https://www.federalregister.gov/agencies/securities-and-exchange-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/466",
+            "parent_id": null,
+            "slug": "securities-and-exchange-commission"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Medicare, Medicaid, and Marketplace Programs; Comprehensive Regulations To Uncover Suspicious Healthcare (CRUSH)",
+      "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23461/medicare-medicaid-and-marketplace-programs-comprehensive-regulations-to-uncover-suspicious",
+      "summary": "Federal Register result for: tax sale property notice",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-19",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+            "name": "Health and Human Services Department",
+            "id": 221,
+            "url": "https://www.federalregister.gov/agencies/health-and-human-services-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/221",
+            "parent_id": null,
+            "slug": "health-and-human-services-department"
+          },
+          {
+            "raw_name": "Centers for Medicare & Medicaid Services",
+            "name": "Centers for Medicare & Medicaid Services",
+            "id": 45,
+            "url": "https://www.federalregister.gov/agencies/centers-for-medicare-medicaid-services",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/45",
+            "parent_id": 221,
+            "slug": "centers-for-medicare-medicaid-services"
+          },
+          {
+            "raw_name": "Office of the Secretary"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Modernizing the Commission's National Environmental Policy Act Rules",
+      "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23385/modernizing-the-commissions-national-environmental-policy-act-rules",
+      "summary": "Federal Register result for: tax sale property notice",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-17",
+        "document_type": "Rule",
+        "agencies": [
+          {
+            "raw_name": "FEDERAL COMMUNICATIONS COMMISSION",
+            "name": "Federal Communications Commission",
+            "id": 161,
+            "url": "https://www.federalregister.gov/agencies/federal-communications-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/161",
+            "parent_id": null,
+            "slug": "federal-communications-commission"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Modernizing the Labor Market Test and Improving Protections for U.S. Workers in the PERM Immigrant Visa Program",
+      "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23370/modernizing-the-labor-market-test-and-improving-protections-for-us-workers-in-the-perm-immigrant",
+      "summary": "Federal Register result for: tax sale property notice",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-17",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF LABOR",
+            "name": "Labor Department",
+            "id": 271,
+            "url": "https://www.federalregister.gov/agencies/labor-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/271",
+            "parent_id": null,
+            "slug": "labor-department"
+          },
+          {
+            "raw_name": "Employment and Training Administration",
+            "name": "Employment and Training Administration",
+            "id": 133,
+            "url": "https://www.federalregister.gov/agencies/employment-and-training-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/133",
+            "parent_id": 271,
+            "slug": "employment-and-training-administration"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Rangeland Management",
+      "url": "https://www.federalregister.gov/documents/2026/11/12/2026-23033/rangeland-management",
+      "summary": "Federal Register result for: tax sale property notice",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-12",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF AGRICULTURE",
+            "name": "Agriculture Department",
+            "id": 12,
+            "url": "https://www.federalregister.gov/agencies/agriculture-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/12",
+            "parent_id": null,
+            "slug": "agriculture-department"
+          },
+          {
+            "raw_name": "Forest Service",
+            "name": "Forest Service",
+            "id": 209,
+            "url": "https://www.federalregister.gov/agencies/forest-service",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/209",
+            "parent_id": 12,
+            "slug": "forest-service"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "FY27 Social Impact Partnerships To Pay for Results Act Notice of Funding Opportunity",
+      "url": "https://www.federalregister.gov/documents/2026/11/12/2026-22989/fy27-social-impact-partnerships-to-pay-for-results-act-notice-of-funding-opportunity",
+      "summary": "Federal Register result for: tax sale property notice",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-12",
+        "document_type": "Notice",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE TREASURY",
+            "name": "Treasury Department",
+            "id": 497,
+            "url": "https://www.federalregister.gov/agencies/treasury-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+            "parent_id": null,
+            "slug": "treasury-department"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Notice of OFAC Sanctions Action",
+      "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22861/notice-of-ofac-sanctions-action",
+      "summary": "Federal Register result for: tax sale property notice",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-10",
+        "document_type": "Notice",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE TREASURY",
+            "name": "Treasury Department",
+            "id": 497,
+            "url": "https://www.federalregister.gov/agencies/treasury-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+            "parent_id": null,
+            "slug": "treasury-department"
+          },
+          {
+            "raw_name": "Office of Foreign Assets Control",
+            "name": "Foreign Assets Control Office",
+            "id": 203,
+            "url": "https://www.federalregister.gov/agencies/foreign-assets-control-office",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/203",
+            "parent_id": 497,
+            "slug": "foreign-assets-control-office"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Policy Statement on Jurisdiction and Preemption Under the ICC Termination Act",
+      "url": "https://www.federalregister.gov/documents/2026/11/09/2026-22811/policy-statement-on-jurisdiction-and-preemption-under-the-icc-termination-act",
+      "summary": "Federal Register result for: tax sale property notice",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-09",
+        "document_type": "Notice",
+        "agencies": [
+          {
+            "raw_name": "SURFACE TRANSPORTATION BOARD",
+            "name": "Surface Transportation Board",
+            "id": 481,
+            "url": "https://www.federalregister.gov/agencies/surface-transportation-board",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/481",
+            "parent_id": null,
+            "slug": "surface-transportation-board"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Medicare Drug Price Negotiation Program and Medicare Prescription Drug Benefit Program",
+      "url": "https://www.federalregister.gov/documents/2026/11/09/2026-22792/medicare-drug-price-negotiation-program-and-medicare-prescription-drug-benefit-program",
+      "summary": "Federal Register result for: tax sale property notice",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-09",
+        "document_type": "Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+            "name": "Health and Human Services Department",
+            "id": 221,
+            "url": "https://www.federalregister.gov/agencies/health-and-human-services-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/221",
+            "parent_id": null,
+            "slug": "health-and-human-services-department"
+          },
+          {
+            "raw_name": "Centers for Medicare & Medicaid Services",
+            "name": "Centers for Medicare & Medicaid Services",
+            "id": 45,
+            "url": "https://www.federalregister.gov/agencies/centers-for-medicare-medicaid-services",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/45",
+            "parent_id": 221,
+            "slug": "centers-for-medicare-medicaid-services"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Miscellaneous Technical Amendments; Technical Amendment",
+      "url": "https://www.federalregister.gov/documents/2026/11/23/2026-23786/miscellaneous-technical-amendments-technical-amendment",
+      "summary": "Federal Register result for: government property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-23",
+        "document_type": "Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF TRANSPORTATION",
+            "name": "Transportation Department",
+            "id": 492,
+            "url": "https://www.federalregister.gov/agencies/transportation-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+            "parent_id": null,
+            "slug": "transportation-department"
+          },
+          {
+            "raw_name": "Federal Aviation Administration",
+            "name": "Federal Aviation Administration",
+            "id": 159,
+            "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+            "parent_id": 492,
+            "slug": "federal-aviation-administration"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Realty Action: Modified Competitive Sale of 20 Parcels of Public Land in Clark County, Nevada; Modification of Recreation and Public Purposes Act Classification",
+      "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23587/realty-action-modified-competitive-sale-of-20-parcels-of-public-land-in-clark-county-nevada",
+      "summary": "Federal Register result for: government property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-19",
+        "document_type": "Notice",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "Bureau of Land Management",
+            "name": "Land Management Bureau",
+            "id": 275,
+            "url": "https://www.federalregister.gov/agencies/land-management-bureau",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/275",
+            "parent_id": 253,
+            "slug": "land-management-bureau"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Proposed Decommissioning and Disposition of USCGC Smilax (WLIC 315)",
+      "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23566/proposed-decommissioning-and-disposition-of-uscgc-smilax-wlic-315",
+      "summary": "Federal Register result for: government property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-19",
+        "document_type": "Notice",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
+            "name": "Homeland Security Department",
+            "id": 227,
+            "url": "https://www.federalregister.gov/agencies/homeland-security-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
+            "parent_id": null,
+            "slug": "homeland-security-department"
+          },
+          {
+            "raw_name": "Coast Guard",
+            "name": "Coast Guard",
+            "id": 53,
+            "url": "https://www.federalregister.gov/agencies/coast-guard",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/53",
+            "parent_id": 227,
+            "slug": "coast-guard"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Executive Compensation Disclosure Reform",
+      "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23555/executive-compensation-disclosure-reform",
+      "summary": "Federal Register result for: government property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-19",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "SECURITIES AND EXCHANGE COMMISSION",
+            "name": "Securities and Exchange Commission",
+            "id": 466,
+            "url": "https://www.federalregister.gov/agencies/securities-and-exchange-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/466",
+            "parent_id": null,
+            "slug": "securities-and-exchange-commission"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Modernizing the Commission's National Environmental Policy Act Rules",
+      "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23385/modernizing-the-commissions-national-environmental-policy-act-rules",
+      "summary": "Federal Register result for: government property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-17",
+        "document_type": "Rule",
+        "agencies": [
+          {
+            "raw_name": "FEDERAL COMMUNICATIONS COMMISSION",
+            "name": "Federal Communications Commission",
+            "id": 161,
+            "url": "https://www.federalregister.gov/agencies/federal-communications-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/161",
+            "parent_id": null,
+            "slug": "federal-communications-commission"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "1,3,4,6,7,8-Hexahydro-4,6,6,7,8,8-hexamethylcyclopenta[\u03b3]-2-benzopyran (HHCB); Risk Evaluation Under the Toxic Substances Control Act (TSCA); Notice of Data Availability and Request for Comment",
+      "url": "https://www.federalregister.gov/documents/2026/11/16/2026-23263/134678-hexahydro-466788-hexamethylcyclopenta-2-benzopyran-hhcb-risk-evaluation-under-the-toxic",
+      "summary": "Federal Register result for: government property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-16",
+        "document_type": "Notice",
+        "agencies": [
+          {
+            "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+            "name": "Environmental Protection Agency",
+            "id": 145,
+            "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+            "parent_id": null,
+            "slug": "environmental-protection-agency"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Safety Zone; Massachusetts Bay, Boston, MA",
+      "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23148/safety-zone-massachusetts-bay-boston-ma",
+      "summary": "Federal Register result for: government property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-13",
+        "document_type": "Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
+            "name": "Homeland Security Department",
+            "id": 227,
+            "url": "https://www.federalregister.gov/agencies/homeland-security-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
+            "parent_id": null,
+            "slug": "homeland-security-department"
+          },
+          {
+            "raw_name": "Coast Guard",
+            "name": "Coast Guard",
+            "id": 53,
+            "url": "https://www.federalregister.gov/agencies/coast-guard",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/53",
+            "parent_id": 227,
+            "slug": "coast-guard"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Direct Sale of Public Land for Affordable Housing Purposes in Clark County, Nevada",
+      "url": "https://www.federalregister.gov/documents/2026/11/12/2026-23080/direct-sale-of-public-land-for-affordable-housing-purposes-in-clark-county-nevada",
+      "summary": "Federal Register result for: government property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-12",
+        "document_type": "Notice",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "Bureau of Land Management",
+            "name": "Land Management Bureau",
+            "id": 275,
+            "url": "https://www.federalregister.gov/agencies/land-management-bureau",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/275",
+            "parent_id": 253,
+            "slug": "land-management-bureau"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Schedules of Controlled Substances: Placement of Oveporexton in Schedule IV",
+      "url": "https://www.federalregister.gov/documents/2026/11/12/2026-23075/schedules-of-controlled-substances-placement-of-oveporexton-in-schedule-iv",
+      "summary": "Federal Register result for: government property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-12",
+        "document_type": "Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF JUSTICE",
+            "name": "Justice Department",
+            "id": 268,
+            "url": "https://www.federalregister.gov/agencies/justice-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/268",
+            "parent_id": null,
+            "slug": "justice-department"
+          },
+          {
+            "raw_name": "Drug Enforcement Administration",
+            "name": "Drug Enforcement Administration",
+            "id": 116,
+            "url": "https://www.federalregister.gov/agencies/drug-enforcement-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/116",
+            "parent_id": 268,
+            "slug": "drug-enforcement-administration"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Rangeland Management",
+      "url": "https://www.federalregister.gov/documents/2026/11/12/2026-23033/rangeland-management",
+      "summary": "Federal Register result for: government property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-12",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF AGRICULTURE",
+            "name": "Agriculture Department",
+            "id": 12,
+            "url": "https://www.federalregister.gov/agencies/agriculture-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/12",
+            "parent_id": null,
+            "slug": "agriculture-department"
+          },
+          {
+            "raw_name": "Forest Service",
+            "name": "Forest Service",
+            "id": 209,
+            "url": "https://www.federalregister.gov/agencies/forest-service",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/209",
+            "parent_id": 12,
+            "slug": "forest-service"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "SAVANNAH RIVER NUCLEAR SOLUTIONS LLC \u2014 MANAGEMENT AND OPERATING CONTRACT FOR THE SAVANNAH RIVER SITE.",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "DEAC0908SR22470",
+        "amount": 27995864149.1,
+        "start": "2008-01-10",
+        "end": "2027-09-30",
+        "agency": "Department of Energy",
+        "state": "SC"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "WASHINGTON SAVANNAH RIVER COMPANY LLC \u2014 INTEGRATED TEAM MANAGEMENT AND OPERATION OF SRS",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "DEAC0996SR18500",
+        "amount": 12893899446.6,
+        "start": "1999-10-15",
+        "end": "2017-12-07",
+        "agency": "Department of Energy",
+        "state": "SC"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "SAVANNAH RIVER REMEDIATION LLC \u2014 NEW CONTRACT AWARD FOR MANAGEMENT OF THE LIQUID WASTE SYSTEM AT SRS",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "DEAC0909SR22505",
+        "amount": 6626030703.19,
+        "start": "2009-03-30",
+        "end": "2022-02-26",
+        "agency": "Department of Energy",
+        "state": "SC"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "CB&I AREVA MOX SERVICES, LLC \u2014 Award record",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "DEAC0299CH10888",
+        "amount": 5837441290.31,
+        "start": "1999-11-15",
+        "end": "2020-03-02",
+        "agency": "Department of Energy",
+        "state": "SC"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "SAVANNAH RIVER MISSION COMPLETION, LLC \u2014 THIS AWARD IS FOR THE SAVANNAH RIVER INTEGRATED MISSION COMPLETION CONTRACT - TASK ORDER 6 (LIQUID WASTE OPERATIONS).",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "89303723FEM400292",
+        "amount": 2605756613.28,
+        "start": "2023-10-01",
+        "end": "2031-10-26",
+        "agency": "Department of Energy",
+        "state": "SC"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "PARSONS GOVERNMENT SERVICES INC. \u2014 SALT WASTE PROCESSING FACILITY CONCEPTUAL DESIGN",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "DEAC0902SR22210",
+        "amount": 2276893314.21,
+        "start": "2002-09-15",
+        "end": "2022-04-30",
+        "agency": "Department of Energy",
+        "state": "SC"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "BATTELLE SAVANNAH RIVER ALLIANCE, LLC \u2014 SAVANNAH RIVER NATIONAL LABORATORY MANAGEMENT AND OPERATING (M&O) CONTRACT",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "89303321CEM000080",
+        "amount": 1690822920.93,
+        "start": "2021-02-16",
+        "end": "2030-02-15",
+        "agency": "Department of Energy",
+        "state": "SC"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "CENTERRA GROUP, LLC \u2014 PROTECTIVE FORCE SECURITY SERVICES FOR THE DEPARTMENT OF ENERGY'S SAVANNAH RIVER SITE",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "DEAC3010CC60025",
+        "amount": 1382722835.71,
+        "start": "2009-10-08",
+        "end": "2023-07-14",
+        "agency": "Department of Energy",
+        "state": "SC"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "ADVANCED TECHNOLOGY INTERNATIONAL \u2014 OT TASK ORDER 4",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "75A50123F61004",
+        "amount": 1010801807.0,
+        "start": "2023-09-29",
+        "end": "2030-12-31",
+        "agency": "Department of Health and Human Services",
+        "state": "SC"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "PALMETTO GBA, LLC \u2014 IGF::OT::IGF JM AB MAC AWARD",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "HHSM5002015M0028Z",
+        "amount": 988206263.41,
+        "start": "2015-04-01",
+        "end": "2023-01-31",
+        "agency": "Department of Health and Human Services",
+        "state": "SC"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "HUMANA GOVERNMENT BUSINESS INC \u2014 IGF::OT::IGF",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "HT940216C0001",
+        "amount": 51269205263.03,
+        "start": "2016-08-01",
+        "end": "2025-12-31",
+        "agency": "Department of Defense",
+        "state": "KY"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "LOCKHEED MARTIN CORP \u2014 Award record",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "DEAC0494AL85000",
+        "amount": 48063737196.35,
+        "start": "1993-10-15",
+        "end": "2017-04-30",
+        "agency": "Department of Energy",
+        "state": "NM"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "NATIONAL TECHNOLOGY & ENGINEERING SOLUTIONS OF SANDIA, LLC \u2014 IGF::CL,CT::IGF CONTRACT AWARD DE-NA0003525 TO THE NATIONAL TECHNOLOGY&ENGINEERING SOLUTIONS OF SANDIA, LLC (NTESS) FOR THE MANAGEMENT AND OPERATION OF THE DEPARTMENT OF ENERGY, NATIONAL NUCLEAR SECURITY ADMINISTRATION'S SANDIA NATIONAL LABORATORIES (SNL)",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "DENA0003525",
+        "amount": 44093914875.26,
+        "start": "2017-01-18",
+        "end": "2027-04-30",
+        "agency": "Department of Energy",
+        "state": "NM"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "UT-BATTELLE LLC \u2014 MANAGEMENT AND OPERATION OF THE OAK RIDGE NATIONAL LABORATORY",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "DEAC0500OR22725",
+        "amount": 42970738616.89,
+        "start": "1999-10-15",
+        "end": "2030-03-31",
+        "agency": "Department of Energy",
+        "state": "TN"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "LAWRENCE LIVERMORE NATIONAL SECURITY, LLC \u2014 TAS::89 0240::TAS THIS PERFORMANCE-BASED MANAGEMENT CONTRACT (PBMC) IS FOR THE MANAGEMENT AND OPERATION OF THE LAWRENCE LIVERMORE NATIONAL LABORATORY (LLNL). THE CONTRACTOR SHALL, IN ACCORDANCE WITH THE PROVISIONS OF THIS CONTRACT, ACCOMPLISH THE MISSIONS AND PROGRAMS ASSIGNED BY THE U.S. DEPARTMENT OF ENERGY (DOE) AND MANAGE AND OPERATE THE LABORATORY.  THE LABORATORY IS ONE OF DOES OFFICE OF DEFENSE PROGRAM MULTI-PROGRAM LABORATORIES.  THE LABORATORY IS A FEDERALLY FUNDED RESEARCH AND DEVELOPMENT INSTITUTION (ESTABLISHED IN ACCORDANCE WITH THE FEDERAL ACQUISITION REGULATION (FAR) PART 35 AND OPERATED UNDER THIS MANAGEMENT AND OPERATING (M&O) CONTRACT, AS DEFINED IN FAR 17.6 AND DEAR 917.6.",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "DEAC5207NA27344",
+        "amount": 42157425910.2,
+        "start": "2007-05-09",
+        "end": "2031-09-30",
+        "agency": "Department of Energy",
+        "state": "CA"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "TRIAD NATIONAL SECURITY, LLC \u2014 IGF::CL::IGF COMPETITION FOR MANAGEMENT AND OPERATION OF LOS ALAMOS NATIONAL LABORATORY",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "89233218CNA000001",
+        "amount": 36289094015.26,
+        "start": "2018-06-08",
+        "end": "2028-10-31",
+        "agency": "Department of Energy",
+        "state": "NM"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "ELECTRIC BOAT CORPORATION \u2014 SSN 802 AND 803 LONG LEAD TIME MATERIAL",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "N0002417C2100",
+        "amount": 35737749929.0,
+        "start": "2017-02-14",
+        "end": "2036-06-02",
+        "agency": "Department of Defense",
+        "state": "CT"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "REGENTS OF THE UNIVERSITY OF CALIFORNIA, THE \u2014 M&O OF LANL BR OF U OF CA",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "DEAC3243AL00036",
+        "amount": 35295925219.18,
+        "start": "1978-09-30",
+        "end": "2006-05-31",
+        "agency": "Department of Energy",
+        "state": "NM"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "CONSOLIDATED NUCLEAR SECURITY, LLC \u2014 IGF::CL,CT::IGF MANAGEMENT AND OPERATING CONTRACT FOR Y-12 NATIONAL SECURITY COMPLEX, PANTEX PLANT, WITH AN OPTION FOR SAVANNAH RIVER TRITIUM OPERATIONS",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "DENA0001942",
+        "amount": 35151184369.83,
+        "start": "2013-01-08",
+        "end": "2027-09-30",
+        "agency": "Department of Energy",
+        "state": "TN"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "LOCKHEED MARTIN CORPORATION \u2014 LRIP LOT 12 ADVANCE ACQUISITION CONTRACT",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "N0001917C0001",
+        "amount": 35135514910.2,
+        "start": "2017-11-17",
+        "end": "2031-03-31",
+        "agency": "Department of Defense",
+        "state": "TX"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "procurement_portal",
+      "title": "SAM.gov contract opportunities",
+      "url": "https://sam.gov/content/opportunities",
+      "summary": "Official federal opportunity portal. Automated API searching requires an approved API key; this free agent supplies the portal link, not fabricated live bid results.",
+      "status": "manual_search",
+      "evidence": {
+        "api_key_required_for_api": true
+      },
+      "next_action": "Search active opportunities by South Carolina location, NAICS code and set-aside; review solicitation and eligibility."
+    },
+    {
+      "agent": "State & County Land Discovery",
+      "type": "land_source",
+      "title": "South Carolina State Surplus Property",
+      "url": "https://www.admin.sc.gov/services/surplus-property",
+      "summary": "Official state surplus property program and public auctions.",
+      "status": "source_link",
+      "evidence": {},
+      "next_action": "Confirm the parcel is actually offered for sale. Obtain parcel ID, title search, tax status, access, zoning, utilities and redemption information before any bid or payment."
+    },
+    {
+      "agent": "State & County Land Discovery",
+      "type": "land_source",
+      "title": "Berkeley County tax-sale listings and status",
+      "url": "https://berkeleycountysc.gov/dept/delinquent-tax-collector/taxsale/",
+      "summary": "Official local tax-sale page; check current sale status and linked property research resources.",
+      "status": "source_link",
+      "evidence": {},
+      "next_action": "Confirm the parcel is actually offered for sale. Obtain parcel ID, title search, tax status, access, zoning, utilities and redemption information before any bid or payment."
+    },
+    {
+      "agent": "State & County Land Discovery",
+      "type": "land_source",
+      "title": "Berkeley County balance-in-trust / excess proceeds FAQ",
+      "url": "https://berkeleycountysc.gov/dept/delinquent-tax-collector/faq_delinquent-tax/",
+      "summary": "Official FAQ explains that a balance-in-trust may exist when a tax-sale bid exceeds taxes, penalties, levy costs and current-year taxes; the defaulting taxpayer is entitled to that balance if the property is conveyed to the bidder.",
+      "status": "source_link",
+      "evidence": {},
+      "next_action": "Confirm the parcel is actually offered for sale. Obtain parcel ID, title search, tax status, access, zoning, utilities and redemption information before any bid or payment."
+    },
+    {
+      "agent": "State & County Land Discovery",
+      "type": "land_source",
+      "title": "Berkeley County Forfeited Land Commission",
+      "url": "https://berkeleycountysc.gov/dept/forfeited-land-commission/",
+      "summary": "Official county commission information about disposition of forfeited lands after the redemption period.",
+      "status": "source_link",
+      "evidence": {},
+      "next_action": "Confirm the parcel is actually offered for sale. Obtain parcel ID, title search, tax status, access, zoning, utilities and redemption information before any bid or payment."
+    },
+    {
+      "agent": "State & County Land Discovery",
+      "type": "land_source",
+      "title": "Berkeley County Master in Equity sales",
+      "url": "https://berkeleycountysc.gov/dept/mie/sale/",
+      "summary": "Official foreclosure-sale information and court roster instructions; title and property condition require independent diligence.",
+      "status": "source_link",
+      "evidence": {},
+      "next_action": "Confirm the parcel is actually offered for sale. Obtain parcel ID, title search, tax status, access, zoning, utilities and redemption information before any bid or payment."
+    },
+    {
+      "agent": "State & County Land Discovery",
+      "type": "land_source",
+      "title": "Charleston County delinquent tax sale",
+      "url": "https://www.charlestoncounty.gov/departments/delinquent-tax/tax-sale.php",
+      "summary": "Official neighboring-county tax-sale listings and bidder information.",
+      "status": "source_link",
+      "evidence": {},
+      "next_action": "Confirm the parcel is actually offered for sale. Obtain parcel ID, title search, tax status, access, zoning, utilities and redemption information before any bid or payment."
+    },
+    {
+      "agent": "State & County Land Discovery",
+      "type": "land_source",
+      "title": "South Carolina Treasurer",
+      "url": "https://treasurer.sc.gov/",
+      "summary": "State financial and unclaimed-property information; not a land-sale list.",
+      "status": "source_link",
+      "evidence": {},
+      "next_action": "Confirm the parcel is actually offered for sale. Obtain parcel ID, title search, tax status, access, zoning, utilities and redemption information before any bid or payment."
+    },
+    {
+      "agent": "State & County Land Discovery",
+      "type": "land_source",
+      "title": "South Carolina county tax sale directory search",
+      "url": "https://www.google.com/search?q=site%3Asc.gov+county+tax+sale+real+property+South+Carolina",
+      "summary": "Searches public county-government pages for tax-sale notices.",
+      "status": "source_link",
+      "evidence": {},
+      "next_action": "Confirm the parcel is actually offered for sale. Obtain parcel ID, title search, tax status, access, zoning, utilities and redemption information before any bid or payment."
+    },
+    {
+      "agent": "State & County Land Discovery",
+      "type": "land_source",
+      "title": "Federal real property disposal information",
+      "url": "https://disposal.gsa.gov/",
+      "summary": "Federal property disposal information.",
+      "status": "source_link",
+      "evidence": {},
+      "next_action": "Confirm the parcel is actually offered for sale. Obtain parcel ID, title search, tax status, access, zoning, utilities and redemption information before any bid or payment."
+    },
+    {
+      "agent": "Ownership & Evidence",
+      "type": "process_template",
+      "title": "Ownership evidence workflow",
+      "url": "https://www.usa.gov/",
+      "summary": "Checklist only: identify the issuing authority, official record, claimant relationship, required proof, filing method and written confirmation.",
+      "status": "preparation_only",
+      "evidence": {
+        "automated_ownership_determination": false
+      },
+      "next_action": "The agent cannot establish title or beneficial ownership. Obtain the deed, agency determination, court order or other legally recognized evidence from the competent authority."
+    },
+    {
+      "agent": "Ownership & Evidence",
+      "type": "process_template",
+      "title": "Contract assignment permission workflow",
+      "url": "https://www.sba.gov/business-guide/manage-your-business",
+      "summary": "Check contract language, consent, licensing, notice, disclosure, liability and payment trigger before any transfer.",
+      "status": "preparation_only",
+      "evidence": {
+        "automated_assignment_authority": false
+      },
+      "next_action": "Get written consent where required and legal review before signing or assigning."
+    },
+    {
+      "agent": "Claims & Documents",
+      "type": "document_workflow",
+      "title": "Claim packet preparation checklist",
+      "url": "https://www.usa.gov/unclaimed-money",
+      "summary": "Prepare a packet checklist from the agency's own instructions; keep sensitive identity documents off this public app.",
+      "status": "preparation_only",
+      "evidence": {
+        "can_sign_or_submit": false
+      },
+      "next_action": "You must review, sign and submit through the official agency channel. Never pay a finder fee to claim your own property unless the official rules expressly allow it."
+    },
+    {
+      "agent": "Revenue & Accounting",
+      "type": "ledger_workflow",
+      "title": "Revenue ledger initialized",
+      "url": "./revenue-ledger.json",
+      "summary": "Only money actually received and documented should count as revenue. Leads, asking prices and award amounts are not earnings.",
+      "status": "tracking_only",
+      "evidence": {
+        "verified_receipts_recorded": 0,
+        "currency": "USD"
+      },
+      "next_action": "Add receipts only after funds clear; retain invoice, payer, date, amount, fees and proof of deposit."
+    }
+  ]
+}
