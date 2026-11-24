@@ -12,8 +12,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: money-hunter-repo-writes
@@ -113,15 +111,3 @@ jobs:
           done
           echo "Could not publish generated files after 3 attempts" >&2
           exit 1
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload site artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-
-      - name: Deploy updated site
-        id: deployment
-        uses: actions/deploy-pages@v4
