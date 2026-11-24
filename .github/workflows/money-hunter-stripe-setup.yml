@@ -1,6 +1,10 @@
 name: Money Hunter Stripe Setup Bot
 
 on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/money-hunter-stripe-setup.yml"
   pull_request:
     paths:
       - "money-hunter/scripts/stripe-setup-bot.mjs"
@@ -19,7 +23,7 @@ permissions:
 
 jobs:
   validate:
-    if: ${{ github.event_name == 'pull_request' || inputs.confirm == 'SETUP' }}
+    if: ${{ github.event_name == 'pull_request' || inputs.confirm == 'SETUP' || github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -34,7 +38,7 @@ jobs:
         run: node --input-type=module --check < money-hunter/cloud.js
 
   setup:
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.confirm == 'SETUP' }}
+    if: ${{ (github.event_name == 'workflow_dispatch' && inputs.confirm == 'SETUP') || github.event_name == 'push' }}
     needs: validate
     runs-on: ubuntu-latest
     steps:
