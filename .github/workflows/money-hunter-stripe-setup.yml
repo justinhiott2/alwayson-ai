@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - "money-hunter/scripts/stripe-setup-bot.mjs"
+      - "money-hunter/cloud.js"
+      - "money-hunter/index.html"
       - ".github/workflows/money-hunter-stripe-setup.yml"
   workflow_dispatch:
     inputs:
@@ -28,6 +30,8 @@ jobs:
           node-version: "20"
       - name: Check setup bot syntax
         run: node --check money-hunter/scripts/stripe-setup-bot.mjs
+      - name: Check browser billing module syntax
+        run: node --input-type=module --check < money-hunter/cloud.js
 
   setup:
     if: ${{ github.event_name == 'workflow_dispatch' && inputs.confirm == 'SETUP' }}
