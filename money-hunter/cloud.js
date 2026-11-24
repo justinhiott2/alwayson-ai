@@ -39,7 +39,7 @@ async function updateAccount() {
   if ($("accountName")) $("accountName").disabled = signed;
   if ($("premiumCheckout")) {
     $("premiumCheckout").disabled = !signed || true;
-    $("premiumCheckout").textContent = "PayPal subscription setup pending";
+    $("premiumCheckout").textContent = "Black Friday PayPal checkout pending";
   }
   await refreshMembership();
 }
