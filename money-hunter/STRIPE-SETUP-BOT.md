@@ -44,3 +44,8 @@ end-to-end payment tests. Use Stripe test mode with test credentials and a
 test price to verify checkout, successful payment confirmation, failed renewal,
 and cancellation. Only after those pass should a human explicitly enable live
 checkout. The bot never flips that switch.
+
+## Latest application test
+
+The GitHub Actions Money Hunter Browser Test Bot completed successfully on this branch:
+23 checks passed, 0 failed. This is an isolated browser/UI test using synthetic data; it does not exercise Stripe checkout, card authorization, webhook delivery, renewals, or cancellation.
