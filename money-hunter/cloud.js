@@ -14,10 +14,11 @@ async function refreshMembership() {
   if (!currentSession?.user) {
     if ($("membershipCloudStatus")) $("membershipCloudStatus").textContent = "Sign in to connect membership to your account.";
     if ($("manageBilling")) $("manageBilling").classList.add("hidden");
+    if ($("premiumCheckout")) $("premiumCheckout").disabled = true;
     return;
   }
   const { data, error } = await supabase.from("memberships")
-    .select("status,current_period_end,cancel_at_period_end")
+    .select("status,current_period_end,cancel_at_period_end,stripe_customer_id")
     .eq("user_id", currentSession.user.id).maybeSingle();
   if (error) {
     $("membershipCloudStatus").textContent = "Account connected; membership status could not be loaded.";
@@ -25,9 +26,50 @@ async function refreshMembership() {
   }
   const active = data && ["active", "trialing"].includes(data.status);
   $("membershipCloudStatus").textContent = active
-    ? "PayPal membership: " + data.status + (data.current_period_end ? " · period ends " + new Date(data.current_period_end).toLocaleDateString() : "") + (data.cancel_at_period_end ? " · cancellation scheduled" : "")
-    : "Membership: " + (data?.status || "Free plan") + ". Paid access will be granted only after PayPal confirms payment.";
-  if ($("manageBilling")) $("manageBilling").classList.toggle("hidden", !data);
+    ? "Stripe membership: " + data.status + (data.current_period_end ? " · period ends " + new Date(data.current_period_end).toLocaleDateString() : "") + (data.cancel_at_period_end ? " · cancellation scheduled" : "")
+    : "Membership: " + (data?.status || "Free plan") + ". Paid access activates only after Stripe confirms payment.";
+  if ($("manageBilling")) $("manageBilling").classList.toggle("hidden", !data?.stripe_customer_id);
+  if ($("premiumCheckout")) {
+    $("premiumCheckout").disabled = Boolean(active);
+    $("premiumCheckout").textContent = active ? "Membership active" : "Subscribe securely with Stripe";
+  }
+}
+async function startCheckout() {
+  if (!currentSession?.user) return setStatus("Sign in before subscribing.", true);
+  const button = $("premiumCheckout");
+  button.disabled = true;
+  button.textContent = "Opening secure Stripe checkout…";
+  setStatus("Creating your secure subscription checkout…");
+  try {
+    const { data, error } = await supabase.functions.invoke("create-checkout-session", { body: {} });
+    if (error) throw error;
+    if (!data?.url || typeof data.url !== "string" || !data.url.startsWith("https://checkout.stripe.com/")) {
+      throw new Error(data?.error || "Stripe did not return a valid checkout URL.");
+    }
+    window.location.assign(data.url);
+  } catch (error) {
+    setStatus(error?.message || "Checkout is unavailable. Please try again later.", true);
+    await refreshMembership();
+  } finally {
+    if (button && !button.disabled) button.textContent = "Subscribe securely with Stripe";
+  }
+}
+async function manageBilling() {
+  if (!currentSession?.user) return setStatus("Sign in to manage your membership.", true);
+  const button = $("manageBilling");
+  if (button) { button.disabled = true; button.textContent = "Opening billing portal…"; }
+  try {
+    const { data, error } = await supabase.functions.invoke("create-portal-session", { body: {} });
+    if (error) throw error;
+    if (!data?.url || typeof data.url !== "string" || !data.url.startsWith("https://billing.stripe.com/")) {
+      throw new Error(data?.error || "Stripe did not return a valid billing portal URL.");
+    }
+    window.location.assign(data.url);
+  } catch (error) {
+    setStatus(error?.message || "Billing management is unavailable.", true);
+  } finally {
+    if (button) { button.disabled = false; button.textContent = "Manage / cancel membership"; }
+  }
 }
 async function updateAccount() {
   const user = currentSession?.user;
@@ -37,10 +79,7 @@ async function updateAccount() {
   $("accountSignup")?.classList.toggle("hidden", signed);
   $("accountLogout")?.classList.toggle("hidden", !signed);
   if ($("accountName")) $("accountName").disabled = signed;
-  if ($("premiumCheckout")) {
-    $("premiumCheckout").disabled = !signed || true;
-    $("premiumCheckout").textContent = "PayPal subscription setup pending";
-  }
+  if ($("premiumCheckout")) $("premiumCheckout").disabled = !signed;
   await refreshMembership();
 }
 async function signUp() {
@@ -77,8 +116,8 @@ async function signOut() {
 $("accountSignup")?.addEventListener("click", signUp);
 $("accountLogin")?.addEventListener("click", signIn);
 $("accountLogout")?.addEventListener("click", signOut);
-$("manageBilling")?.addEventListener("click", () => setStatus("PayPal cancellation management will be enabled after the PayPal subscription API and webhook are configured."));
-$("premiumCheckout")?.addEventListener("click", () => setStatus("PayPal subscription checkout is not enabled yet. No payment has been requested."));
+$("manageBilling")?.addEventListener("click", manageBilling);
+$("premiumCheckout")?.addEventListener("click", startCheckout);
 supabase.auth.onAuthStateChange((_event, session) => { currentSession = session; updateAccount(); });
 const { data } = await supabase.auth.getSession();
 currentSession = data.session;
