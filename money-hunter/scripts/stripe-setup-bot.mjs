@@ -38,7 +38,7 @@ async function stripe(path, key, method = "GET", form) {
   return request(STRIPE_API + path, key, {
     method,
     headers: form ? { "Content-Type": "application/x-www-form-urlencoded" } : {},
-    body: form ? new URLSearchParams(form) : undefined
+    body: form ? (() => { const params = new URLSearchParams(); for (const [key, value] of Object.entries(form)) { if (Array.isArray(value)) value.forEach(item => params.append(key, item)); else params.append(key, String(value)); } return params; })() : undefined
   });
 }
 async function main() {
@@ -66,7 +66,21 @@ async function main() {
     if (endpoint.url !== WEBHOOK_URL) throw new Error("STRIPE_WEBHOOK_ENDPOINT_ID points to a different endpoint URL.");
     if (endpoint.status !== "enabled") throw new Error("Configured Stripe webhook endpoint is not enabled.");
     // Stripe does not reveal an existing endpoint's signing secret again.
-    throw new Error("Existing webhook endpoint found. To securely refresh its signing secret, remove STRIPE_WEBHOOK_ENDPOINT_ID from the GitHub Actions variable and rerun; the bot will create a replacement and store its new secret.");
+    // Preserve its secret; only synchronize the non-secret values.
+    const secrets = [
+      { name: "STRIPE_SECRET_KEY", value: stripeKey },
+      { name: "STRIPE_PRICE_ID", value: PRICE_ID },
+      { name: "ALLOW_LIVE_CHECKOUT", value: "false" }
+    ];
+    await request(SUPABASE_API + "/projects/" + encodeURIComponent(projectRef) + "/secrets", supabaseToken, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(secrets)
+    });
+    for (const item of secrets) console.log("::add-mask::" + item.value);
+    console.log("::notice::Existing Money Hunter webhook verified; Stripe price and safe checkout lock synchronized.");
+    console.log("Live checkout remains disabled (ALLOW_LIVE_CHECKOUT=false).");
+    return;
   } else {
     endpoint = await stripe("/webhook_endpoints", stripeKey, "POST", {
       url: WEBHOOK_URL,
