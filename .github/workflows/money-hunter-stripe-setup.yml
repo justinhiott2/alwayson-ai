@@ -1,6 +1,10 @@
 name: Money Hunter Stripe Setup Bot
 
 on:
+  pull_request:
+    paths:
+      - "money-hunter/scripts/stripe-setup-bot.mjs"
+      - ".github/workflows/money-hunter-stripe-setup.yml"
   workflow_dispatch:
     inputs:
       confirm:
@@ -12,8 +16,22 @@ permissions:
   contents: read
 
 jobs:
+  validate:
+    if: ${{ github.event_name == 'pull_request' || inputs.confirm == 'SETUP' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Verify Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Check setup bot syntax
+        run: node --check money-hunter/scripts/stripe-setup-bot.mjs
+
   setup:
-    if: ${{ inputs.confirm == 'SETUP' }}
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.confirm == 'SETUP' }}
+    needs: validate
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
