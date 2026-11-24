@@ -9,15 +9,23 @@ let currentSession = null;
 const setStatus = (message, error = false) => {
   const el = $("accountStatus");
   if (el) { el.textContent = message; el.style.color = error ? "#ff9a8b" : "#a9b5c8"; }
+  const checkout = $("premiumCheckoutStatus");
+  if (checkout) checkout.textContent = message;
 };
+async function paypalAction(action) {
+  const { data, error } = await supabase.functions.invoke("paypal-subscription-manager", { body: { action } });
+  if (error) throw new Error(error.message || "Could not reach PayPal subscription service.");
+  if (data?.error) throw new Error(data.error);
+  return data;
+}
 async function refreshMembership() {
   if (!currentSession?.user) {
     if ($("membershipCloudStatus")) $("membershipCloudStatus").textContent = "Sign in to connect membership to your account.";
-    if ($("manageBilling")) $("manageBilling").classList.add("hidden");
+    $("manageBilling")?.classList.add("hidden");
     return;
   }
   const { data, error } = await supabase.from("memberships")
-    .select("status,current_period_end,cancel_at_period_end")
+    .select("status,current_period_end,cancel_at_period_end,paypal_status,paypal_subscription_id")
     .eq("user_id", currentSession.user.id).maybeSingle();
   if (error) {
     $("membershipCloudStatus").textContent = "Account connected; membership status could not be loaded.";
@@ -25,9 +33,11 @@ async function refreshMembership() {
   }
   const active = data && ["active", "trialing"].includes(data.status);
   $("membershipCloudStatus").textContent = active
-    ? "PayPal membership: " + data.status + (data.current_period_end ? " · period ends " + new Date(data.current_period_end).toLocaleDateString() : "") + (data.cancel_at_period_end ? " · cancellation scheduled" : "")
-    : "Membership: " + (data?.status || "Free plan") + ". Paid access will be granted only after PayPal confirms payment.";
-  if ($("manageBilling")) $("manageBilling").classList.toggle("hidden", !data);
+    ? "PayPal membership: " + data.status + (data.current_period_end ? " · next billing " + new Date(data.current_period_end).toLocaleDateString() : "")
+    : data?.paypal_status === "APPROVAL_PENDING"
+      ? "PayPal approval is pending. Complete approval in PayPal; paid access starts only after verified payment."
+      : "Membership: " + (data?.status || "Free plan") + ". Paid access is granted only after PayPal confirms payment.";
+  $("manageBilling")?.classList.toggle("hidden", !data?.paypal_subscription_id);
 }
 async function updateAccount() {
   const user = currentSession?.user;
@@ -38,8 +48,8 @@ async function updateAccount() {
   $("accountLogout")?.classList.toggle("hidden", !signed);
   if ($("accountName")) $("accountName").disabled = signed;
   if ($("premiumCheckout")) {
-    $("premiumCheckout").disabled = !signed || true;
-    $("premiumCheckout").textContent = "PayPal subscription setup pending";
+    $("premiumCheckout").disabled = !signed;
+    $("premiumCheckout").textContent = signed ? "Subscribe with PayPal" : "Sign in to subscribe";
   }
   await refreshMembership();
 }
@@ -77,10 +87,42 @@ async function signOut() {
 $("accountSignup")?.addEventListener("click", signUp);
 $("accountLogin")?.addEventListener("click", signIn);
 $("accountLogout")?.addEventListener("click", signOut);
-$("manageBilling")?.addEventListener("click", () => setStatus("PayPal cancellation management will be enabled after the PayPal subscription API and webhook are configured."));
-$("premiumCheckout")?.addEventListener("click", () => setStatus("PayPal subscription checkout is not enabled yet. No payment has been requested."));
+$("premiumCheckout")?.addEventListener("click", async () => {
+  const button = $("premiumCheckout");
+  if (!currentSession?.user) return setStatus("Sign in before subscribing.", true);
+  button.disabled = true; button.textContent = "Connecting to PayPal…";
+  try {
+    const result = await paypalAction("create-checkout");
+    if (!result.approval_url) throw new Error("PayPal did not return an approval link.");
+    setStatus("Opening PayPal securely. Complete the approval there; access activates only after PayPal confirms payment.");
+    window.location.assign(result.approval_url);
+  } catch (e) {
+    setStatus(e.message || "PayPal checkout is not ready. Please try again later.", true);
+    button.disabled = false; button.textContent = "Subscribe with PayPal";
+  }
+});
+$("manageBilling")?.addEventListener("click", async () => {
+  if (!currentSession?.user) return setStatus("Sign in to manage your subscription.", true);
+  if (!window.confirm("Cancel your Money Hunter subscription? This sends a cancellation request to PayPal.")) return;
+  $("manageBilling").disabled = true;
+  try {
+    await paypalAction("cancel");
+    setStatus("Cancellation request sent to PayPal. Membership status will update after PayPal confirms it.");
+    await refreshMembership();
+  } catch (e) { setStatus(e.message || "Could not cancel the PayPal subscription.", true); }
+  finally { $("manageBilling").disabled = false; }
+});
 supabase.auth.onAuthStateChange((_event, session) => { currentSession = session; updateAccount(); });
 const { data } = await supabase.auth.getSession();
 currentSession = data.session;
 await updateAccount();
+const params = new URLSearchParams(window.location.search);
+if (params.get("paypal") === "approved") {
+  setStatus("PayPal returned you to Money Hunter. Waiting for the verified payment notification before activating Premium.");
+  try { await paypalAction("status"); await refreshMembership(); } catch (_) {}
+  params.delete("paypal"); history.replaceState({}, "", window.location.pathname + (params.toString() ? "?" + params : "") + window.location.hash);
+} else if (params.get("paypal") === "cancelled") {
+  setStatus("PayPal checkout was cancelled. No subscription was activated.");
+  params.delete("paypal"); history.replaceState({}, "", window.location.pathname + (params.toString() ? "?" + params : "") + window.location.hash);
+}
 window.moneyHunterCloud = { supabase, refreshMembership };
