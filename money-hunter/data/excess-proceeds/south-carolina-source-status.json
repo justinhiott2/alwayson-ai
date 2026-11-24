@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-23T23:54:50.635878+00:00",
+  "checked_at": "2026-11-24T02:55:35.316817+00:00",
   "check_type": "official_source_link_health_only_not_docket_search",
   "county_count": 46,
   "county_coverage": {
@@ -197,7 +197,7 @@
       "kind": "tax_office_url",
       "url": "https://calhouncounty.sc.gov/departments/tax-collector",
       "status": "reachable",
-      "http_status": 200,
+      "http_status": 206,
       "detail": ""
     },
     {
@@ -381,7 +381,7 @@
       "kind": "county_website_url",
       "url": "https://edgefieldcounty.sc.gov/",
       "status": "reachable",
-      "http_status": 202,
+      "http_status": 200,
       "detail": ""
     },
     {
@@ -389,7 +389,7 @@
       "kind": "tax_office_url",
       "url": "https://edgefieldcounty.sc.gov/tax-collector/",
       "status": "reachable",
-      "http_status": 202,
+      "http_status": 200,
       "detail": ""
     },
     {
@@ -829,7 +829,7 @@
       "kind": "tax_office_url",
       "url": "https://saludacounty.sc.gov/departments/tax-collector",
       "status": "reachable",
-      "http_status": 200,
+      "http_status": 206,
       "detail": ""
     },
     {
