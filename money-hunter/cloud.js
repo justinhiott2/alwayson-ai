@@ -115,4 +115,26 @@ supabase.auth.onAuthStateChange((_event, session) => {
 const { data: sessionData } = await supabase.auth.getSession();
 currentSession = sessionData.session;
 await updateAccount();
-window.moneyHunterCloud = { supabase, refreshMembership };
+async function checkBillingHealth() {
+  const el = $("premiumCheckoutStatus");
+  if (!el) return;
+  try {
+    const response = await fetch("https://unjulxbkxnscwkxlmtbd.supabase.co/functions/v1/billing-health", { cache: "no-store" });
+    const health = await response.json();
+    if (!health.stripe_secret_configured || !health.recurring_price_configured || !health.webhook_secret_configured) {
+      const missing = [];
+      if (!health.stripe_secret_configured) missing.push("Stripe test secret key");
+      if (!health.recurring_price_configured) missing.push("test recurring price ID");
+      if (!health.webhook_secret_configured) missing.push("test webhook signing secret");
+      el.textContent = "Sandbox setup incomplete: " + missing.join(", ") + ". Live checkout remains locked.";
+    } else if (health.stripe_mode === "test") {
+      el.textContent = "Sandbox is configured. Test payments only; live checkout remains locked until all tests are verified and approved.";
+    } else {
+      el.textContent = "Stripe is configured in " + health.stripe_mode + " mode. Live checkout remains locked unless separately approved.";
+    }
+  } catch {
+    el.textContent = "Billing backend is deployed, but its configuration status could not be checked.";
+  }
+}
+checkBillingHealth();
+window.moneyHunterCloud = { supabase, refreshMembership, checkBillingHealth };
