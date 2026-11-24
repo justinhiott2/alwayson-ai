@@ -3,6 +3,8 @@
 This manually triggered GitHub Actions bot verifies the existing live Money Hunter
 $29/month Stripe price, creates the Stripe webhook endpoint, and writes the
 Stripe secrets into the Money Hunter Supabase project's Edge Function secrets.
+The Money Hunter browser account flow calls the authenticated Supabase Checkout
+and Customer Portal functions; it never receives a Stripe secret key.
 
 **Safety:** it always sets `ALLOW_LIVE_CHECKOUT=false`. It does not create a
 customer, charge a card, start a subscription, or turn on live checkout.
@@ -16,7 +18,9 @@ In the repository's **Settings → Secrets and variables → Actions**, add:
 - Secret `SUPABASE_ACCESS_TOKEN`: a Supabase personal access token authorized
   to manage project secrets for project `unjulxbkxnscwkxlmtbd`.
 
-The bot does not need a publishable key or a customer card.
+The bot does not need a publishable key or a customer card. The frontend billing
+buttons are wired to the Supabase functions, but the backend continues to reject
+live checkout until `ALLOW_LIVE_CHECKOUT=true` is deliberately set after tests.
 
 ## Run it
 
