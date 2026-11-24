@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T13:37:47.659661+00:00",
+  "generated_at": "2026-11-24T13:32:41.338575+00:00",
   "mode": "free_public_source_autonomous_scan",
   "important": "This run searches public APIs where available and refreshes official source links. It does not perform personal claimant searches, prove ownership, submit claims, bid, sign contracts, or confirm income.",
   "agents": [
@@ -168,10 +168,9 @@
       "title": "US Courts unclaimed funds",
       "url": "https://ucf.uscourts.gov/",
       "summary": "Bankruptcy court unclaimed funds search.",
-      "status": "unreachable",
+      "status": "reachable",
       "evidence": {
-        "http_status": 404,
-        "note": "Automated request blocked or failed; manual official-site check may still work."
+        "http_status": 200
       },
       "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
     },
@@ -1210,6 +1209,30 @@
     {
       "agent": "Land & Public Notice",
       "type": "federal_notice",
+      "title": "Restructuring the Governance and Funding Model of the Consolidated Audit Trail",
+      "url": "https://www.federalregister.gov/documents/2026/11/24/2026-23951/restructuring-the-governance-and-funding-model-of-the-consolidated-audit-trail",
+      "summary": "Federal Register result for: tax sale property notice",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-24",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "SECURITIES AND EXCHANGE COMMISSION",
+            "name": "Securities and Exchange Commission",
+            "id": 466,
+            "url": "https://www.federalregister.gov/agencies/securities-and-exchange-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/466",
+            "parent_id": null,
+            "slug": "securities-and-exchange-commission"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
       "title": "Employee or Independent Contractor Status Under the Fair Labor Standards Act, Family and Medical Leave Act, and Migrant and Seasonal Agricultural Worker Protection Act",
       "url": "https://www.federalregister.gov/documents/2026/11/23/2026-23777/employee-or-independent-contractor-status-under-the-fair-labor-standards-act-family-and-medical",
       "summary": "Federal Register result for: tax sale property notice",
@@ -1466,39 +1489,6 @@
             "json_url": "https://www.federalregister.gov/api/v1/agencies/481",
             "parent_id": null,
             "slug": "surface-transportation-board"
-          }
-        ]
-      },
-      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
-    },
-    {
-      "agent": "Land & Public Notice",
-      "type": "federal_notice",
-      "title": "Medicare Drug Price Negotiation Program and Medicare Prescription Drug Benefit Program",
-      "url": "https://www.federalregister.gov/documents/2026/11/09/2026-22792/medicare-drug-price-negotiation-program-and-medicare-prescription-drug-benefit-program",
-      "summary": "Federal Register result for: tax sale property notice",
-      "status": "unverified_notice",
-      "evidence": {
-        "publication_date": "2026-11-09",
-        "document_type": "Rule",
-        "agencies": [
-          {
-            "raw_name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
-            "name": "Health and Human Services Department",
-            "id": 221,
-            "url": "https://www.federalregister.gov/agencies/health-and-human-services-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/221",
-            "parent_id": null,
-            "slug": "health-and-human-services-department"
-          },
-          {
-            "raw_name": "Centers for Medicare & Medicaid Services",
-            "name": "Centers for Medicare & Medicaid Services",
-            "id": 45,
-            "url": "https://www.federalregister.gov/agencies/centers-for-medicare-medicaid-services",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/45",
-            "parent_id": 221,
-            "slug": "centers-for-medicare-medicaid-services"
           }
         ]
       },
