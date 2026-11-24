@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-24T14:15:55.887377+00:00",
+  "checked_at": "2026-11-24T20:47:29.746359+00:00",
   "check_type": "official_source_link_health_only_not_docket_search",
   "county_count": 46,
   "county_coverage": {
@@ -10,9 +10,9 @@
     "meaning": "All 46 South Carolina counties now have an individually reviewed official county tax-office, delinquent-tax, Treasurer, or tax-sale source link. This is source-directory coverage, not proof that each county publishes an overage register. Only Fairfield's historical 2021\u20132024 overage list was found in this review; other counties require direct public-record or clerk inquiries."
   },
   "source_count": 117,
-  "reachable": 89,
+  "reachable": 90,
   "restricted": 26,
-  "unreachable": 2,
+  "unreachable": 1,
   "docket_checking": "manual_case_lookup_required_no_supported_public_api",
   "important": "This registry is a verified-source directory and monitoring checklist, not a statewide list of money owed. The bot cannot automatically determine entitlement or confirm current balances from these pages.",
   "sources": [
@@ -197,7 +197,7 @@
       "kind": "tax_office_url",
       "url": "https://calhouncounty.sc.gov/departments/tax-collector",
       "status": "reachable",
-      "http_status": 200,
+      "http_status": 206,
       "detail": ""
     },
     {
@@ -308,9 +308,9 @@
       "county": "Colleton",
       "kind": "county_website_url",
       "url": "http://www.colletoncounty.org",
-      "status": "unreachable",
-      "http_status": 500,
-      "detail": "Host refused or rate-limited automated link check; open manually."
+      "status": "reachable",
+      "http_status": 206,
+      "detail": ""
     },
     {
       "county": "Colleton",
