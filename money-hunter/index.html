@@ -15,7 +15,7 @@
 <div class="notice" id="membershipCloudStatus">Sign in to connect your membership to your account.</div><button id="manageBilling" class="secondary hidden">Manage / cancel membership</button>
 </div></section>
 <div class="notice"><b>Truth & safety:</b> No single government database contains all unclaimed money. This app searches by directing you to official databases and can match records you import or enter. It cannot access private government claimant records, prove identity from a name alone, sign legal declarations, bypass agency checks, or automatically submit every claim. Never enter your SSN, bank password, card number, wallet seed phrase, or private key here.</div>
-<nav class="nav no-print"><button class="active" data-tab="home">Overview</button><button data-tab="search">Search</button><button data-tab="bot">AI Bot</button><a class="btn secondary" href="./deep-scan.html">Deep Search Bot ↗</a><a class="btn secondary" href="./bots/index.html">Money / Land / Contract Bots ↗</a><a class="btn secondary" href="./bots/excess-proceeds-recovery.html">Excess Proceeds Bot ↗</a><a class="btn secondary" href="./agents/index.html">Autonomous AI Reports ↗</a><a class="btn secondary" href="./claim-finder.html">Claim Finder Bot ↗</a><a class="btn secondary" href="./maintenance.html">App Repair & Upgrade Bot ↗</a><button data-tab="profile">My profile</button><button data-tab="matches">Matches</button><button data-tab="claims">Claims</button><button data-tab="pricing">Membership</button><button data-tab="account">Account</button><button data-tab="revenue">Revenue</button><button data-tab="settings">Backup</button></nav>
+<nav class="nav no-print"><button class="active" data-tab="home">Overview</button><button data-tab="search">Search</button><button data-tab="bot">AI Bot</button><a class="btn secondary" href="./deep-scan.html">Deep Search Bot ↗</a><a class="btn secondary" href="./bots/index.html">Money / Land / Contract Bots ↗</a><a class="btn secondary" href="./bots/excess-proceeds-recovery.html">Excess Proceeds Bot ↗</a><a class="btn secondary" href="./agents/index.html">Autonomous AI Reports ↗</a><a class="btn secondary" href="./claim-finder.html">Claim Finder Bot ↗</a><a class="btn secondary" href="./maintenance.html">App Repair & Upgrade Bot ↗</a><button data-tab="profile">My profile</button><button data-tab="matches">Matches</button><button data-tab="claims">Claims</button><button data-tab="pricing">Membership</button><button data-tab="account">Account</button><button data-tab="analytics">Traffic AI</button><button data-tab="revenue">Revenue</button><button data-tab="settings">Backup</button></nav>
 <section id="home" class="tabs active">
 <div class="panel hero"><span class="tag green">Free-first recovery workspace</span><h2>Your money recovery command center</h2><p class="muted">Run nationwide searches, import results, compare names and prior addresses, prepare a claim checklist, and track confirmed payments.</p><div class="row"><button onclick="showTab('search')">Start a search →</button><button class="secondary" onclick="showTab('profile')">Set up my profile</button></div></div>
 <div class="grid">
@@ -64,6 +64,20 @@
 </div>
 <div class="panel"><h3>Additional services</h3><p class="muted tiny">Optional one-time research reports or negotiated success-based contract fees may be offered only when the service, deliverables, legal requirements, and customer terms are clearly disclosed. No claim recovery or deal outcome is guaranteed.</p></div>
 <div class="notice">Payment setup status: Stripe recurring billing is being connected. Stripe must confirm each payment through a verified webhook before Premium access is granted. Live checkout remains locked until end-to-end payment and cancellation tests pass.</div>
+</section>
+<section id="analytics" class="tabs">
+<div class="panel hero"><span class="tag green">AI traffic organizer · Live data</span><h2>Visitor & Growth Dashboard</h2><p class="muted">First-party visitor analytics. Tracks page views, browser-level unique visitors, sign-ups, checkout starts and verified membership events. No ad trackers.</p><div class="row"><button id="refreshTraffic">Refresh traffic</button><span id="trafficUpdated" class="tiny muted">Waiting for analytics…</span></div></div>
+<div class="grid">
+<div class="panel"><div class="metric" id="trafficViews">—</div><div class="metric-label">Page views · 30 days</div></div>
+<div class="panel"><div class="metric" id="trafficVisitors">—</div><div class="metric-label">Unique browser IDs · 30 days</div></div>
+<div class="panel"><div class="metric" id="trafficSignups">—</div><div class="metric-label">Sign-ups tracked</div></div>
+<div class="panel"><div class="metric" id="trafficCheckout">—</div><div class="metric-label">Checkout starts</div></div>
+<div class="panel"><div class="metric" id="trafficActive">—</div><div class="metric-label">Membership activations tracked</div></div>
+</div>
+<div class="panel"><h3>AI Traffic Organizer</h3><p class="tiny muted">Turns measured activity into practical next steps. It does not invent visitors or claim revenue.</p><div id="trafficInsights" class="notice">Loading traffic insights…</div></div>
+<div class="grid"><div class="panel"><h3>Top pages</h3><div id="trafficPages" class="tiny muted">Loading…</div></div><div class="panel"><h3>Where visitors came from</h3><div id="trafficSources" class="tiny muted">Loading…</div></div><div class="panel"><h3>Devices</h3><div id="trafficDevices" class="tiny muted">Loading…</div></div></div>
+<div class="panel"><h3>Daily page views · Last 14 days</h3><div id="trafficDaily" class="tablewrap tiny muted">Loading…</div></div>
+<p class="tiny muted">Privacy note: unique visitors are anonymous browser IDs, not verified individuals. Analytics start when this tracking version reaches the public site. Historical visits cannot be reconstructed.</p>
 </section>
 <section id="revenue" class="tabs">
 <div class="panel hero"><span class="tag gold">Business finance tracker</span><h2>Revenue & Profit Center</h2><p class="muted">Track money actually received, pending fees, signed deals, and expenses. View the Membership tab for the $15.99 introductory plan, then $19.99/month. Entries are stored only in this browser until you export a backup.</p><div class="notice">This is a manual ledger. Step is the intended destination for deposits by ACH/direct deposit. No payment processor or live Step account connection is configured. Enter only payments you have independently confirmed. Never store card or bank credentials here.</div></div>
@@ -246,5 +260,24 @@ async function loadDailyScan(){
 $("refreshScan").onclick=loadDailyScan;
 fillProfile();drawStates();renderAll();loadDailyScan();
 if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+</script><script>
+(async function(){
+ const endpoint="https://unjulxbkxnscwkxlmtbd.supabase.co/functions/v1/money-hunter-analytics";
+ const key="sb_publishable_F5Ix3YoQLNA3JPhbfeAoCg_oLMGfrK3";
+ const el=id=>document.getElementById(id);
+ const list=(items)=>items&&items.length?items.map(x=>"<div class='source'><div class='desc'>"+String(x.label).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))+"</div><b>"+x.value+"</b></div>").join(""):"<p class='muted'>No data yet.</p>";
+ async function load(){
+  el("trafficUpdated").textContent="Refreshing…";
+  try{
+   const r=await fetch(endpoint,{headers:{apikey:key},cache:"no-store"});const d=await r.json();if(!r.ok)throw new Error(d.error||"Analytics unavailable");
+   el("trafficViews").textContent=d.totals.page_views;el("trafficVisitors").textContent=d.totals.unique_visitors;el("trafficSignups").textContent=d.totals.signups;el("trafficCheckout").textContent=d.totals.checkout_starts;el("trafficActive").textContent=d.totals.membership_activations;
+   el("trafficUpdated").textContent="Updated "+new Date(d.generated_at).toLocaleString()+" · Last "+d.period_days+" days";
+   el("trafficInsights").innerHTML=(d.ai_organizer.insights||[]).map(x=>"<p>• "+x+"</p>").join("");
+   el("trafficPages").innerHTML=list(d.top_pages);el("trafficSources").innerHTML=list(d.top_referrers);el("trafficDevices").innerHTML=list(d.devices);
+   el("trafficDaily").innerHTML="<table><thead><tr><th>Date</th><th>Views</th></tr></thead><tbody>"+d.daily_views.map(x=>"<tr><td>"+x.date+"</td><td>"+x.views+"</td></tr>").join("")+"</tbody></table>";
+  }catch(e){el("trafficUpdated").textContent="Could not load: "+e.message;el("trafficInsights").textContent="Analytics bot is waiting for valid data or a successful connection.";}
+ }
+ el("refreshTraffic")?.addEventListener("click",load);load();setInterval(()=>{if(!el("analytics").classList.contains("hidden")&&el("analytics").classList.contains("active"))load();},300000);
+})();
 </script><script src="./bot.js" defer></script><script type="module" src="./cloud.js"></script>
 <script>(function(){let n=3;const num=document.getElementById("launchNumber"),msg=document.getElementById("launchMessage"),sub=document.getElementById("launchSub");const timer=setInterval(()=>{n--;if(n>0){num.textContent=String(n)}else{clearInterval(timer);num.textContent="LIVE";msg.textContent="MONEY HUNTER IS LIVE";sub.textContent="Public app access is open. Premium billing remains subject to payment verification.";}} ,1000)})();</script></body></html>
