@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1220"><title>Money Hunter Operations Bot</title>
+<style>body{margin:0;background:#090d16;color:#eef3fa;font:15px/1.55 system-ui}main{max-width:900px;margin:auto;padding:20px}h1,h2{color:#e8bd58}.card{background:#121a29;border:1px solid #293951;border-radius:13px;padding:16px;margin:12px 0}.muted{color:#a9b5c8}.pass{color:#63d6a2}.blocked{color:#ff9a8b}.attention{color:#e8bd58}a{color:#f0ca70}button{background:#e8bd58;border:0;border-radius:8px;padding:10px 14px;font-weight:700}li{margin:8px 0}</style></head>
+<body><main><p><a href="./index.html">← Money Hunter</a> · <a href="./bots/index.html">Bot Command Center</a></p><h1>Money Hunter Operations Bot</h1>
+<p class="muted">Automated health checks for the published app, backend connection, browser workflows and PayPal readiness. It never initiates a live charge.</p>
+<div class="card"><button id="refresh">Run read-only check now</button> <a href="https://github.com/justinhiott2/alwayson-ai/actions/workflows/money-hunter-operations.yml" target="_blank" rel="noopener">Open bot runs ↗</a><p id="status" class="muted">Loading latest report…</p></div>
+<div id="checks"></div><div id="gates"></div>
+<p class="muted">The bot runs automatically every six hours and after relevant app changes. Manual PayPal sandbox approval and final live-payment authorization remain human-controlled.</p></main>
+<script>
+const reportUrl="./reports/operations.json";
+async function load(){const status=document.getElementById("status"),checks=document.getElementById("checks"),gates=document.getElementById("gates");status.textContent="Checking latest published report…";try{const r=await fetch(reportUrl+"?t="+Date.now());if(!r.ok)throw Error("No operations report has been published yet. Start the bot from GitHub Actions.");const d=await r.json();status.innerHTML="<b>Last run:</b> "+new Date(d.checked_at).toLocaleString()+" · <b>Status:</b> <span class='"+d.status+"'>"+d.status+"</span><br>"+d.summary.passed+" passed · "+d.summary.blocked+" blocked · "+d.summary.attention+" attention";checks.innerHTML=d.checks.map(x=>"<article class='card'><b class='"+x.status+"'>"+x.status.toUpperCase()+"</b><h2>"+esc(x.name)+"</h2><p>"+esc(x.detail)+"</p></article>").join("");gates.innerHTML="<article class='card'><h2>Remaining human-controlled steps</h2><ul>"+d.remaining_manual_gates.map(x=>"<li>"+esc(x)+"</li>").join("")+"</ul></article>"}catch(e){status.textContent=e.message;checks.innerHTML="";gates.innerHTML=""}}
+function esc(s){return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+document.getElementById("refresh").addEventListener("click",load);load();
+</script></body></html>
