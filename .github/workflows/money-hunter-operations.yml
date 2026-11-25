@@ -1,0 +1,72 @@
+name: Money Hunter Operations Bot
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "money-hunter/**"
+      - "scripts/money_hunter_operations_bot.py"
+      - "scripts/test_money_hunter_browser.mjs"
+      - ".github/workflows/money-hunter-operations.yml"
+permissions:
+  contents: write
+concurrency:
+  group: money-hunter-repo-writes
+  cancel-in-progress: false
+jobs:
+  operate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out Money Hunter
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run repository smoke tests
+        run: python -m unittest discover -s scripts -p "test_*.py" -v
+      - name: Run isolated mobile browser tests
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+          python3 -m http.server 4173 --directory . > /tmp/mh-server.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            curl --fail --silent http://127.0.0.1:4173/money-hunter/ > /dev/null && break
+            sleep 1
+          done
+          APP_BASE_URL=http://127.0.0.1:4173/money-hunter/ node scripts/test_money_hunter_browser.mjs
+      - name: Run safe live-site and billing diagnostics
+        id: operations
+        continue-on-error: true
+        run: python scripts/money_hunter_operations_bot.py
+      - name: Publish operations report
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add money-hunter/reports/operations.json money-hunter/reports/browser-test.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: publish Money Hunter operations report"
+            git push origin HEAD:main
+          fi
+      - name: Upload operations diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: money-hunter-operations-${{ github.run_number }}
+          path: |
+            money-hunter/reports/operations.json
+            money-hunter/reports/browser-test.json
+            money-hunter-browser-test.png
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Fail if live readiness checks are blocked
+        if: steps.operations.outcome == 'failure'
+        run: exit 1
