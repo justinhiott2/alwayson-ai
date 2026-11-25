@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T13:32:41.338575+00:00",
+  "generated_at": "2026-11-25T13:38:54.880345+00:00",
   "mode": "free_public_source_autonomous_scan",
   "important": "This run searches public APIs where available and refreshes official source links. It does not perform personal claimant searches, prove ownership, submit claims, bid, sign contracts, or confirm income.",
   "agents": [
@@ -168,9 +168,9 @@
       "title": "US Courts unclaimed funds",
       "url": "https://ucf.uscourts.gov/",
       "summary": "Bankruptcy court unclaimed funds search.",
-      "status": "reachable",
+      "status": "check_manually",
       "evidence": {
-        "http_status": 200
+        "error": "TimeoutError"
       },
       "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
     },
@@ -903,6 +903,129 @@
     {
       "agent": "Land & Public Notice",
       "type": "federal_notice",
+      "title": "Petition for Rulemaking To Consider Amendments to Regulations Governing Interim Use of Rights-of-Way as Trails",
+      "url": "https://www.federalregister.gov/documents/2026/11/25/2026-24003/petition-for-rulemaking-to-consider-amendments-to-regulations-governing-interim-use-of-rights-of-way",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-25",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "SURFACE TRANSPORTATION BOARD",
+            "name": "Surface Transportation Board",
+            "id": 481,
+            "url": "https://www.federalregister.gov/agencies/surface-transportation-board",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/481",
+            "parent_id": null,
+            "slug": "surface-transportation-board"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Endangered and Threatened Wildlife and Plants; Endangered Species Status for the Rio Grande Shiner",
+      "url": "https://www.federalregister.gov/documents/2026/11/25/2026-23969/endangered-and-threatened-wildlife-and-plants-endangered-species-status-for-the-rio-grande-shiner",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-25",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "Fish and Wildlife Service",
+            "name": "Fish and Wildlife Service",
+            "id": 197,
+            "url": "https://www.federalregister.gov/agencies/fish-and-wildlife-service",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/197",
+            "parent_id": 253,
+            "slug": "fish-and-wildlife-service"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Endangered and Threatened Wildlife and Plants; Endangered Species Status for Peppered Shiner",
+      "url": "https://www.federalregister.gov/documents/2026/11/25/2026-23968/endangered-and-threatened-wildlife-and-plants-endangered-species-status-for-peppered-shiner",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-25",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "Fish and Wildlife Service",
+            "name": "Fish and Wildlife Service",
+            "id": 197,
+            "url": "https://www.federalregister.gov/agencies/fish-and-wildlife-service",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/197",
+            "parent_id": 253,
+            "slug": "fish-and-wildlife-service"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Quarterly Status Report of Water Service, Repayment, and Other Water-Related Contract Actions",
+      "url": "https://www.federalregister.gov/documents/2026/11/25/2026-23956/quarterly-status-report-of-water-service-repayment-and-other-water-related-contract-actions",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-25",
+        "document_type": "Notice",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "Bureau of Reclamation",
+            "name": "Reclamation Bureau",
+            "id": 446,
+            "url": "https://www.federalregister.gov/agencies/reclamation-bureau",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/446",
+            "parent_id": 253,
+            "slug": "reclamation-bureau"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
       "title": "Employee or Independent Contractor Status Under the Fair Labor Standards Act, Family and Medical Leave Act, and Migrant and Seasonal Agricultural Worker Protection Act",
       "url": "https://www.federalregister.gov/documents/2026/11/23/2026-23777/employee-or-independent-contractor-status-under-the-fair-labor-standards-act-family-and-medical",
       "summary": "Federal Register result for: public land sale",
@@ -1086,88 +1209,22 @@
     {
       "agent": "Land & Public Notice",
       "type": "federal_notice",
-      "title": "Atlantic Highly Migratory Species; Atlantic Bluefin Tuna Fisheries; General Category December Quota Transfer",
-      "url": "https://www.federalregister.gov/documents/2026/11/18/2026-23477/atlantic-highly-migratory-species-atlantic-bluefin-tuna-fisheries-general-category-december-quota",
-      "summary": "Federal Register result for: public land sale",
+      "title": "Petition for Rulemaking To Consider Amendments to Regulations Governing Interim Use of Rights-of-Way as Trails",
+      "url": "https://www.federalregister.gov/documents/2026/11/25/2026-24003/petition-for-rulemaking-to-consider-amendments-to-regulations-governing-interim-use-of-rights-of-way",
+      "summary": "Federal Register result for: tax sale property notice",
       "status": "unverified_notice",
       "evidence": {
-        "publication_date": "2026-11-18",
-        "document_type": "Rule",
-        "agencies": [
-          {
-            "raw_name": "DEPARTMENT OF COMMERCE",
-            "name": "Commerce Department",
-            "id": 54,
-            "url": "https://www.federalregister.gov/agencies/commerce-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
-            "parent_id": null,
-            "slug": "commerce-department"
-          },
-          {
-            "raw_name": "National Oceanic and Atmospheric Administration",
-            "name": "National Oceanic and Atmospheric Administration",
-            "id": 361,
-            "url": "https://www.federalregister.gov/agencies/national-oceanic-and-atmospheric-administration",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/361",
-            "parent_id": 54,
-            "slug": "national-oceanic-and-atmospheric-administration"
-          }
-        ]
-      },
-      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
-    },
-    {
-      "agent": "Land & Public Notice",
-      "type": "federal_notice",
-      "title": "Modernizing the Commission's National Environmental Policy Act Rules",
-      "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23385/modernizing-the-commissions-national-environmental-policy-act-rules",
-      "summary": "Federal Register result for: public land sale",
-      "status": "unverified_notice",
-      "evidence": {
-        "publication_date": "2026-11-17",
-        "document_type": "Rule",
-        "agencies": [
-          {
-            "raw_name": "FEDERAL COMMUNICATIONS COMMISSION",
-            "name": "Federal Communications Commission",
-            "id": 161,
-            "url": "https://www.federalregister.gov/agencies/federal-communications-commission",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/161",
-            "parent_id": null,
-            "slug": "federal-communications-commission"
-          }
-        ]
-      },
-      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
-    },
-    {
-      "agent": "Land & Public Notice",
-      "type": "federal_notice",
-      "title": "Horse Protection",
-      "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23086/horse-protection",
-      "summary": "Federal Register result for: public land sale",
-      "status": "unverified_notice",
-      "evidence": {
-        "publication_date": "2026-11-13",
+        "publication_date": "2026-11-25",
         "document_type": "Proposed Rule",
         "agencies": [
           {
-            "raw_name": "DEPARTMENT OF AGRICULTURE",
-            "name": "Agriculture Department",
-            "id": 12,
-            "url": "https://www.federalregister.gov/agencies/agriculture-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/12",
+            "raw_name": "SURFACE TRANSPORTATION BOARD",
+            "name": "Surface Transportation Board",
+            "id": 481,
+            "url": "https://www.federalregister.gov/agencies/surface-transportation-board",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/481",
             "parent_id": null,
-            "slug": "agriculture-department"
-          },
-          {
-            "raw_name": "Animal and Plant Health Inspection Service",
-            "name": "Animal and Plant Health Inspection Service",
-            "id": 22,
-            "url": "https://www.federalregister.gov/agencies/animal-and-plant-health-inspection-service",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/22",
-            "parent_id": 12,
-            "slug": "animal-and-plant-health-inspection-service"
+            "slug": "surface-transportation-board"
           }
         ]
       },
@@ -1176,31 +1233,31 @@
     {
       "agent": "Land & Public Notice",
       "type": "federal_notice",
-      "title": "Direct Sale of Public Land for Affordable Housing Purposes in Clark County, Nevada",
-      "url": "https://www.federalregister.gov/documents/2026/11/12/2026-23080/direct-sale-of-public-land-for-affordable-housing-purposes-in-clark-county-nevada",
-      "summary": "Federal Register result for: public land sale",
+      "title": "Medicare Program; Contract Year 2028 Policy and Technical Changes to the Medicare Advantage Program, Medicare Prescription Drug Benefit Program, and Programs of All-Inclusive Care for the Elderly",
+      "url": "https://www.federalregister.gov/documents/2026/11/25/2026-23960/medicare-program-contract-year-2028-policy-and-technical-changes-to-the-medicare-advantage-program",
+      "summary": "Federal Register result for: tax sale property notice",
       "status": "unverified_notice",
       "evidence": {
-        "publication_date": "2026-11-12",
-        "document_type": "Notice",
+        "publication_date": "2026-11-25",
+        "document_type": "Proposed Rule",
         "agencies": [
           {
-            "raw_name": "DEPARTMENT OF THE INTERIOR",
-            "name": "Interior Department",
-            "id": 253,
-            "url": "https://www.federalregister.gov/agencies/interior-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "raw_name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+            "name": "Health and Human Services Department",
+            "id": 221,
+            "url": "https://www.federalregister.gov/agencies/health-and-human-services-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/221",
             "parent_id": null,
-            "slug": "interior-department"
+            "slug": "health-and-human-services-department"
           },
           {
-            "raw_name": "Bureau of Land Management",
-            "name": "Land Management Bureau",
-            "id": 275,
-            "url": "https://www.federalregister.gov/agencies/land-management-bureau",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/275",
-            "parent_id": 253,
-            "slug": "land-management-bureau"
+            "raw_name": "Centers for Medicare & Medicaid Services",
+            "name": "Centers for Medicare & Medicaid Services",
+            "id": 45,
+            "url": "https://www.federalregister.gov/agencies/centers-for-medicare-medicaid-services",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/45",
+            "parent_id": 221,
+            "slug": "centers-for-medicare-medicaid-services"
           }
         ]
       },
@@ -1440,55 +1497,31 @@
     {
       "agent": "Land & Public Notice",
       "type": "federal_notice",
-      "title": "Notice of OFAC Sanctions Action",
-      "url": "https://www.federalregister.gov/documents/2026/11/10/2026-22861/notice-of-ofac-sanctions-action",
-      "summary": "Federal Register result for: tax sale property notice",
+      "title": "Renaming Narcotic Treatment Program (NTP) to Opioid Treatment Program (OTP) in DEA Regulations",
+      "url": "https://www.federalregister.gov/documents/2026/11/25/2026-23962/renaming-narcotic-treatment-program-ntp-to-opioid-treatment-program-otp-in-dea-regulations",
+      "summary": "Federal Register result for: government property disposal",
       "status": "unverified_notice",
       "evidence": {
-        "publication_date": "2026-11-10",
-        "document_type": "Notice",
+        "publication_date": "2026-11-25",
+        "document_type": "Rule",
         "agencies": [
           {
-            "raw_name": "DEPARTMENT OF THE TREASURY",
-            "name": "Treasury Department",
-            "id": 497,
-            "url": "https://www.federalregister.gov/agencies/treasury-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+            "raw_name": "DEPARTMENT OF JUSTICE",
+            "name": "Justice Department",
+            "id": 268,
+            "url": "https://www.federalregister.gov/agencies/justice-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/268",
             "parent_id": null,
-            "slug": "treasury-department"
+            "slug": "justice-department"
           },
           {
-            "raw_name": "Office of Foreign Assets Control",
-            "name": "Foreign Assets Control Office",
-            "id": 203,
-            "url": "https://www.federalregister.gov/agencies/foreign-assets-control-office",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/203",
-            "parent_id": 497,
-            "slug": "foreign-assets-control-office"
-          }
-        ]
-      },
-      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
-    },
-    {
-      "agent": "Land & Public Notice",
-      "type": "federal_notice",
-      "title": "Policy Statement on Jurisdiction and Preemption Under the ICC Termination Act",
-      "url": "https://www.federalregister.gov/documents/2026/11/09/2026-22811/policy-statement-on-jurisdiction-and-preemption-under-the-icc-termination-act",
-      "summary": "Federal Register result for: tax sale property notice",
-      "status": "unverified_notice",
-      "evidence": {
-        "publication_date": "2026-11-09",
-        "document_type": "Notice",
-        "agencies": [
-          {
-            "raw_name": "SURFACE TRANSPORTATION BOARD",
-            "name": "Surface Transportation Board",
-            "id": 481,
-            "url": "https://www.federalregister.gov/agencies/surface-transportation-board",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/481",
-            "parent_id": null,
-            "slug": "surface-transportation-board"
+            "raw_name": "Drug Enforcement Administration",
+            "name": "Drug Enforcement Administration",
+            "id": 116,
+            "url": "https://www.federalregister.gov/agencies/drug-enforcement-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/116",
+            "parent_id": 268,
+            "slug": "drug-enforcement-administration"
           }
         ]
       },
@@ -1759,39 +1792,6 @@
             "json_url": "https://www.federalregister.gov/api/v1/agencies/116",
             "parent_id": 268,
             "slug": "drug-enforcement-administration"
-          }
-        ]
-      },
-      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
-    },
-    {
-      "agent": "Land & Public Notice",
-      "type": "federal_notice",
-      "title": "Rangeland Management",
-      "url": "https://www.federalregister.gov/documents/2026/11/12/2026-23033/rangeland-management",
-      "summary": "Federal Register result for: government property disposal",
-      "status": "unverified_notice",
-      "evidence": {
-        "publication_date": "2026-11-12",
-        "document_type": "Proposed Rule",
-        "agencies": [
-          {
-            "raw_name": "DEPARTMENT OF AGRICULTURE",
-            "name": "Agriculture Department",
-            "id": 12,
-            "url": "https://www.federalregister.gov/agencies/agriculture-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/12",
-            "parent_id": null,
-            "slug": "agriculture-department"
-          },
-          {
-            "raw_name": "Forest Service",
-            "name": "Forest Service",
-            "id": 209,
-            "url": "https://www.federalregister.gov/agencies/forest-service",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/209",
-            "parent_id": 12,
-            "slug": "forest-service"
           }
         ]
       },
