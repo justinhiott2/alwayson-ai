@@ -106,7 +106,7 @@
     "No claims, contacts, offers, contracts, or payments were submitted."
   ],
   "source_monitor": {
-    "checked_at": "2026-11-25T11:16:25.949717+00:00",
+    "checked_at": "2026-11-26T11:14:31.372119+00:00",
     "scope": "HTTP reachability only; not a database search or verification of a personal claim/deal",
     "reachable": 4,
     "total": 5,
@@ -116,7 +116,7 @@
         "url": "https://southcarolina.findyourunclaimedproperty.com/",
         "status": "reachable",
         "http_status": 200,
-        "checked_at": "2026-11-25T11:16:25.296650+00:00"
+        "checked_at": "2026-11-26T11:14:30.518922+00:00"
       },
       {
         "label": "MissingMoney nationwide search",
@@ -124,30 +124,30 @@
         "status": "check_failed",
         "http_status": 403,
         "note": "HTTP Error 403: Forbidden",
-        "checked_at": "2026-11-25T11:16:25.629345+00:00"
+        "checked_at": "2026-11-26T11:14:30.983735+00:00"
       },
       {
         "label": "SC state surplus real estate",
         "url": "https://admin.sc.gov/services/real-estate",
         "status": "reachable",
         "http_status": 200,
-        "checked_at": "2026-11-25T11:16:25.697680+00:00"
+        "checked_at": "2026-11-26T11:14:31.044694+00:00"
       },
       {
         "label": "SC procurement opportunities",
         "url": "https://procurement.sc.gov/doing-biz",
         "status": "reachable",
         "http_status": 200,
-        "checked_at": "2026-11-25T11:16:25.826563+00:00"
+        "checked_at": "2026-11-26T11:14:31.175782+00:00"
       },
       {
         "label": "USA.gov unclaimed money guide",
         "url": "https://www.usa.gov/unclaimed-money",
         "status": "reachable",
         "http_status": 200,
-        "checked_at": "2026-11-25T11:16:25.949583+00:00"
+        "checked_at": "2026-11-26T11:14:31.371965+00:00"
       }
     ]
   },
-  "monitor_updated_at": "2026-11-25T11:16:25.949717+00:00"
+  "monitor_updated_at": "2026-11-26T11:14:31.372119+00:00"
 }
