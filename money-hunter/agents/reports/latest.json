@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T13:38:54.880345+00:00",
+  "generated_at": "2026-11-26T13:38:11.529684+00:00",
   "mode": "free_public_source_autonomous_scan",
   "important": "This run searches public APIs where available and refreshes official source links. It does not perform personal claimant searches, prove ownership, submit claims, bid, sign contracts, or confirm income.",
   "agents": [
@@ -168,9 +168,9 @@
       "title": "US Courts unclaimed funds",
       "url": "https://ucf.uscourts.gov/",
       "summary": "Bankruptcy court unclaimed funds search.",
-      "status": "check_manually",
+      "status": "reachable",
       "evidence": {
-        "error": "TimeoutError"
+        "http_status": 200
       },
       "next_action": "Search the portal manually using your legal name and prior addresses; do not send sensitive identifiers to this app."
     },
@@ -903,6 +903,39 @@
     {
       "agent": "Land & Public Notice",
       "type": "federal_notice",
+      "title": "Endangered and Threatened Wildlife and Plants; Threatened Species Status With Section 4(d) Rule for Ciliate-Leaf Tickseed",
+      "url": "https://www.federalregister.gov/documents/2026/11/27/2026-24097/endangered-and-threatened-wildlife-and-plants-threatened-species-status-with-section-4d-rule-for",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-27",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "Fish and Wildlife Service",
+            "name": "Fish and Wildlife Service",
+            "id": 197,
+            "url": "https://www.federalregister.gov/agencies/fish-and-wildlife-service",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/197",
+            "parent_id": 253,
+            "slug": "fish-and-wildlife-service"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
       "title": "Petition for Rulemaking To Consider Amendments to Regulations Governing Interim Use of Rights-of-Way as Trails",
       "url": "https://www.federalregister.gov/documents/2026/11/25/2026-24003/petition-for-rulemaking-to-consider-amendments-to-regulations-governing-interim-use-of-rights-of-way",
       "summary": "Federal Register result for: public land sale",
@@ -1177,30 +1210,6 @@
             "json_url": "https://www.federalregister.gov/api/v1/agencies/275",
             "parent_id": 253,
             "slug": "land-management-bureau"
-          }
-        ]
-      },
-      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
-    },
-    {
-      "agent": "Land & Public Notice",
-      "type": "federal_notice",
-      "title": "Air Plan Approval; Texas; Collin County Second 10-Year Maintenance Plan for the 2008 Lead Standard",
-      "url": "https://www.federalregister.gov/documents/2026/11/18/2026-23519/air-plan-approval-texas-collin-county-second-10-year-maintenance-plan-for-the-2008-lead-standard",
-      "summary": "Federal Register result for: public land sale",
-      "status": "unverified_notice",
-      "evidence": {
-        "publication_date": "2026-11-18",
-        "document_type": "Proposed Rule",
-        "agencies": [
-          {
-            "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
-            "name": "Environmental Protection Agency",
-            "id": 145,
-            "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
-            "parent_id": null,
-            "slug": "environmental-protection-agency"
           }
         ]
       },
@@ -1497,6 +1506,54 @@
     {
       "agent": "Land & Public Notice",
       "type": "federal_notice",
+      "title": "Technical Updates to the RCRA Hazardous Waste Permitting Regulations-Permitting Technical Updates Rule",
+      "url": "https://www.federalregister.gov/documents/2026/11/27/2026-24084/technical-updates-to-the-rcra-hazardous-waste-permitting-regulations-permitting-technical-updates",
+      "summary": "Federal Register result for: government property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-27",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+            "name": "Environmental Protection Agency",
+            "id": 145,
+            "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+            "parent_id": null,
+            "slug": "environmental-protection-agency"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Significant New Use Rule on a Chemical Substance (P-24-195)",
+      "url": "https://www.federalregister.gov/documents/2026/11/27/2026-24082/significant-new-use-rule-on-a-chemical-substance-p-24-195",
+      "summary": "Federal Register result for: government property disposal",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-27",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+            "name": "Environmental Protection Agency",
+            "id": 145,
+            "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+            "parent_id": null,
+            "slug": "environmental-protection-agency"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
       "title": "Renaming Narcotic Treatment Program (NTP) to Opioid Treatment Program (OTP) in DEA Regulations",
       "url": "https://www.federalregister.gov/documents/2026/11/25/2026-23962/renaming-narcotic-treatment-program-ntp-to-opioid-treatment-program-otp-in-dea-regulations",
       "summary": "Federal Register result for: government property disposal",
@@ -1726,72 +1783,6 @@
             "json_url": "https://www.federalregister.gov/api/v1/agencies/53",
             "parent_id": 227,
             "slug": "coast-guard"
-          }
-        ]
-      },
-      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
-    },
-    {
-      "agent": "Land & Public Notice",
-      "type": "federal_notice",
-      "title": "Direct Sale of Public Land for Affordable Housing Purposes in Clark County, Nevada",
-      "url": "https://www.federalregister.gov/documents/2026/11/12/2026-23080/direct-sale-of-public-land-for-affordable-housing-purposes-in-clark-county-nevada",
-      "summary": "Federal Register result for: government property disposal",
-      "status": "unverified_notice",
-      "evidence": {
-        "publication_date": "2026-11-12",
-        "document_type": "Notice",
-        "agencies": [
-          {
-            "raw_name": "DEPARTMENT OF THE INTERIOR",
-            "name": "Interior Department",
-            "id": 253,
-            "url": "https://www.federalregister.gov/agencies/interior-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
-            "parent_id": null,
-            "slug": "interior-department"
-          },
-          {
-            "raw_name": "Bureau of Land Management",
-            "name": "Land Management Bureau",
-            "id": 275,
-            "url": "https://www.federalregister.gov/agencies/land-management-bureau",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/275",
-            "parent_id": 253,
-            "slug": "land-management-bureau"
-          }
-        ]
-      },
-      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
-    },
-    {
-      "agent": "Land & Public Notice",
-      "type": "federal_notice",
-      "title": "Schedules of Controlled Substances: Placement of Oveporexton in Schedule IV",
-      "url": "https://www.federalregister.gov/documents/2026/11/12/2026-23075/schedules-of-controlled-substances-placement-of-oveporexton-in-schedule-iv",
-      "summary": "Federal Register result for: government property disposal",
-      "status": "unverified_notice",
-      "evidence": {
-        "publication_date": "2026-11-12",
-        "document_type": "Rule",
-        "agencies": [
-          {
-            "raw_name": "DEPARTMENT OF JUSTICE",
-            "name": "Justice Department",
-            "id": 268,
-            "url": "https://www.federalregister.gov/agencies/justice-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/268",
-            "parent_id": null,
-            "slug": "justice-department"
-          },
-          {
-            "raw_name": "Drug Enforcement Administration",
-            "name": "Drug Enforcement Administration",
-            "id": 116,
-            "url": "https://www.federalregister.gov/agencies/drug-enforcement-administration",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/116",
-            "parent_id": 268,
-            "slug": "drug-enforcement-administration"
           }
         ]
       },
