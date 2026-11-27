@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T13:38:11.529684+00:00",
+  "generated_at": "2026-11-27T13:33:23.617782+00:00",
   "mode": "free_public_source_autonomous_scan",
   "important": "This run searches public APIs where available and refreshes official source links. It does not perform personal claimant searches, prove ownership, submit claims, bid, sign contracts, or confirm income.",
   "agents": [
@@ -1797,7 +1797,7 @@
       "status": "award_record",
       "evidence": {
         "award_id": "DEAC0908SR22470",
-        "amount": 27995864149.1,
+        "amount": 28070772602.28,
         "start": "2008-01-10",
         "end": "2027-09-30",
         "agency": "Department of Energy",
@@ -2097,23 +2097,6 @@
     {
       "agent": "Contract & Award Research",
       "type": "federal_award",
-      "title": "CONSOLIDATED NUCLEAR SECURITY, LLC \u2014 IGF::CL,CT::IGF MANAGEMENT AND OPERATING CONTRACT FOR Y-12 NATIONAL SECURITY COMPLEX, PANTEX PLANT, WITH AN OPTION FOR SAVANNAH RIVER TRITIUM OPERATIONS",
-      "url": "https://www.usaspending.gov/search",
-      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
-      "status": "award_record",
-      "evidence": {
-        "award_id": "DENA0001942",
-        "amount": 35151184369.83,
-        "start": "2013-01-08",
-        "end": "2027-09-30",
-        "agency": "Department of Energy",
-        "state": "TN"
-      },
-      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
-    },
-    {
-      "agent": "Contract & Award Research",
-      "type": "federal_award",
       "title": "LOCKHEED MARTIN CORPORATION \u2014 LRIP LOT 12 ADVANCE ACQUISITION CONTRACT",
       "url": "https://www.usaspending.gov/search",
       "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
@@ -2125,6 +2108,23 @@
         "end": "2031-03-31",
         "agency": "Department of Defense",
         "state": "TX"
+      },
+      "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
+    },
+    {
+      "agent": "Contract & Award Research",
+      "type": "federal_award",
+      "title": "CONSOLIDATED NUCLEAR SECURITY, LLC \u2014 IGF::CL,CT::IGF MANAGEMENT AND OPERATING CONTRACT FOR Y-12 NATIONAL SECURITY COMPLEX, PANTEX PLANT, WITH AN OPTION FOR SAVANNAH RIVER TRITIUM OPERATIONS",
+      "url": "https://www.usaspending.gov/search",
+      "summary": "Award-history lead from USAspending; an award is not an open bid or assignable contract.",
+      "status": "award_record",
+      "evidence": {
+        "award_id": "DENA0001942",
+        "amount": 35106991746.75,
+        "start": "2013-01-08",
+        "end": "2027-09-30",
+        "agency": "Department of Energy",
+        "state": "TN"
       },
       "next_action": "Use the award record to identify agencies and incumbents. Find the actual solicitation or subcontract route; do not represent an awarded contract as available for transfer."
     },
