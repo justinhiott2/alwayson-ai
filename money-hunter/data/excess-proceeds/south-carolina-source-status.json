@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-27T14:17:22.902617+00:00",
+  "checked_at": "2026-11-28T13:57:07.563364+00:00",
   "check_type": "official_source_link_health_only_not_docket_search",
   "county_count": 46,
   "county_coverage": {
@@ -10,9 +10,9 @@
     "meaning": "All 46 South Carolina counties now have an individually reviewed official county tax-office, delinquent-tax, Treasurer, or tax-sale source link. This is source-directory coverage, not proof that each county publishes an overage register. Only Fairfield's historical 2021\u20132024 overage list was found in this review; other counties require direct public-record or clerk inquiries."
   },
   "source_count": 117,
-  "reachable": 87,
+  "reachable": 90,
   "restricted": 26,
-  "unreachable": 4,
+  "unreachable": 1,
   "docket_checking": "manual_case_lookup_required_no_supported_public_api",
   "important": "This registry is a verified-source directory and monitoring checklist, not a statewide list of money owed. The bot cannot automatically determine entitlement or confirm current balances from these pages.",
   "sources": [
@@ -197,32 +197,32 @@
       "kind": "tax_office_url",
       "url": "https://calhouncounty.sc.gov/departments/tax-collector",
       "status": "reachable",
-      "http_status": 206,
+      "http_status": 200,
       "detail": ""
     },
     {
       "county": "Charleston",
       "kind": "county_website_url",
       "url": "https://www.charlestoncounty.org",
-      "status": "unreachable",
-      "http_status": null,
-      "detail": "URLError: <urlopen error timed out>"
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
     },
     {
       "county": "Charleston",
       "kind": "tax_office_url",
       "url": "https://www.charlestoncounty.gov/departments/delinquent-tax/index.php",
-      "status": "unreachable",
-      "http_status": null,
-      "detail": "URLError: <urlopen error timed out>"
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
     },
     {
       "county": "Charleston",
       "kind": "sale_information_url",
       "url": "https://www.charlestoncounty.gov/departments/delinquent-tax/tax-sale.php",
-      "status": "unreachable",
-      "http_status": null,
-      "detail": "URLError: <urlopen error timed out>"
+      "status": "reachable",
+      "http_status": 200,
+      "detail": ""
     },
     {
       "county": "Cherokee",
@@ -397,7 +397,7 @@
       "kind": "county_website_url",
       "url": "https://www.fairfieldsc.com/",
       "status": "reachable",
-      "http_status": 200,
+      "http_status": 206,
       "detail": ""
     },
     {
@@ -837,7 +837,7 @@
       "kind": "sale_information_url",
       "url": "https://saludacounty.sc.gov/departments/tax-collector/delinquent-tax-sale",
       "status": "reachable",
-      "http_status": 206,
+      "http_status": 200,
       "detail": ""
     },
     {
