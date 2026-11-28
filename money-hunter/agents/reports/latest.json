@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T13:33:23.617782+00:00",
+  "generated_at": "2026-11-28T13:17:44.084516+00:00",
   "mode": "free_public_source_autonomous_scan",
   "important": "This run searches public APIs where available and refreshes official source links. It does not perform personal claimant searches, prove ownership, submit claims, bid, sign contracts, or confirm income.",
   "agents": [
@@ -903,6 +903,237 @@
     {
       "agent": "Land & Public Notice",
       "type": "federal_notice",
+      "title": "Endangered and Threatened Wildlife and Plants; Threatened Species Status for Streaked Horned Lark With a Section 4(d) Rule",
+      "url": "https://www.federalregister.gov/documents/2026/11/30/2026-24304/endangered-and-threatened-wildlife-and-plants-threatened-species-status-for-streaked-horned-lark",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-30",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "Fish and Wildlife Service",
+            "name": "Fish and Wildlife Service",
+            "id": 197,
+            "url": "https://www.federalregister.gov/agencies/fish-and-wildlife-service",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/197",
+            "parent_id": 253,
+            "slug": "fish-and-wildlife-service"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Endangered and Threatened Wildlife and Plants; Threatened Species Status With Section 4(d) Rule for the Piebald Madtom",
+      "url": "https://www.federalregister.gov/documents/2026/11/30/2026-24292/endangered-and-threatened-wildlife-and-plants-threatened-species-status-with-section-4d-rule-for-the",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-30",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "Fish and Wildlife Service",
+            "name": "Fish and Wildlife Service",
+            "id": 197,
+            "url": "https://www.federalregister.gov/agencies/fish-and-wildlife-service",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/197",
+            "parent_id": 253,
+            "slug": "fish-and-wildlife-service"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Proposed Withdrawal Extension and Opportunity for Public Meeting for the Sugarloaf Petroglyphs and Pine Spring Archeological Sites, Wyoming",
+      "url": "https://www.federalregister.gov/documents/2026/11/30/2026-24281/proposed-withdrawal-extension-and-opportunity-for-public-meeting-for-the-sugarloaf-petroglyphs-and",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-30",
+        "document_type": "Notice",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "Bureau of Land Management",
+            "name": "Land Management Bureau",
+            "id": 275,
+            "url": "https://www.federalregister.gov/agencies/land-management-bureau",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/275",
+            "parent_id": 253,
+            "slug": "land-management-bureau"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Endangered and Threatened Wildlife and Plants; Threatened Species Status With a Section 4(d) Rule for Blanding's Turtle",
+      "url": "https://www.federalregister.gov/documents/2026/11/30/2026-24221/endangered-and-threatened-wildlife-and-plants-threatened-species-status-with-a-section-4d-rule-for",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-30",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "Fish and Wildlife Service",
+            "name": "Fish and Wildlife Service",
+            "id": 197,
+            "url": "https://www.federalregister.gov/agencies/fish-and-wildlife-service",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/197",
+            "parent_id": 253,
+            "slug": "fish-and-wildlife-service"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Endangered and Threatened Wildlife and Plants; Threatened Species Status With Section 4(d) Rule for the Cascade and Columbia Torrent Salamanders",
+      "url": "https://www.federalregister.gov/documents/2026/11/30/2026-24220/endangered-and-threatened-wildlife-and-plants-threatened-species-status-with-section-4d-rule-for-the",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-30",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "Fish and Wildlife Service",
+            "name": "Fish and Wildlife Service",
+            "id": 197,
+            "url": "https://www.federalregister.gov/agencies/fish-and-wildlife-service",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/197",
+            "parent_id": 253,
+            "slug": "fish-and-wildlife-service"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Endangered and Threatened Wildlife and Plants; Threatened Species Status With Section 4(d) Rule for Ferris's Copper",
+      "url": "https://www.federalregister.gov/documents/2026/11/30/2026-24219/endangered-and-threatened-wildlife-and-plants-threatened-species-status-with-section-4d-rule-for",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-30",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "Fish and Wildlife Service",
+            "name": "Fish and Wildlife Service",
+            "id": 197,
+            "url": "https://www.federalregister.gov/agencies/fish-and-wildlife-service",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/197",
+            "parent_id": 253,
+            "slug": "fish-and-wildlife-service"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
+      "title": "Endangered and Threatened Wildlife and Plants; Endangered Species Status for Tharp's Bluestar",
+      "url": "https://www.federalregister.gov/documents/2026/11/30/2026-24218/endangered-and-threatened-wildlife-and-plants-endangered-species-status-for-tharps-bluestar",
+      "summary": "Federal Register result for: public land sale",
+      "status": "unverified_notice",
+      "evidence": {
+        "publication_date": "2026-11-30",
+        "document_type": "Proposed Rule",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "Fish and Wildlife Service",
+            "name": "Fish and Wildlife Service",
+            "id": 197,
+            "url": "https://www.federalregister.gov/agencies/fish-and-wildlife-service",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/197",
+            "parent_id": 253,
+            "slug": "fish-and-wildlife-service"
+          }
+        ]
+      },
+      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
+    },
+    {
+      "agent": "Land & Public Notice",
+      "type": "federal_notice",
       "title": "Endangered and Threatened Wildlife and Plants; Threatened Species Status With Section 4(d) Rule for Ciliate-Leaf Tickseed",
       "url": "https://www.federalregister.gov/documents/2026/11/27/2026-24097/endangered-and-threatened-wildlife-and-plants-threatened-species-status-with-section-4d-rule-for",
       "summary": "Federal Register result for: public land sale",
@@ -993,97 +1224,31 @@
     {
       "agent": "Land & Public Notice",
       "type": "federal_notice",
-      "title": "Endangered and Threatened Wildlife and Plants; Endangered Species Status for Peppered Shiner",
-      "url": "https://www.federalregister.gov/documents/2026/11/25/2026-23968/endangered-and-threatened-wildlife-and-plants-endangered-species-status-for-peppered-shiner",
-      "summary": "Federal Register result for: public land sale",
+      "title": "Consumer Leasing (Regulation M)",
+      "url": "https://www.federalregister.gov/documents/2026/11/30/2026-24345/consumer-leasing-regulation-m",
+      "summary": "Federal Register result for: tax sale property notice",
       "status": "unverified_notice",
       "evidence": {
-        "publication_date": "2026-11-25",
-        "document_type": "Proposed Rule",
-        "agencies": [
-          {
-            "raw_name": "DEPARTMENT OF THE INTERIOR",
-            "name": "Interior Department",
-            "id": 253,
-            "url": "https://www.federalregister.gov/agencies/interior-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
-            "parent_id": null,
-            "slug": "interior-department"
-          },
-          {
-            "raw_name": "Fish and Wildlife Service",
-            "name": "Fish and Wildlife Service",
-            "id": 197,
-            "url": "https://www.federalregister.gov/agencies/fish-and-wildlife-service",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/197",
-            "parent_id": 253,
-            "slug": "fish-and-wildlife-service"
-          }
-        ]
-      },
-      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
-    },
-    {
-      "agent": "Land & Public Notice",
-      "type": "federal_notice",
-      "title": "Quarterly Status Report of Water Service, Repayment, and Other Water-Related Contract Actions",
-      "url": "https://www.federalregister.gov/documents/2026/11/25/2026-23956/quarterly-status-report-of-water-service-repayment-and-other-water-related-contract-actions",
-      "summary": "Federal Register result for: public land sale",
-      "status": "unverified_notice",
-      "evidence": {
-        "publication_date": "2026-11-25",
-        "document_type": "Notice",
-        "agencies": [
-          {
-            "raw_name": "DEPARTMENT OF THE INTERIOR",
-            "name": "Interior Department",
-            "id": 253,
-            "url": "https://www.federalregister.gov/agencies/interior-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
-            "parent_id": null,
-            "slug": "interior-department"
-          },
-          {
-            "raw_name": "Bureau of Reclamation",
-            "name": "Reclamation Bureau",
-            "id": 446,
-            "url": "https://www.federalregister.gov/agencies/reclamation-bureau",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/446",
-            "parent_id": 253,
-            "slug": "reclamation-bureau"
-          }
-        ]
-      },
-      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
-    },
-    {
-      "agent": "Land & Public Notice",
-      "type": "federal_notice",
-      "title": "Employee or Independent Contractor Status Under the Fair Labor Standards Act, Family and Medical Leave Act, and Migrant and Seasonal Agricultural Worker Protection Act",
-      "url": "https://www.federalregister.gov/documents/2026/11/23/2026-23777/employee-or-independent-contractor-status-under-the-fair-labor-standards-act-family-and-medical",
-      "summary": "Federal Register result for: public land sale",
-      "status": "unverified_notice",
-      "evidence": {
-        "publication_date": "2026-11-23",
+        "publication_date": "2026-11-30",
         "document_type": "Rule",
         "agencies": [
           {
-            "raw_name": "DEPARTMENT OF LABOR",
-            "name": "Labor Department",
-            "id": 271,
-            "url": "https://www.federalregister.gov/agencies/labor-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/271",
+            "raw_name": "FEDERAL RESERVE SYSTEM",
+            "name": "Federal Reserve System",
+            "id": 188,
+            "url": "https://www.federalregister.gov/agencies/federal-reserve-system",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/188",
             "parent_id": null,
-            "slug": "labor-department"
+            "slug": "federal-reserve-system"
           },
           {
-            "raw_name": "Wage and Hour Division",
-            "name": "Wage and Hour Division",
-            "id": 524,
-            "url": "https://www.federalregister.gov/agencies/wage-and-hour-division",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/524",
-            "parent_id": 271,
-            "slug": "wage-and-hour-division"
+            "raw_name": "Consumer Financial Protection Bureau",
+            "name": "Consumer Financial Protection Bureau",
+            "id": 573,
+            "url": "https://www.federalregister.gov/agencies/consumer-financial-protection-bureau",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/573",
+            "parent_id": null,
+            "slug": "consumer-financial-protection-bureau"
           }
         ]
       },
@@ -1092,124 +1257,22 @@
     {
       "agent": "Land & Public Notice",
       "type": "federal_notice",
-      "title": "Endangered and Threatened Wildlife and Plants; Threatened Species Status With Section 4(d) Rule for White Sands Pupfish and Critical Habitat Determination",
-      "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23711/endangered-and-threatened-wildlife-and-plants-threatened-species-status-with-section-4d-rule-for",
-      "summary": "Federal Register result for: public land sale",
+      "title": "Data Reporting Requirements for Certain Event Contracts",
+      "url": "https://www.federalregister.gov/documents/2026/11/30/2026-24209/data-reporting-requirements-for-certain-event-contracts",
+      "summary": "Federal Register result for: tax sale property notice",
       "status": "unverified_notice",
       "evidence": {
-        "publication_date": "2026-11-20",
-        "document_type": "Proposed Rule",
+        "publication_date": "2026-11-30",
+        "document_type": "Rule",
         "agencies": [
           {
-            "raw_name": "DEPARTMENT OF THE INTERIOR",
-            "name": "Interior Department",
-            "id": 253,
-            "url": "https://www.federalregister.gov/agencies/interior-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "raw_name": "COMMODITY FUTURES TRADING COMMISSION",
+            "name": "Commodity Futures Trading Commission",
+            "id": 77,
+            "url": "https://www.federalregister.gov/agencies/commodity-futures-trading-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/77",
             "parent_id": null,
-            "slug": "interior-department"
-          },
-          {
-            "raw_name": "Fish and Wildlife Service",
-            "name": "Fish and Wildlife Service",
-            "id": 197,
-            "url": "https://www.federalregister.gov/agencies/fish-and-wildlife-service",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/197",
-            "parent_id": 253,
-            "slug": "fish-and-wildlife-service"
-          }
-        ]
-      },
-      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
-    },
-    {
-      "agent": "Land & Public Notice",
-      "type": "federal_notice",
-      "title": "Endangered and Threatened Wildlife and Plants; Endangered Species Status for Mazama Newt",
-      "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23706/endangered-and-threatened-wildlife-and-plants-endangered-species-status-for-mazama-newt",
-      "summary": "Federal Register result for: public land sale",
-      "status": "unverified_notice",
-      "evidence": {
-        "publication_date": "2026-11-20",
-        "document_type": "Proposed Rule",
-        "agencies": [
-          {
-            "raw_name": "DEPARTMENT OF THE INTERIOR",
-            "name": "Interior Department",
-            "id": 253,
-            "url": "https://www.federalregister.gov/agencies/interior-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
-            "parent_id": null,
-            "slug": "interior-department"
-          },
-          {
-            "raw_name": "Fish and Wildlife Service",
-            "name": "Fish and Wildlife Service",
-            "id": 197,
-            "url": "https://www.federalregister.gov/agencies/fish-and-wildlife-service",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/197",
-            "parent_id": 253,
-            "slug": "fish-and-wildlife-service"
-          }
-        ]
-      },
-      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
-    },
-    {
-      "agent": "Land & Public Notice",
-      "type": "federal_notice",
-      "title": "Arms Sales Notification",
-      "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23656/arms-sales-notification",
-      "summary": "Federal Register result for: public land sale",
-      "status": "unverified_notice",
-      "evidence": {
-        "publication_date": "2026-11-20",
-        "document_type": "Notice",
-        "agencies": [
-          {
-            "raw_name": "DEPARTMENT OF DEFENSE",
-            "name": "Defense Department",
-            "id": 103,
-            "url": "https://www.federalregister.gov/agencies/defense-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/103",
-            "parent_id": null,
-            "slug": "defense-department"
-          },
-          {
-            "raw_name": "Office of the Secretary"
-          }
-        ]
-      },
-      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
-    },
-    {
-      "agent": "Land & Public Notice",
-      "type": "federal_notice",
-      "title": "Realty Action: Modified Competitive Sale of 20 Parcels of Public Land in Clark County, Nevada; Modification of Recreation and Public Purposes Act Classification",
-      "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23587/realty-action-modified-competitive-sale-of-20-parcels-of-public-land-in-clark-county-nevada",
-      "summary": "Federal Register result for: public land sale",
-      "status": "unverified_notice",
-      "evidence": {
-        "publication_date": "2026-11-19",
-        "document_type": "Notice",
-        "agencies": [
-          {
-            "raw_name": "DEPARTMENT OF THE INTERIOR",
-            "name": "Interior Department",
-            "id": 253,
-            "url": "https://www.federalregister.gov/agencies/interior-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
-            "parent_id": null,
-            "slug": "interior-department"
-          },
-          {
-            "raw_name": "Bureau of Land Management",
-            "name": "Land Management Bureau",
-            "id": 275,
-            "url": "https://www.federalregister.gov/agencies/land-management-bureau",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/275",
-            "parent_id": 253,
-            "slug": "land-management-bureau"
+            "slug": "commodity-futures-trading-commission"
           }
         ]
       },
@@ -1449,55 +1512,31 @@
     {
       "agent": "Land & Public Notice",
       "type": "federal_notice",
-      "title": "Rangeland Management",
-      "url": "https://www.federalregister.gov/documents/2026/11/12/2026-23033/rangeland-management",
-      "summary": "Federal Register result for: tax sale property notice",
+      "title": "Endangered and Threatened Wildlife and Plants; Threatened Species Status for Streaked Horned Lark With a Section 4(d) Rule",
+      "url": "https://www.federalregister.gov/documents/2026/11/30/2026-24304/endangered-and-threatened-wildlife-and-plants-threatened-species-status-for-streaked-horned-lark",
+      "summary": "Federal Register result for: government property disposal",
       "status": "unverified_notice",
       "evidence": {
-        "publication_date": "2026-11-12",
+        "publication_date": "2026-11-30",
         "document_type": "Proposed Rule",
         "agencies": [
           {
-            "raw_name": "DEPARTMENT OF AGRICULTURE",
-            "name": "Agriculture Department",
-            "id": 12,
-            "url": "https://www.federalregister.gov/agencies/agriculture-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/12",
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
             "parent_id": null,
-            "slug": "agriculture-department"
+            "slug": "interior-department"
           },
           {
-            "raw_name": "Forest Service",
-            "name": "Forest Service",
-            "id": 209,
-            "url": "https://www.federalregister.gov/agencies/forest-service",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/209",
-            "parent_id": 12,
-            "slug": "forest-service"
-          }
-        ]
-      },
-      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
-    },
-    {
-      "agent": "Land & Public Notice",
-      "type": "federal_notice",
-      "title": "FY27 Social Impact Partnerships To Pay for Results Act Notice of Funding Opportunity",
-      "url": "https://www.federalregister.gov/documents/2026/11/12/2026-22989/fy27-social-impact-partnerships-to-pay-for-results-act-notice-of-funding-opportunity",
-      "summary": "Federal Register result for: tax sale property notice",
-      "status": "unverified_notice",
-      "evidence": {
-        "publication_date": "2026-11-12",
-        "document_type": "Notice",
-        "agencies": [
-          {
-            "raw_name": "DEPARTMENT OF THE TREASURY",
-            "name": "Treasury Department",
-            "id": 497,
-            "url": "https://www.federalregister.gov/agencies/treasury-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/497",
-            "parent_id": null,
-            "slug": "treasury-department"
+            "raw_name": "Fish and Wildlife Service",
+            "name": "Fish and Wildlife Service",
+            "id": 197,
+            "url": "https://www.federalregister.gov/agencies/fish-and-wildlife-service",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/197",
+            "parent_id": 253,
+            "slug": "fish-and-wildlife-service"
           }
         ]
       },
@@ -1750,39 +1789,6 @@
             "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
             "parent_id": null,
             "slug": "environmental-protection-agency"
-          }
-        ]
-      },
-      "next_action": "Read the notice. Confirm whether it is an active sale or opportunity and verify deadlines and eligibility with the issuing agency."
-    },
-    {
-      "agent": "Land & Public Notice",
-      "type": "federal_notice",
-      "title": "Safety Zone; Massachusetts Bay, Boston, MA",
-      "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23148/safety-zone-massachusetts-bay-boston-ma",
-      "summary": "Federal Register result for: government property disposal",
-      "status": "unverified_notice",
-      "evidence": {
-        "publication_date": "2026-11-13",
-        "document_type": "Rule",
-        "agencies": [
-          {
-            "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
-            "name": "Homeland Security Department",
-            "id": 227,
-            "url": "https://www.federalregister.gov/agencies/homeland-security-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
-            "parent_id": null,
-            "slug": "homeland-security-department"
-          },
-          {
-            "raw_name": "Coast Guard",
-            "name": "Coast Guard",
-            "id": 53,
-            "url": "https://www.federalregister.gov/agencies/coast-guard",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/53",
-            "parent_id": 227,
-            "slug": "coast-guard"
           }
         ]
       },
